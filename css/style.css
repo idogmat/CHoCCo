@@ -233,7 +233,7 @@ text-align: center;
 
 }
 .features-class:nth-child(1)::before{
-  content: url(/img/icon1.svg);
+  content: url(../img/icon1.svg);
   position: absolute;
   width: 69px;
   height: 66px;
@@ -242,7 +242,7 @@ text-align: center;
   transform: translate(-50%,-50%);
 }
 .features-class:nth-child(2)::before{
-  content: url(/img/icon2.svg);
+  content: url(../img/icon2.svg);
   position: absolute;
   width: 70px;
   height: 69px;
@@ -251,7 +251,7 @@ text-align: center;
   transform: translate(-50%,-50%);
 }
 .features-class:nth-child(3)::before{
-  content: url(/img/icon3.svg);
+  content: url(../img/icon3.svg);
   position: absolute;
   width: 74px;
   height: 64px;
