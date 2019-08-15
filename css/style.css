@@ -8,7 +8,7 @@ body {
   font-family: "Alegreya Sans", sans-serif;
   font-weight: 400;
   font-size: 14px;
-  color: #f5f5f5;
+  color: #000;
   background-color: #f5f5f5;
 }
 
@@ -107,6 +107,7 @@ body {
 }
 
 .title {
+  color: #fff;
   font-size: 60px;
   line-height: 60px;
   font-weight: 700;
@@ -115,7 +116,7 @@ body {
 
 .content-description {
   font-size: 21px;
-  line-height: auto;
+  color: #fff;
   font-weight: 400;
   width: 350px;
 }
@@ -139,6 +140,7 @@ body {
   padding-left: 105px;
   position: relative;
   width: 86px;
+  color: #fff;
 }
 .marketing-plus:nth-child(1){
   padding-left: 55px;
@@ -182,13 +184,15 @@ body {
   background-image: url(../img/bgwhychocco.png);
   overflow: hidden;
   z-index: 2;
+  background-repeat: no-repeat;
 }
 .why-chocco__title{
-  padding-top: 105px;
+  padding-top: 100px;
   margin: 0 auto;
   display: block;
   width: 410px;
   text-align: center;
+  padding-bottom: 210px;
 }
 .why-chocco__title__h2{
   margin:10px 0;
@@ -201,5 +205,118 @@ body {
 .why-chocco__title__text{
   font-size: 18px;
   color: #666666;
+  margin: 0;
 
+}
+.features-block{
+  padding: 0 35px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  
+}
+.features-class{
+  position: relative;
+    width: 285px;
+
+}
+.features-class h3{
+  margin: 0;
+  color: #000;
+  font-size: 27px;
+  text-align: center;
+}
+.features-info{
+color: #666666;
+font-size: 18px;
+text-align: center;
+
+}
+.features-class:nth-child(1)::before{
+  content: url(/img/icon1.svg);
+  position: absolute;
+  width: 69px;
+  height: 66px;
+  top: -102px;
+  left: 142px;
+  transform: translate(-50%,-50%);
+}
+.features-class:nth-child(2)::before{
+  content: url(/img/icon2.svg);
+  position: absolute;
+  width: 70px;
+  height: 69px;
+  top: -99px;
+  left: 141px;
+  transform: translate(-50%,-50%);
+}
+.features-class:nth-child(3)::before{
+  content: url(/img/icon3.svg);
+  position: absolute;
+  width: 74px;
+  height: 64px;
+  top: -95px;
+  left: 142px;
+  transform: translate(-50%,-50%);
+}
+.comment{
+  position: relative;
+  background-image: url(/img/comment-berry.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 650px;
+}
+.comment-title{
+  text-transform: uppercase;
+  padding-top: 60px;
+  padding-bottom: 35px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  
+}
+.person-img{
+
+}
+.person-photo{
+  padding: 50px 20px 50px 50px;
+}
+.comment-person-title{
+  margin: 0;
+  padding: 65px 0 0px 0;
+  font-size: 30px;
+  font-weight: 500;
+  color: #323232;
+}
+.person-info{
+  margin: 0;
+  padding: 25px 0;
+  width: 445px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #666666;
+}
+.person-name{
+  margin: 5px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #666666;
+}
+.comment-person{
+  margin: 0 auto;
+  background-image: url(/img/bgcomment-person.png);
+  width: 940px;
+  height: 345px;
+  display: flex;
+}
+.check-person{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1px;
+  z-index: 2;
 }
