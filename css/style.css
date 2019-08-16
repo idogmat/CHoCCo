@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   width: 100%;
   height: 100%; }
 
@@ -373,3 +374,107 @@ body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 50%; }
+
+.our-team {
+  position: relative;
+  background-image: url(../img/our-team.png);
+  width: 1100px;
+  height: 650px; }
+
+.team-title {
+  padding-top: 105px;
+  padding-bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-transform: uppercase;
+  margin: 0 auto;
+  font-size: 48px;
+  font-weight: 700;
+  color: #000; }
+
+.team-staff {
+  padding: 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.staff-block {
+  max-width: 220px;
+  max-height: 288px; }
+
+.staff-name {
+  position: relative;
+  padding-top: 15px;
+  margin: 0;
+  font-size: 21px;
+  font-weight: 500;
+  text-align: center; }
+  .staff-name:after {
+    position: absolute;
+    content: "";
+    top: 28px;
+    right: 11px;
+    width: 7px;
+    height: 0px;
+    background: #fff;
+    border: 5px solid #fff; }
+  .staff-name:before {
+    position: absolute;
+    content: "";
+    top: 23px;
+    right: 13px;
+    width: 0px;
+    height: 0px;
+    background: #0f5a47;
+    border: 5px solid #0f5a47;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .staff-name:hover::after {
+    top: 18px;
+    right: 11px; }
+  .staff-name:hover + .hidden-block-team {
+    height: 30px;
+    overflow: visible;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
+    transition: 1s; }
+
+.hidden-profession {
+  padding-top: 10px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center; }
+
+.hidden-info {
+  padding-top: 5px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center; }
+
+.hidden-block-team {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 0;
+  overflow: hidden;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.block-team-active {
+  height: 30px;
+  overflow: visible; }
