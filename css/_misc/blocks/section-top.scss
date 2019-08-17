@@ -7,6 +7,7 @@
     background-repeat: no-repeat;
     margin-bottom: -49px;
 }
+
 .container-top {
     padding: 0 80px;
 }
@@ -23,6 +24,7 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 .menu {
     padding-left: 10px;
 }
@@ -66,10 +68,19 @@
 .menu-item:nth-child(1) .menu-link {
     padding: 0;
 }
+
 .menu-list {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
+}
+
+.title {
+    color: #fff;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 700;
+    width: 350px;
 }
 
 .content-description {

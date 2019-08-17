@@ -3,5 +3,8 @@
 //setups
 @import "_misc/layout.scss";
 
-@import "blocks/sectin-top.scss";
-@import "blocks/why-chocco.scss";
+@import "_misc/blocks/section-top";
+@import "_misc/blocks/why-chocco";
+@import "_misc/blocks/comments";
+@import "_misc/blocks/our-team";
+@import "_misc/blocks/fixed-menu";
