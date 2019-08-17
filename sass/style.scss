@@ -11,6 +11,34 @@ body {
     color: #000;
     background-color: #f5f5f5;
 }
+li{
+    list-style: none;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-top: 0;
+    font-weight: normal;
+}
+ul{
+    padding: 0;
+    margin: 0;
+}
+footer{
+    position: relative;
+    width: 100%;
+}
+*{
+    box-sizing: border-box;
+}
+//
+
+.wrapper {
+    padding: 0;
+    width: 1100px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 
 .section-top {
     position: relative;
@@ -20,6 +48,22 @@ body {
     z-index: 2;
     background-repeat: no-repeat;
     margin-bottom: -49px;
+}
+.container-top {
+    padding: 0 80px;
+}
+
+.header-menu {
+    padding: 20px 0 40px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -40,10 +84,6 @@ body {
 
 .menu {
     padding-left: 10px;
-}
-
-.container-top {
-    padding: 0 80px;
 }
 
 .menu-list {
@@ -85,28 +125,6 @@ body {
 .menu-item:nth-child(1) .menu-link {
     padding: 0;
 }
-
-.wrapper {
-    padding: 0;
-    width: 1100px;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-.header-menu {
-    padding: 20px 0 40px 0;
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    width: 100%;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
 .menu-list {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -148,7 +166,7 @@ body {
 .marketing-plus {
     padding-left: 105px;
     position: relative;
-    width: 86px;
+    width: 160px;
     color: #fff;
 
     &:nth-child(1) {
@@ -195,7 +213,7 @@ body {
     height: 759px;
     background-image: url(../img/bgwhychocco.png);
     overflow: hidden;
-    z-index: 2;
+    z-index: 0;
     background-repeat: no-repeat;
 }
 
@@ -543,4 +561,43 @@ body {
 .block-team-active{
     height: 30px;
     overflow: visible;
+}
+
+.fixed-menu{
+    position: fixed;
+    top: 30%;
+    right: 23%;
+    z-index: 5;
+}
+.fixed-menu__item{
+    &--active{
+        .fixed-menu__dot{
+        border-color: #fff;
+        }
+    }
+
+}
+.fixed-menu__dot{
+position: relative;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 3px;
+    &:before{
+        content: "";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: #fff;
+        border-radius: 50%;
+        top: 5%;
+        left: 50%;
+        transform: translate(-50%,50%);
+
+    }
+    &:last-child{
+        margin-bottom: 0;
+    }
 }

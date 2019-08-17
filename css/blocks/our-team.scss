@@ -1,0 +1,111 @@
+.our-team{
+    position: relative;
+    background-image: url(../img/our-team.png);
+    width: 1100px;
+    height: 650px;
+
+}
+.team-title{
+    padding-top: 105px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    margin: 0 auto;
+    font-size: 48px;
+    font-weight: 700;
+    color: #000;
+}
+.team-staff{
+    padding: 0 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.staff-block{
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+    max-height: 405px;
+    list-style: none;
+}
+.staff-name{
+    position: relative;
+    padding-top: 15px;
+    margin: 0;
+    font-size: 21px;
+    font-weight: 500;
+    text-align: center;
+
+}
+.arrow-hidden{
+    position: absolute;
+    background: #0f5a47;
+    width: 9px;
+    height: 5px;
+    top: 28px;
+    right: 14px;
+    transform: translate(-50%,-50%);
+    &:after{
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 6px;
+        right: 5px;
+        background: #fff;
+        border: 3px solid #fff;
+        -webkit-transform: rotate(140deg);
+        -ms-transform: rotate(140deg);
+        transform: rotate(140deg);
+    
+    }
+    &:before{
+        content: "";
+        position: absolute;
+        width: 0px;
+        height: 6px;
+        background: #fff;
+        border: 3px solid #fff;
+        -webkit-transform: rotate(40deg);
+        -ms-transform: rotate(40deg);
+        transform: rotate(40deg);
+        
+    }
+}
+.staff-block:nth-child(2n) .staff-name{
+    .arrow-hidden{
+        position: absolute;
+        background: #0f5a47;
+        width: 9px;
+        height: 5px;
+        top: 28px;
+        right: 27px;
+        transform: translate(-50%,-50%);
+    }
+
+}
+
+.hidden-profession{
+    padding-top: 10px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+.hidden-info{
+    padding-top: 5px;
+    margin: 0;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+}
+.hidden-block-team{
+    display: flex;
+    flex-direction: column;
+    height: 0;
+    overflow: hidden;
+    align-items: center;
+}
+.block-team-active{
+    height: 30px;
+    overflow: visible;
+}

@@ -1,0 +1,141 @@
+.section-top {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background-image: url(../img/berry+pattern.png);
+    z-index: 2;
+    background-repeat: no-repeat;
+    margin-bottom: -49px;
+}
+.container-top {
+    padding: 0 80px;
+}
+
+.header-menu {
+    padding: 20px 0 40px 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.menu {
+    padding-left: 10px;
+}
+
+.menu-list {
+    padding: 0;
+}
+
+.menu-item {
+    list-style: none;
+}
+
+.logo-img {
+    padding: 7px 0;
+}
+
+.phone-number {
+    padding: 12px 0 0 10px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+
+    &::before {
+        padding: 8px;
+        content: url(../img/phone.png);
+    }
+}
+
+.menu-link {
+    padding: 0;
+    padding-left: 25px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+}
+
+.menu-item:nth-child(1) .menu-link {
+    padding: 0;
+}
+.menu-list {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+
+.content-description {
+    font-size: 21px;
+    color: #fff;
+    font-weight: 400;
+    width: 350px;
+}
+
+.block-marketing-pluses {
+    padding-top: 49px;
+    width: 470px;
+}
+
+.marketing-pluses {
+    margin: 0;
+    padding: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    list-style: none;
+    width: 100%;
+}
+
+.marketing-plus {
+    padding-left: 105px;
+    position: relative;
+    width: 160px;
+    color: #fff;
+
+    &:nth-child(1) {
+        padding-left: 55px;
+
+        &::before {
+            position: absolute;
+            content: url(../img/leef.svg);
+            width: 44px;
+            height: 41px;
+            left: 23px;
+            -webkit-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    &:nth-child(2)::before {
+        position: absolute;
+        content: url(../img/transport.svg);
+        width: 50px;
+        height: 40px;
+        left: 70px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    &:nth-child(3)::before {
+        position: absolute;
+        content: url(../img/weight.svg);
+        width: 42px;
+        height: 42px;
+        left: 75px;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
