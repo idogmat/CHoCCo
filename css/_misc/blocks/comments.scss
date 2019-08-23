@@ -1,10 +1,43 @@
-.comment {
+.wrapper-comment {
     position: relative;
-    background-image: url(../img/comment-berry.png);
-    background-repeat: no-repeat;
+background: #fff;
     width: 100%;
     height: 650px;
 }
+.wrapper-comment::after{
+    content: '';
+    background-image: url(../img/comment-strawberry.png);
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 86px;
+    position: absolute;
+    top: 11%;
+    right: 0%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.wrapper-comment::before{
+    content: '';
+    background-image: url(../img/comments-berry.png);
+    background-repeat: no-repeat;
+    width: 140px;
+    height: 323px;
+    position: absolute;
+    bottom: -50%;
+    left: 3.5%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.comment {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
 
 .comment-title {
     text-transform: uppercase;
@@ -56,7 +89,7 @@
     height: 345px;
     display: -webkit-box;
     display: -ms-flexbox;
-    display: flex;
+    display: none;
 }
 
 .person-check {
@@ -105,38 +138,14 @@
     margin-top: 26px;
 }
 
-.person-check {
-    &:nth-child(1) .person-link {
-        background-image: url(../img/photo-person1.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 68px;
-        height: 68px;
-    }
-
-    &:nth-child(2) .person-link {
-        background-image: url(../img/photo-person2.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 68px;
-        height: 68px;
-    }
-
-    &:nth-child(3) .person-link {
-        background-image: url(../img/photo-person3.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 68px;
-        height: 68px;
-    }
-}
-
 .check-active {
     border: 6px solid #0f5a47;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-radius: 50%;
+    width: 80px;
+    height: 80px;
+}
+.comment-person__active{
+    display: flex;
 }

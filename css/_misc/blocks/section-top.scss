@@ -1,15 +1,25 @@
+.wrapper-section-top{
+margin: 0 auto;
+background:url(../img/bg-leaf.png), #61c4d9;
+max-height: 650px;
+background-image: url(../img/bg-leaf.png);
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
 .section-top {
     position: relative;
-    width: 100%;
+    width: 1100px;
     height: 700px;
-    background-image: url(../img/berry+pattern.png);
+    margin: 0 auto;
+    
     z-index: 2;
     background-repeat: no-repeat;
-    margin-bottom: -49px;
 }
 
 .container-top {
     padding: 0 80px;
+    box-sizing: border-box;
 }
 
 .header-menu {
@@ -24,7 +34,6 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
-
 .menu {
     padding-left: 10px;
 }
@@ -106,47 +115,46 @@
     list-style: none;
     width: 100%;
 }
-
+.marketing-pluses::after{
+    content: '';
+    background-image: url(../img/cooky-berry.png);
+    background-repeat: no-repeat;
+    width: 615px;
+    height: 641px;
+    position: absolute;
+    bottom: -45%;
+    right: -35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.marketing-pluses::before{
+    content: '';
+    background-image: url(../img/mini-leaf.png);
+    background-repeat: no-repeat;
+    width: 59px;
+    height: 112px;
+    position: absolute;
+    bottom: -8%;
+    right: 91%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
 .marketing-plus {
-    padding-left: 105px;
+    padding-left: 60px;
     position: relative;
+    min-height: 60px;
     width: 160px;
     color: #fff;
-
-    &:nth-child(1) {
-        padding-left: 55px;
-
-        &::before {
-            position: absolute;
-            content: url(../img/leef.svg);
-            width: 44px;
-            height: 41px;
-            left: 23px;
-            -webkit-transform: translateX(-50%);
-            -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-        }
-    }
-
-    &:nth-child(2)::before {
-        position: absolute;
-        content: url(../img/transport.svg);
-        width: 50px;
-        height: 40px;
-        left: 70px;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
-
-    &:nth-child(3)::before {
-        position: absolute;
-        content: url(../img/weight.svg);
-        width: 42px;
-        height: 42px;
-        left: 75px;
-        -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-    }
+}
+.leaf,.transport,.weight{
+    position: absolute;
+    top: 23px;
+    left: 25px;
+    width: 43px;
+    height: 43px;
+    fill: transparent;
+    stroke: #b0f7ff;
+    transform: translate(-50%,-50%);
 }
