@@ -1,32 +1,42 @@
 .wrapper-our-team {
     position: relative;
-    background-image: url(../img/team-bg.png);
+background: #fff;
     margin: 0 auto;
-    max-height: 650px;
+    width: 100%;
+    min-height: rem(650px);
     background-repeat: no-repeat;
     background-size: 100%;
+    @include tablets{
+        width: 50rem;
+        height: 66rem;
+    }
 }
 .wrapper-our-team::after{
     content: '';
     background-image: url(../img/team-blueberry.png);
     background-repeat: no-repeat;
-    width: 137px;
-    height: 115px;
+    width: 198px;
+    height: 600px;
     position: absolute;
-    bottom: 81%;
-    right: 0%;
+    bottom: -3%;
+    right: -6rem;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 0;
+    @include tablets{
+        bottom: 27%;
+        right: -13%;
+        z-index: 0;
+    }
 }
 
 .wrapper-our-team::before{
     content: '';
     background-image: url(../img/team-raspberry.png);
     background-repeat: no-repeat;
-    width: 104px;
-    height: 114px;
+    width: 7.5rem;
+    height: 8.125rem;
     position: absolute;
     bottom: -14%;
     left: 7%;
@@ -37,44 +47,61 @@
 }
 .our-team {
     position: relative;
-    background-image: url();
-    width: 1100px;
-    height: 732px;
+    width: 100%;
+    height: rem(732px);
     z-index: 1;
+    @include tablets{
+        width: rem(768px);
+        
+    }
 
 }
 
 .team-title {
-    padding-top: 105px;
-    padding-bottom: 50px;
+    padding-top: rem(105px);
+    padding-bottom: rem(50px);
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     margin: 0 auto;
-    font-size: 48px;
+    font-size: rem(48px);
     font-weight: 700;
     color: #000;
+    @include tablets{
+        padding-top: 40px;
+        padding-bottom: 50px;
+        
+    }
 }
 
 .team-staff {
-    padding: 0 80px;
+    padding: 0 rem(80px);
     display: flex;
     justify-content: space-between;
+    flex-flow: row wrap;
+    @include tablets{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    }
 }
 
 .staff-block {
     display: flex;
     flex-direction: column;
-    max-width: 220px;
-    max-height: 405px;
+    max-width: rem(220px);
+    max-height: rem(405px);
     list-style: none;
+    @include tablets{
+        max-height: rem(440px);
+    }
 }
 
 .staff-name {
     position: relative;
-    padding-top: 15px;
+    padding-top: rem(15px);
     margin: 0;
-    font-size: 21px;
+    font-size: rem(21px);
     font-weight: 500;
     text-align: center;
 
@@ -83,20 +110,20 @@
 .arrow-hidden {
     position: absolute;
     background: #0f5a47;
-    width: 9px;
-    height: 5px;
-    top: 28px;
-    right: 14px;
+    width: rem(9px);
+    height: rem(5px);
+    top: rem(28px);
+    right: rem(14px);
     transform: translate(-50%, -50%);
 
     &:after {
         content: "";
         position: absolute;
-        width: 0px;
-        height: 6px;
-        right: 5px;
+        width: rem(0px);
+        height: rem(6px);
+        right: rem(5px);
         background: #fff;
-        border: 3px solid #fff;
+        border: rem(3px) solid #fff;
         -webkit-transform: rotate(140deg);
         -ms-transform: rotate(140deg);
         transform: rotate(140deg);
@@ -106,10 +133,10 @@
     &:before {
         content: "";
         position: absolute;
-        width: 0px;
-        height: 6px;
+        width: rem(0px);
+        height: rem(6px);
         background: #fff;
-        border: 3px solid #fff;
+        border: rem(3px) solid #fff;
         -webkit-transform: rotate(40deg);
         -ms-transform: rotate(40deg);
         transform: rotate(40deg);
@@ -121,27 +148,27 @@
     .arrow-hidden {
         position: absolute;
         background: #0f5a47;
-        width: 9px;
-        height: 5px;
-        top: 28px;
-        right: 27px;
+        width: rem(9px);
+        height: rem(5px);
+        top: rem(28px);
+        right: rem(27px);
         transform: translate(-50%, -50%);
     }
 
 }
 
 .hidden-profession {
-    padding-top: 10px;
+    padding-top: rem(10px);
     margin: 0;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 400;
     text-align: center;
 }
 
 .hidden-info {
-    padding-top: 5px;
+    padding-top: rem(5px);
     margin: 0;
-    font-size: 18px;
+    font-size: rem(18px);
     font-weight: 300;
     text-align: center;
 }
@@ -155,6 +182,9 @@
 }
 
 .block-team-active {
-    height: 30px;
+    margin: 0;
+    height: rem(30px);
+    margin-bottom: 100px;
     overflow: visible;
+    transition: .5s;
 }

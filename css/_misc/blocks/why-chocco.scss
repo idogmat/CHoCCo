@@ -2,53 +2,88 @@
     position: relative;
     background: #fff;
     background-repeat: no-repeat;
+    box-sizing: border-box;
+    @include tablets{
+        width: 50rem;
+        max-height: 66rem;
+    }
 }
 .wrapper-why-chocco:before{
     content: "";
     position: absolute;
-    background-image: url(../img/why-chocco-raspberry.png);
+    background-image: url(../img/why-leaf.png);
     background-repeat: no-repeat;
-    width: 188px;
-    height: 582px;
-    top: 77%;
-    left: 5%;
+    width: 100%;
+    height: rem(330px);
+    top: 60%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+    @include tablets{
+        height: 21.625rem;
+    }
+
+}
+.wrapper-why-chocco:after{
+    content: "";
+    position: absolute;
+    background-image: url(../img/why-raspberry.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: rem(315px);
+    top: 93%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    @include tablets{
+        height: 20.6875rem;
+    }
+
 }
 .why-chocco {
     position: relative;
-    width: 1100px;
-    height: 759px;
+    width: 100%;
+    height: rem(759px);
     overflow: hidden;
     z-index: 0;
     background-repeat: no-repeat;
+    @include tablets{
+        
+        height: rem(1000px);
+    }
 }
 .why-chocco__title {
-    padding-top: 100px;
+    padding-top: rem(100px);
     margin: 0 auto;
     display: block;
-    width: 410px;
+    width: rem(410px);
     text-align: center;
-    padding-bottom: 210px;
+    padding-bottom: rem(210px);
+    @include tablets{
+        padding-top: rem(70px);
+        padding-bottom: rem(160px);
+    }
 }
 
 .why-chocco__title__h2 {
-    margin: 10px 0;
+    margin: rem(10px) 0;
     color: #000;
     text-transform: uppercase;
-    font-size: 48px;
+    font-size: rem(48px);
     font-weight: 700;
 }
 
 .why-chocco__title__text {
-    font-size: 18px;
+    font-size: rem(18px);
     color: #666666;
     margin: 0;
 }
 
 .features-block {
     position: relative;
-    padding: 0 35px;
+    padding: 0 rem(35px);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -58,117 +93,174 @@
     flex-flow: row nowrap;
     -ms-flex-pack: distribute;
     justify-content: space-around;
+
+    @include tablets{
+        display: flex;
+flex-direction: column;
+margin: 0 auto;
+    justify-content: space-between;
+    }
+
 }
 .features-block:after{
     content: url(../img/circle3.png);
     position: absolute;
-    width: 69px;
-    height: 66px;
-    top: -73px;
-    right: 304px;
+    width: rem(69px);
+    height: rem(66px);
+    top: rem(-73px);
+    right: rem(304px);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 2;
+        @include tablets{
+        display: none;
+        width: 0;
+        height: 0;
+    }
 }
 .features-block::before{
     content: url(../img/circle3.png);
     position: absolute;
-    width: 69px;
-    height: 66px;
-    top: -73px;
-    left: 379px;
+    width: rem(69px);
+    height: rem(66px);
+    top: rem(-73px);
+    left: rem(379px);
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 2;
+    @include tablets{
+        display: none;
+        width: 0;
+        height: 0;
+    }
 }
 .features-class {
     position: relative;
-    width: 285px;
+    width: rem(285px);
+    @include tablets{
+        margin: 0 auto;
+        justify-content: space-between;
+    }
 
     h3 {
         margin: 0;
         color: #000;
-        font-size: 27px;
+        font-size: rem(27px);
         text-align: center;
     }
 }
 
 .features-info {
     color: #666666;
-    font-size: 18px;
+    font-size: rem(18px);
     text-align: center;
 }
 
 .features-class {
+    @include tablets{
+        margin: 0 auto;
+        width: rem(445px);
+padding-bottom: rem(160px);
+    }
     &:nth-child(1)::before {
         content: url(../img/icon1.svg);
         position: absolute;
-        width: 69px;
-        height: 66px;
-        top: -102px;
-        left: 142px;
+        width: rem(69px);
+        height: rem(66px);
+        top: rem(-102px);
+        left: rem(142px);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         z-index: 2;
+        @include tablets{
+            top: -32%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+        }
     }
     &:nth-child(1)::after{
         content: url(../img/circle1.png);
         position: absolute;
-        width: 69px;
-        height: 66px;
-        top: -125px;
-        left: 116px;
+        width: rem(69px);
+        height: rem(66px);
+        top: rem(-125px);
+        left: rem(116px);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+                @include tablets{
+    top: -42%;
+    left: 44%;
+            transform: translate(-50%, -50%);
+        }
     }
     &:nth-child(2)::before {
         content: url(../img/icon2.svg);
         position: absolute;
-        width: 70px;
-        height: 69px;
-        top: -99px;
-        left: 141px;
+        width: rem(70px);
+        height: rem(69px);
+        top: rem(-99px);
+        left: rem(141px);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         z-index: 2;
+        @include tablets{
+            top: -32%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+        }
     }
     &:nth-child(2)::after{
         content: url(../img/circle1.png);
         position: absolute;
-        width: 69px;
-        height: 66px;
-        top: -125px;
-        left: 116px;
+        width: rem(69px);
+        height: rem(66px);
+        top: rem(-125px);
+        left: rem(116px);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+                @include tablets{
+    top: -42%;
+    left: 44%;
+            transform: translate(-50%, -50%);
+        }
     }
     &:nth-child(3)::before {
         content: url(../img/icon3.svg);
         position: absolute;
-        width: 74px;
-        height: 64px;
-        top: -95px;
-        left: 142px;
+        width: rem(74px);
+        height: rem(64px);
+        top: rem(-95px);
+        left: rem(142px);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         z-index: 2;
+        @include tablets{
+            top: -32%;
+            left: 51%;
+            transform: translate(-50%, -50%);
+        }
     }
     &:nth-child(3)::after{
         content: url(../img/circle1.png);
         position: absolute;
-        width: 69px;
-        height: 66px;
-        top: -125px;
-        left: 116px;
+        width: rem(69px);
+        height: rem(66px);
+        top: rem(-125px);
+        left: rem(116px);
         -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+                @include tablets{
+    top: -42%;
+    left: 44%;
+            transform: translate(-50%, -50%);
+        }
     }
 }
