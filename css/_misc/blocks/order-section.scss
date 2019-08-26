@@ -9,6 +9,10 @@
     width: 50rem;
     height: 66rem;
  }
+ @include phones{
+    width: 100%;
+    height: 55rem;
+ }
 }
 .order-section::after{
     content: url(../img/order-blackberry.png);
@@ -17,10 +21,22 @@
     top:-23%;
     width: rem(197px);
     height: rem(260px);
-    z-index: 1;
+    z-index: 0;
     @include tablets{
-        right: 27px;
+        right: -5%;
         top: -16%;
+    }
+    @include phones{
+        content: "";
+        background: url(../img/order-blackberry.png);
+        background-size: 105%;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0%;
+        top: -11%;
+        width: 7.3125rem;
+        height: 16.25rem;
+        z-index: 0;
     }
 }
 .order-page{
@@ -39,6 +55,7 @@
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
+    z-index: 1;
 }
 .order-form{
     display: flex;
@@ -47,6 +64,9 @@
         margin: 0 auto;
         padding: 0px 9.18rem;
        }
+       @include phones{
+        padding: 0px 1rem;
+    }
 }
 .form-container{
     display: flex;
@@ -55,6 +75,9 @@
      margin: 0 auto;
      width: 95%;
     }
+    @include phones{
+        width: 93%;
+     }
 }
 .form-left{
     display: flex;

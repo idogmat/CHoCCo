@@ -7,6 +7,10 @@ background: #fff;
         height: 66rem;
         width: 50rem;
     }
+    @include phones{
+        height: 57rem;
+        width: 100%;
+    }
     
 }
 .wrapper-comment::after{
@@ -24,7 +28,12 @@ background: #fff;
     z-index: 2;
     @include tablets{
         top: 6%;
-        right: -7%;
+        right: -10%;
+        width: 10.375rem;
+        height: 6.375rem;
+    }
+    @include phones{
+        right: -13%;
     }
 }
 .wrapper-comment::before{
@@ -77,6 +86,12 @@ background: #fff;
     @include tablets{
         padding: 5.125rem 1.25rem 0 1.125rem;
     }
+    @include phones{
+        padding: 0;
+        margin-top: 4.8125rem;
+        width: 7.8125rem;
+        height: 7.8125rem;
+    }
 }
 .comment-info{
     @include tablets{
@@ -86,7 +101,7 @@ background: #fff;
 }
 .comment-person-title {
     margin: 0;
-    padding: rem(65px) 0 rem(0px) 0;
+    padding: rem(65px) 0 0 0;
     font-size: rem(30px);
     font-weight: 500;
     color: #323232;
@@ -112,7 +127,6 @@ background: #fff;
 }
 
 .comment-person {
-    
     width: 100%;
     display: none;
     background: url(../img/comments-leaf.png) top right no-repeat,url(../img/circle-comm.png) 50% -45px no-repeat,#f8faf9;

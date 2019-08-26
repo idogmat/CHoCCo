@@ -5,6 +5,9 @@
     @include tablets{
         width: 50rem;
     }
+    @include phones{
+        width: 34.286rem;
+    }
 }
 .map-container{
     width: 100%;
@@ -18,6 +21,9 @@
     @include tablets{
         display: flex;
         bottom:-3%;
+    }
+    @include phones{
+        bottom: -10%;
     }
 }
 .conteiner-footer{
