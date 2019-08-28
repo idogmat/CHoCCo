@@ -15,16 +15,18 @@
  }
 }
 .order-section::after{
-    content: url(../img/order-blackberry.png);
+    content:"";
+    background: url(../img/order-blackberry.png);
     position: absolute;
     right: 0;
     top:-23%;
     width: rem(197px);
     height: rem(260px);
     z-index: 0;
+    transform: translate(-50%,-50%);
     @include tablets{
-        right: -5%;
-        top: -16%;
+        right: -12%;
+        top: -1%;
     }
     @include phones{
         content: "";

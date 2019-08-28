@@ -1,37 +1,89 @@
-.wrapper-section-top{
+.wrapper-section-top {
+    position: relative;
     width: 100%;
+    background: url(../img/bg-leaf.png) center center/cover no-repeat, #fff;
+    background-size: cover;
+    min-height: rem(650px);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-clip: content-box;
+    @include tablets {
+        width: 50rem;
+        height: 66rem;
+        background-image: url(../img/bg-leaf-768.png) 100%;
+        background-size: cover;
+    }
 
-    background: url(../img/bg-leaf.png) 100%,#61c4d9;
-    background-size: cover;
-height: rem(650px);
-background-repeat: no-repeat;
-background-size: auto;
-box-sizing: border-box;
-@include tablets{
-    width: 100%;
-    height: 66rem;
-    background-image: url(../img/bg-leaf-768.png) 100%;
-    background-size: cover;
+    @include phones {
+        width: 34.286rem;
+    }
 }
-@include phones{
-width: 34.286rem;
-}
+.wrapper-section-top:before{
+    content: "";
+    background: url(../img/chocco-cooky.png) no-repeat;
+    position: absolute;
+    width: 31.25rem;
+    height: 32.125rem;
+    top: 47%;
+    left: 67%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    @include tablets{
+        display: none;
+    }
 }
 
 .section-top {
+    padding: 0 4%;
     position: relative;
-    height: rem(700px);
+    height: 100%;
     margin: 0 auto;
     width: 100%;
     z-index: 2;
     background-repeat: no-repeat;
 }
+.section-top::after{
+    content: '';
+    background-image: url(../img/cooky-berry.png);
+    background-repeat: no-repeat;
+    width: 28.8rem;
+    height: 21.3rem;
+    position: absolute;
+    bottom: -69%;
+    right: -13%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: -1;
 
-.container-top {
-    padding: 0 rem(80px);
-    box-sizing: border-box;
     @include tablets{
-padding: 0;
+        display: none;
+    }
+}
+.section-top::before{
+    content: '';
+    background-image: url(../img/mini-leaf.png);
+    background-repeat: no-repeat;
+    width: 3.6875rem;
+    height: 7rem;
+    position: absolute;
+    bottom: -50%;
+    left: 3%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    @include tablets{
+        display: none;
+    }
+}
+.container-top {
+    
+    box-sizing: border-box;
+
+    @include tablets {
+        padding: 0;
     }
 }
 
@@ -46,31 +98,45 @@ padding: 0;
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    @include tablets{
-    &:after{
-        content: url(../img/bga-leaf-768.png);
-        display:block;
-        margin: 0 auto;
-       
+
+    @include tablets {
+        &:after {
+            content: url(../img/bga-leaf-768.png);
+            display: block;
+            margin: 0 auto;
+
+        }
     }
-}
 }
 
 .menu {
-    @include tablets{
-
-    }
+    @include tablets {}
 
 }
 
 .menu-list {
     padding: 0;
     display: inline-flex;
+//
     @include tablets{
-        display: none;
+        display: block;
     }
 }
-.mini-menu{
+.menu-tablet{
+    @include tablets{
+        display: block;
+        position: fixed;
+        z-index: 1000;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #2f3234;
+        justify-content: center;
+        transition: .5s;
+    }
+}
+.mini-menu {
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -81,11 +147,13 @@ padding: 0;
     position: fixed;
     top: 20px;
     right: 0;
-    @include tablets{
+
+    @include tablets {
         display: flex;
     }
 }
-.mini-menu-row{
+
+.mini-menu-row {
     display: flex;
     height: .25rem;
     background-color: #fff;
@@ -100,7 +168,8 @@ padding: 0;
 
 .logo-img {
     padding: rem(7px) 0;
-    @include tablets{
+
+    @include tablets {
         position: absolute;
     }
 }
@@ -117,19 +186,21 @@ padding: 0;
         padding: rem(8px);
         content: url(../img/phone.png);
     }
-    @include tablets{
+
+    @include tablets {
         display: none;
     }
 }
 
 .menu-link {
     padding: 0;
-    padding-left: rem(25px);
+    padding-left: 1rem;
     text-decoration: none;
-    font-size: rem(18px);
-    line-height: rem(30px);
+    font-size: 1.125rem;
+    line-height: 1.875rem;
     text-align: center;
     color: #fff;
+
 }
 
 .menu-item:nth-child(1) .menu-link {
@@ -137,26 +208,29 @@ padding: 0;
 }
 
 .title {
+    position: relative;
     color: #fff;
     font-size: rem(60px);
     line-height: rem(60px);
     font-weight: 700;
     width: rem(350px);
     text-transform: uppercase;
-    @include tablets{
+
+    @include tablets {
         width: 24rem;
         text-align: center;
         margin: 0;
     }
 }
-.content-promo{
-@include tablets{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    align-items: center;
-    text-align: center;
-}
+
+.content-promo {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 .content-description {
@@ -169,7 +243,9 @@ padding: 0;
 .block-marketing-pluses {
     padding-top: rem(49px);
     width: rem(470px);
-    @include tablets{
+    margin-bottom: rem(-60px);
+
+    @include tablets {
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -188,43 +264,33 @@ padding: 0;
     justify-content: space-around;
     list-style: none;
     width: 100%;
-    @include phones{
-        width:140%;
+
+    @include phones {
+        width: 140%;
     }
 }
-.marketing-pluses::after{
-    content: '';
-    background-image: url(../img/cooky-berry.png);
-    background-repeat: no-repeat;
-    width: 33.4375rem;
-    height: 40.0625rem;
-    position: absolute;
-    bottom: -45%;
-    right: -18%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    @include tablets{
-        display: none;
-    }
-}
-.marketing-pluses::before{
-    content: '';
-    background-image: url(../img/mini-leaf.png);
-    background-repeat: no-repeat;
-    width: rem(59px);
-    height: rem(112px);
-    position: absolute;
-    bottom: -8%;
-    right: 91%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    @include tablets{
-        display: none;
-    }
-}
+// .marketing-pluses::after {
+//     content: url(../img/cooky-berry.png);
+//     background-repeat: no-repeat;
+//     width: 0.0001rem;
+//     height: 0.0001rem;
+//     margin: rem(-166px) rem(-37px) 0 rem(0px);
+//     padding-left: rem(259px);
+//         @include tablets{
+//         display: none;
+//     }
+// }
+//     .marketing-pluses::before {
+//         content: url(../img/mini-leaf.png);
+//         width: 4.0001rem;
+//         height: 0.0001rem;
+//         margin: rem(78px) 0 0 0;
+//         @include tablets{
+//             display: none;
+//         }
+//     }
+
+
 .marketing-plus {
     padding-left: rem(60px);
     position: relative;
@@ -232,7 +298,10 @@ padding: 0;
     width: rem(160px);
     color: #fff;
 }
-.leaf,.transport,.weight{
+
+.leaf,
+.transport,
+.weight{
     position: absolute;
     top: rem(23px);
     left: rem(25px);

@@ -3,7 +3,7 @@
 background: #fff;
     margin: 0 auto;
     width: 100%;
-    height: rem(650px);
+    min-height: rem(650px);
     background-repeat: no-repeat;
     background-size: 100%;
     @include tablets{
@@ -30,7 +30,7 @@ background: #fff;
     z-index: 0;
     @include tablets{
         bottom: 27%;
-        right: -13%;
+        right: -12%;
         z-index: 0;
     }
 }
@@ -52,7 +52,7 @@ background: #fff;
 .our-team {
     position: relative;
     width: 100%;
-    height: rem(732px);
+    height: 100%;
     z-index: 1;
     @include tablets{
         width: 100%;

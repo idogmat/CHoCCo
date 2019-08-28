@@ -204,8 +204,9 @@ margin: 0 auto;
     width: rem(125px);
     height: rem(125px);
     border-radius: 50%;
+
     @include phones{
-        width: 16.8125rem;
+            width: 13.8125rem;
     }
 }
 .features-icon{
@@ -217,9 +218,10 @@ margin: 0 auto;
     top: rem(61px);
     transform: translate(-50%,-50%);
 }
-.features-icon2{
-    fill: #fff;
+.features-icon{
+    fill: #f2f5f4;
     stroke: #000;
+    stroke-width: .9px;
 }
 
 // .features-class {
