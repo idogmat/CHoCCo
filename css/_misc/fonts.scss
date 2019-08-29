@@ -154,3 +154,14 @@
          url('../fonts/alegreya-sans-v10-cyrillic_latin-900italic.ttf') format('truetype'), /* Safari, Android, iOS */
          url('../fonts/alegreya-sans-v10-cyrillic_latin-900italic.svg#AlegreyaSans') format('svg'); /* Legacy iOS */
   }
+
+
+  @font-face {
+     font-family: 'Museosans';
+     font-style: normal;
+     font-weight: 500;
+     src: url('../fonts/Museosanscyrl500.woff') format('woff');
+     src: url('../fonts/Museosanscyrl500.woff2') format('woff2'),
+          url('../fonts/Museosanscyrl500.ttf') format('truetype'); /* Safari, Android, iOS */
+          
+   }

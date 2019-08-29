@@ -1,5 +1,5 @@
 //slider
-var slides = document.querySelectorAll('.slider-item'),
+let slides = document.querySelectorAll('.slider-item'),
 prev = document.querySelector('#arrow-left'),
 next = document.querySelector('#arrow-right'),
 slideIndex = 1;
@@ -18,7 +18,8 @@ function showSlides(n) {
         slides[slideIndex - 1].classList.remove('structure-block-visible');
             // slides[i].style.display = 'none';
             // slides[slideIndex - 1].style.display = 'flex';
-		}
+        }
+
     }
         function plusSlides(n) {
             showSlides(slideIndex += n);
@@ -35,4 +36,4 @@ function showSlides(n) {
         next.addEventListener('click', function () {
             plusSlides(1);
         });
-//menu
+//slider-show

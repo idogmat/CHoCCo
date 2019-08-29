@@ -171,6 +171,9 @@ margin: 0 auto;
 
 
 }
+.features-info{
+    font-weight: 300;
+}
 .features-text{
     @include phones{
         padding-left: 1rem;

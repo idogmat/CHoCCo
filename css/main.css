@@ -402,6 +402,14 @@ template, [hidden] {
   src: local("Alegreya Sans Black Italic"), local("AlegreyaSans-BlackItalic"), url("../fonts/alegreya-sans-v10-cyrillic_latin-900italic.eot?#iefix") format("embedded-opentype"), url("../fonts/alegreya-sans-v10-cyrillic_latin-900italic.woff2") format("woff2"), url("../fonts/alegreya-sans-v10-cyrillic_latin-900italic.woff") format("woff"), url("../fonts/alegreya-sans-v10-cyrillic_latin-900italic.ttf") format("truetype"), url("../fonts/alegreya-sans-v10-cyrillic_latin-900italic.svg#AlegreyaSans") format("svg");
   /* Legacy iOS */ }
 
+@font-face {
+  font-family: 'Museosans';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Museosanscyrl500.woff") format("woff");
+  src: url("../fonts/Museosanscyrl500.woff2") format("woff2"), url("../fonts/Museosanscyrl500.ttf") format("truetype");
+  /* Safari, Android, iOS */ }
+
 body,
 html {
   height: 100%; }
@@ -499,6 +507,8 @@ footer {
   background-clip: content-box; }
   @media screen and (max-width: 768px) {
     .wrapper-section-top {
+      margin: 0;
+      padding: 0;
       width: 50rem;
       height: 66rem;
       background-image: url(../img/bg-leaf-768.png) 100%;
@@ -531,6 +541,10 @@ footer {
   width: 100%;
   z-index: 2;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .section-top {
+      margin: 0;
+      padding: 0; } }
 
 .section-top::after {
   content: '';
@@ -539,8 +553,8 @@ footer {
   width: 28.8rem;
   height: 21.3rem;
   position: absolute;
-  bottom: -69%;
-  right: -13%;
+  bottom: -21.5rem;
+  right: -13rem;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -596,67 +610,55 @@ footer {
   display: inline-flex; }
   @media screen and (max-width: 768px) {
     .menu-list {
-      display: block; } }
+      display: none; } }
 
 @media screen and (max-width: 768px) {
-  .menu-tablet {
-    display: block;
-    position: fixed;
+  .mini-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: .625rem;
     z-index: 1000;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #2f3234;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    position: fixed;
+    top: 20px;
+    right: 0; } }
+
+@media screen and (max-width: 768px) {
+  .mini-menu-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: .25rem;
+    background-color: #fff;
+    border-radius: .125rem;
     -webkit-transition: .5s;
     -o-transition: .5s;
-    transition: .5s; } }
-
-.mini-menu {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-right: .625rem;
-  z-index: 1000;
-  position: fixed;
-  top: 20px;
-  right: 0; }
-  @media screen and (max-width: 768px) {
-    .mini-menu {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
-
-.mini-menu-row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: .25rem;
-  background-color: #fff;
-  border-radius: .125rem;
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-  top: 0; }
+    transition: .5s;
+    top: 0; } }
 
 .menu-item {
   list-style: none; }
 
-.logo-img {
-  padding: 0.4375rem 0; }
+.logo-cho {
+  padding: 0.4375rem 0;
+  padding-right: 2rem;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Museosans', Arial,  sans-serif;
+  font-size: 1.5rem; }
   @media screen and (max-width: 768px) {
-    .logo-img {
-      position: absolute; } }
+    .logo-cho {
+      position: absolute;
+      padding-left: 2rem; } }
 
 .phone-number {
   padding: 0.75rem 0 0 0.625rem;
@@ -739,6 +741,7 @@ footer {
       width: 70%; } }
 
 .marketing-pluses {
+  font-size: 1rem;
   margin: 0;
   padding: 0;
   display: -webkit-inline-box;
@@ -953,6 +956,9 @@ footer {
       display: inline-flex;
       margin: 0;
       width: 100%; } }
+
+.features-info {
+  font-weight: 300; }
 
 @media screen and (max-width: 480px) {
   .features-text {
@@ -1742,18 +1748,14 @@ footer {
   content: "";
   background: url(../img/order-blackberry.png);
   position: absolute;
-  right: 0;
-  top: -23%;
+  right: -6rem;
+  top: -1rem;
   width: 12.3125rem;
   height: 16.25rem;
   z-index: 0;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
-  @media screen and (max-width: 768px) {
-    .order-section::after {
-      right: -12%;
-      top: -1%; } }
   @media screen and (max-width: 480px) {
     .order-section::after {
       content: "";
@@ -2072,6 +2074,9 @@ footer {
     .slider-section {
       height: 66rem;
       width: 50rem; } }
+  @media screen and (max-width: 480px) {
+    .slider-section {
+      width: 34.286rem; } }
 
 .slider-wrap {
   position: relative;
@@ -2124,7 +2129,7 @@ footer {
 .slider-img {
   width: 100%;
   height: 100%;
-  padding-right: 3.75rem; }
+  padding-right: 2.75rem; }
   @media screen and (max-width: 768px) {
     .slider-img {
       padding: 0;
@@ -2151,8 +2156,8 @@ footer {
   @media screen and (max-width: 768px) {
     .item-structure {
       position: absolute;
-      top: -8%;
-      right: -1%;
+      top: -3rem;
+      right: -1rem;
       -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%); } }
@@ -2300,7 +2305,7 @@ footer {
   background: #fff;
   opacity: .9;
   top: 11.897rem;
-  left: 47.47rem;
+  left: 46.47rem;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);

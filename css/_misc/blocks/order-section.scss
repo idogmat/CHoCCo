@@ -15,18 +15,18 @@
  }
 }
 .order-section::after{
-    content:"";
+    content: "";
     background: url(../img/order-blackberry.png);
     position: absolute;
-    right: 0;
-    top:-23%;
-    width: rem(197px);
-    height: rem(260px);
+    right: -6rem;
+    top: -1rem;
+    width: 12.3125rem;
+    height: 16.25rem;
     z-index: 0;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     @include tablets{
-        right: -12%;
-        top: -1%;
     }
     @include phones{
         content: "";

@@ -8,6 +8,8 @@
     box-sizing: border-box;
     background-clip: content-box;
     @include tablets {
+        margin: 0;
+        padding: 0;
         width: 50rem;
         height: 66rem;
         background-image: url(../img/bg-leaf-768.png) 100%;
@@ -43,6 +45,10 @@
     width: 100%;
     z-index: 2;
     background-repeat: no-repeat;
+    @include tablets{
+        margin: 0;
+        padding: 0;
+    }
 }
 .section-top::after{
     content: '';
@@ -51,8 +57,8 @@
     width: 28.8rem;
     height: 21.3rem;
     position: absolute;
-    bottom: -69%;
-    right: -13%;
+    bottom: -21.5rem;
+    right: -13rem;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -117,27 +123,31 @@
 .menu-list {
     padding: 0;
     display: inline-flex;
+    @include tablets{
+        display: none;
+    }
 //
-    @include tablets{
-        display: block;
-    }
+
 }
-.menu-tablet{
-    @include tablets{
-        display: block;
-        position: fixed;
-        z-index: 1000;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: #2f3234;
-        justify-content: center;
-        transition: .5s;
-    }
-}
+// .menu-tablet{
+//     @include tablets{
+//         display: none;
+//         justify-content: center;
+//         flex-direction: column;
+//         position: fixed;
+//         z-index: 1000;
+//         width: 100%;
+//         height: 100%;
+//         top: 0;
+//         left: 0;
+//         background: #2f3234;
+//         justify-content: center;
+//         transition: .5s;
+//     }
+// }
 .mini-menu {
-    display: none;
+    @include tablets{
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     width: 1.5rem;
@@ -147,13 +157,13 @@
     position: fixed;
     top: 20px;
     right: 0;
-
-    @include tablets {
-        display: flex;
     }
 }
 
 .mini-menu-row {
+    @include tablets{
+
+    
     display: flex;
     height: .25rem;
     background-color: #fff;
@@ -161,16 +171,23 @@
     transition: .5s;
     top: 0;
 }
+}
 
 .menu-item {
     list-style: none;
+
 }
 
-.logo-img {
+.logo-cho {
     padding: rem(7px) 0;
-
+    padding-right: 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-family:'Museosans', Arial,  sans-serif;
+    font-size: 1.5rem;
     @include tablets {
         position: absolute;
+        padding-left: 2rem;
     }
 }
 
@@ -255,6 +272,7 @@
 }
 
 .marketing-pluses {
+    font-size: 1rem;
     margin: 0;
     padding: 0;
     display: -webkit-inline-box;
