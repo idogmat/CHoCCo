@@ -5,7 +5,7 @@ background: #fff;
     height: rem(650px);
     @include tablets{
         height: 66rem;
-        width: 50rem;
+        
     }
     @include phones{
         height: 57rem;
@@ -25,7 +25,7 @@ background: #fff;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 0;
     @include tablets{
         top: 6%;
         right: -10%;
@@ -33,7 +33,11 @@ background: #fff;
         height: 6.375rem;
     }
     @include phones{
-        right: -13%;
+        width: 8.375rem;
+    height: 5.375rem;
+        background-size: 40% 40%;
+        background-size: 100% 100%;
+        right: -12%;
     }
 }
 .wrapper-comment::before{
@@ -64,6 +68,7 @@ background: #fff;
 
 
 .comment-title {
+    position: relative;
     text-transform: uppercase;
     padding-top: rem(60px);
     padding-bottom: rem(35px);
@@ -76,12 +81,15 @@ background: #fff;
     justify-content: center;
     font-size: rem(48px);
     font-weight: 700;
+    z-index: 1;
     @include tablets{
         padding-bottom: rem(70px);
     }
 }
 
 .person-photo {
+    width: rem(288px);
+    height: rem(335px);
     padding: rem(50px) rem(20px) rem(50px) rem(50px);
     @include tablets{
         padding: 5.125rem 1.25rem 0 1.125rem;
@@ -97,6 +105,9 @@ background: #fff;
     @include tablets{
         text-align: center;
         padding-bottom: 2rem;
+    }
+    @include phones{
+        width: 100%;
     }
 }
 .comment-person-title {
@@ -117,6 +128,10 @@ background: #fff;
     font-size: rem(18px);
     font-weight: 500;
     color: #666666;
+    @include phones{
+        width: 100%;
+        padding: 4% 2%;
+    }
 }
 
 .person-name {
@@ -134,7 +149,6 @@ background: #fff;
     position: relative;
     @include tablets{
         flex-direction: column;
-        width: rem(540px);
         justify-content: center;
         align-items: center;
         margin: auto;
@@ -199,4 +213,8 @@ background: #fff;
 }
 .comment-person__active{
     display: flex;
+}
+.person-img{
+    width: rem(67px);
+    height: rem(68px);
 }

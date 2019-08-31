@@ -1,95 +1,39 @@
-.wrapper-section-top {
+.section-top {
     position: relative;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    background: url(../img/bg-leaf.png) center center/cover no-repeat, #fff;
-    background-size: cover;
-    min-height: rem(650px);
+    background: url(../img/bg-leaf.png) 100%, #61c4d9;
+    background-size: contain;
     background-repeat: no-repeat;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    background-clip: content-box;
+    z-index: 1;
+
     @include tablets {
         margin: 0;
         padding: 0;
-        width: 50rem;
-        height: 66rem;
-        background-image: url(../img/bg-leaf-768.png) 100%;
+        background-image: none;
         background-size: cover;
     }
 
     @include phones {
-        width: 34.286rem;
-    }
-}
-.wrapper-section-top:before{
-    content: "";
-    background: url(../img/chocco-cooky.png) no-repeat;
-    position: absolute;
-    width: 31.25rem;
-    height: 32.125rem;
-    top: 47%;
-    left: 67%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    @include tablets{
-        display: none;
     }
 }
 
-.section-top {
-    padding: 0 4%;
-    position: relative;
-    height: 100%;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 2;
-    background-repeat: no-repeat;
-    @include tablets{
-        margin: 0;
-        padding: 0;
-    }
-}
-.section-top::after{
-    content: '';
-    background-image: url(../img/cooky-berry.png);
-    background-repeat: no-repeat;
-    width: 28.8rem;
-    height: 21.3rem;
-    position: absolute;
-    bottom: -21.5rem;
-    right: -13rem;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    z-index: -1;
-
-    @include tablets{
-        display: none;
-    }
-}
-.section-top::before{
-    content: '';
-    background-image: url(../img/mini-leaf.png);
-    background-repeat: no-repeat;
-    width: 3.6875rem;
-    height: 7rem;
-    position: absolute;
-    bottom: -50%;
-    left: 3%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    @include tablets{
-        display: none;
-    }
-}
 .container-top {
-    
+    padding: 0px 4%;
+    width: 100%;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    position: relative;
 
     @include tablets {
         padding: 0;
+        background: transparent;
     }
 }
 
@@ -106,71 +50,50 @@
     box-sizing: border-box;
 
     @include tablets {
-        &:after {
-            content: url(../img/bga-leaf-768.png);
-            display: block;
-            margin: 0 auto;
+        padding: 1.25rem 0 0 0;
 
-        }
     }
 }
 
 .menu {
+    display: flex;
+    align-items: center;
     @include tablets {}
-
 }
 
 .menu-list {
     padding: 0;
     display: inline-flex;
-    @include tablets{
+
+    @include tablets {
         display: none;
     }
-//
-
 }
-// .menu-tablet{
-//     @include tablets{
-//         display: none;
-//         justify-content: center;
-//         flex-direction: column;
-//         position: fixed;
-//         z-index: 1000;
-//         width: 100%;
-//         height: 100%;
-//         top: 0;
-//         left: 0;
-//         background: #2f3234;
-//         justify-content: center;
-//         transition: .5s;
-//     }
-// }
+
 .mini-menu {
-    @include tablets{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-right: .625rem;
-    z-index: 1000;
-    position: fixed;
-    top: 20px;
-    right: 0;
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: .625rem;
+        z-index: 1000;
+        position: fixed;
+        top: 20px;
+        right: 0;
     }
 }
 
 .mini-menu-row {
-    @include tablets{
-
-    
-    display: flex;
-    height: .25rem;
-    background-color: #fff;
-    border-radius: .125rem;
-    transition: .5s;
-    top: 0;
-}
+    @include tablets {
+        display: flex;
+        height: .25rem;
+        background-color: #fff;
+        border-radius: .125rem;
+        transition: .5s;
+        top: 0;
+    }
 }
 
 .menu-item {
@@ -183,9 +106,11 @@
     padding-right: 2rem;
     text-decoration: none;
     color: #fff;
-    font-family:'Museosans', Arial,  sans-serif;
+    font-family: 'Museosans', Arial, sans-serif;
     font-size: 1.5rem;
+
     @include tablets {
+        top: 1rem;
         position: absolute;
         padding-left: 2rem;
     }
@@ -230,27 +155,66 @@
     font-size: rem(60px);
     line-height: rem(60px);
     font-weight: 700;
-    width: rem(350px);
+    width: 45rem;
     text-transform: uppercase;
 
     @include tablets {
-        width: 24rem;
+        width: 100%;
         text-align: center;
         margin: 0;
+        
+    }
+    @include phones{
+        font-size: 3.3rem;
+    }
+}
+.content{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    height: 100%;
+    background: url(../img/bga-leaf-1100.png) 100% 39%;
+    background-repeat: no-repeat;
+    background-size: 48% 90%;
+    @include tablets{
+        height: 95%;
+        justify-content: flex-end;
+        background: url(../img/bga-leaf-1100.png) 60% -1%;
+        background-repeat: no-repeat;
+        background-size: 60% 53%;
+    }
+    @include phones{
+        height: 95%;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        background: url(../img/bga-leaf-1100.png) 60% -1%;
+        background-repeat: no-repeat;
+        background-size: 90% 58%;
     }
 }
 
 .content-promo {
+    display: flex;
+    flex-direction: column;
     @include tablets {
         display: flex;
         flex-direction: column;
-        margin: auto;
         align-items: center;
         text-align: center;
+        padding-bottom: 2rem;
     }
 }
 
 .content-description {
+    display: flex;
+    flex-direction: column;
     font-size: rem(21px);
     color: #fff;
     font-weight: 400;
@@ -258,9 +222,9 @@
 }
 
 .block-marketing-pluses {
-    padding-top: rem(49px);
+    
     width: rem(470px);
-    margin-bottom: rem(-60px);
+    
 
     @include tablets {
         display: flex;
@@ -282,44 +246,36 @@
     justify-content: space-around;
     list-style: none;
     width: 100%;
-
+            &::before{
+                content: "";
+                position: absolute;
+                width: 5rem;
+                height: 7rem;
+                left: -2rem;
+                bottom: -3rem;
+                background: url(../img/mini-leaf.png) 100% 39%;
+                background-repeat: no-repeat;
+                @include tablets{
+                    visibility: hidden;
+                }
+            
+        }
+    
     @include phones {
-        width: 140%;
+        width: 100%;
     }
 }
-// .marketing-pluses::after {
-//     content: url(../img/cooky-berry.png);
-//     background-repeat: no-repeat;
-//     width: 0.0001rem;
-//     height: 0.0001rem;
-//     margin: rem(-166px) rem(-37px) 0 rem(0px);
-//     padding-left: rem(259px);
-//         @include tablets{
-//         display: none;
-//     }
-// }
-//     .marketing-pluses::before {
-//         content: url(../img/mini-leaf.png);
-//         width: 4.0001rem;
-//         height: 0.0001rem;
-//         margin: rem(78px) 0 0 0;
-//         @include tablets{
-//             display: none;
-//         }
-//     }
 
 
 .marketing-plus {
     padding-left: rem(60px);
     position: relative;
-    min-height: rem(60px);
-    width: rem(160px);
     color: #fff;
 }
 
 .leaf,
 .transport,
-.weight{
+.weight {
     position: absolute;
     top: rem(23px);
     left: rem(25px);
@@ -327,5 +283,5 @@
     height: rem(43px);
     fill: transparent;
     stroke: #b0f7ff;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 }

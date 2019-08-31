@@ -1,43 +1,20 @@
-.wrapper-why-chocco{
+.why-chocco{
     position: relative;
-    background: #fff;
+    background: url(../img/why-leaf.png),#f8faf9;
+    background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    @include tablets{
-        width: 50rem;
-        max-height: 66rem;
-    }
-    @include phones{
-        width: 100%;;
-        height: 50rem;
-    }
+
 }
-.wrapper-why-chocco:before{
-    content: "";
-    position: absolute;
-    background-image: url(../img/why-leaf.png);
-    background-repeat: no-repeat;
-    width: 100%;
-    height: rem(330px);
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0;
-    @include tablets{
-        height: 21.625rem;
-    }
-    @include phones{
-        display: none;
-    }
-}
-.wrapper-why-chocco:after{
-    content: "";
+
+.why-raspberry{
+    
     position: absolute;
     background-image: url(../img/why-raspberry.png);
     background-repeat: no-repeat;
     width: 100%;
     height: rem(315px);
-    top: 93%;
+    top: 95%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -51,26 +28,11 @@
     }
 
 }
-.why-chocco {
-    position: relative;
-    width: 100%;
-    height: rem(759px);
-    overflow: hidden;
-    z-index: 0;
-    background-repeat: no-repeat;
-    @include tablets{
-        height: rem(1000px);
-    }
-    @include phones{
-        width: 100%;
-        height: 50rem;
-    }
-}
+
 .why-chocco__title {
     padding-top: rem(100px);
     margin: 0 auto;
     display: block;
-    width: rem(410px);
     text-align: center;
     padding-bottom: 4.125rem;
     @include tablets{
@@ -78,6 +40,7 @@
         padding-bottom: 3rem;
     }
     @include phones{
+        font-size: 2.9rem;
         padding-top: rem(50px);
         padding-bottom: 3rem;
     }
@@ -95,6 +58,10 @@
     font-size: rem(18px);
     color: #666666;
     margin: 0;
+    margin: 0 30%;
+    @include tablets{
+        margin: 0 auto;
+    }
 }
 
 .features-block {

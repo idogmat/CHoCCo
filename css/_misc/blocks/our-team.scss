@@ -1,48 +1,53 @@
 .wrapper-our-team {
     position: relative;
-background: #fff;
+    background: #fff;
     margin: 0 auto;
     width: 100%;
     min-height: rem(650px);
     background-repeat: no-repeat;
     background-size: 100%;
     @include tablets{
-        width: 50rem;
-        height: 66rem;
+        
+
     }
     @include phones{
         width: 100%;
-        height: 55rem;
+
     }
 }
-.wrapper-our-team::after{
-    content: '';
+.team-blueberry{
     background-image: url(../img/team-blueberry.png);
     background-repeat: no-repeat;
-    width: rem(198px);
-    height: rem(600px);
+    width: 12rem;
+    height: 37.5rem;
     position: absolute;
-    bottom: -3%;
+    bottom: 17rem;
     right: -6rem;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 0;
     @include tablets{
-        bottom: 27%;
-        right: -12%;
-        z-index: 0;
+        bottom: 26rem;
+        right: -6rem;
+        
     }
 }
-
-.wrapper-our-team::before{
-    content: '';
+.photo-staff{
+    width: 200px;
+    height: 280px;
+    @include phones{
+        width: 146px;
+        height: 218px;
+    }
+}
+.team-raspberry{
     background-image: url(../img/team-raspberry.png);
     background-repeat: no-repeat;
     width: 7.5rem;
     height: 8.125rem;
     position: absolute;
-    bottom: -14%;
+    bottom: -12%;
     left: 7%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -51,20 +56,24 @@ background: #fff;
 }
 .our-team {
     position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
+    background: #fff;
     @include tablets{
-        width: 100%;
+        
+        height: 66rem;
     }
     @include phones{
         width: 100%;
-        height: 55rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
     }
 }
 
+
 .team-title {
-    padding-top: rem(105px);
+    position: relative;
+    padding-top: 4rem;
     padding-bottom: rem(50px);
     display: flex;
     justify-content: center;
@@ -80,38 +89,41 @@ background: #fff;
     }
     @include phones{
         padding: 0px;
+        padding: 0px;
+        z-index: 1;
     }
 }
 
 .team-staff {
-    padding: 0 rem(80px);
+    height: 75%;
+    padding: 0 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-flow: row wrap;
+    
     @include tablets{
-    flex-direction: row;
-    flex-wrap: wrap;
+        
+        flex-flow: row wrap;
     justify-content: space-around;
     }
     @include phones{
         padding: 0;
     }
 }
-.staff-block img{
-    width: rem(220px);
-    height: rem(290px);
-}
 .staff-block {
     display: flex;
+        align-items: center;
     flex-direction: column;
     max-width: rem(220px);
     max-height: rem(405px);
     list-style: none;
+    z-index: 1;
     @include tablets{
         max-height: rem(440px);
     }
     @include phones{
-        max-height: 26rem;
+        width: 50%;
+        max-height: 18rem;
     }
 }
 
@@ -126,54 +138,26 @@ background: #fff;
 }
 
 .arrow-hidden {
-    position: absolute;
-    background: #0f5a47;
-    width: rem(9px);
-    height: rem(5px);
-    top: rem(28px);
-    right: rem(14px);
-    transform: translate(-50%, -50%);
-
     &:after {
-        content: "";
+        content: '';
         position: absolute;
-        width: rem(0px);
-        height: rem(6px);
-        right: rem(5px);
-        background: #fff;
-        border: rem(3px) solid #fff;
-        -webkit-transform: rotate(140deg);
-        -ms-transform: rotate(140deg);
-        transform: rotate(140deg);
-
-    }
-
-    &:before {
-        content: "";
-        position: absolute;
-        width: rem(0px);
-        height: rem(6px);
-        background: #fff;
-        border: rem(3px) solid #fff;
-        -webkit-transform: rotate(40deg);
-        -ms-transform: rotate(40deg);
-        transform: rotate(40deg);
+        top: 56%;
+        margin-left: .3125rem;
+        border: 0.3125rem solid transparent;
+        border-bottom-color: #0f5a47;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
 
     }
 }
-
-.staff-block:nth-child(2n) .staff-name {
-    .arrow-hidden {
-        position: absolute;
-        background: #0f5a47;
-        width: rem(9px);
-        height: rem(5px);
-        top: rem(28px);
-        right: rem(27px);
-        transform: translate(-50%, -50%);
+.arrow-active{
+    &:after{
+    content: '';
+    transform: rotate(180deg);
     }
-
 }
+
 
 .hidden-profession {
     padding-top: rem(10px);

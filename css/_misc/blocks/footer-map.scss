@@ -2,12 +2,7 @@
     position: relative;
     width: 100%;
     height: rem(750px);
-    @include tablets{
-        width: 50rem;
-    }
-    @include phones{
-        width: 34.286rem;
-    }
+
 }
 .map-container{
     width: 100%;
@@ -34,6 +29,13 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    @include tablets{
+        padding: 2rem 3rem 0;
+    }
+    @include phones{
+        width: 100%;
+        padding: 6rem 3rem 0;
+    }
 }
 .contact{
     width: 50%;
