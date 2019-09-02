@@ -3,9 +3,9 @@
     width: 100%;
     display: flex;
     align-items: center;
-    height: 40.625rem;
+    
     @include tablets{
-        height: 66rem;
+        
 
     }
     @include phones{
@@ -26,7 +26,7 @@
 .slider-obj{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     position: relative;
 }
@@ -40,8 +40,7 @@
     }
 }
 .slider-img{
-    width: 100%;
-    height: 100%;
+
     @include tablets{
         padding: 0;
         display: flex;
@@ -52,9 +51,13 @@
 .chocco-slider-img{
     width: 29.625rem;
     height: 26.375rem;
+@include tablets{
+    width: 80%;
+    height: 80%;
+}
     @include phones{
-        width: 100%;
-        height: 100%;
+        width: 80%;
+        height: 80%;
     }
 }
 .item-structure{
@@ -71,13 +74,15 @@
     color: #FFF;
     cursor: pointer;
     @include tablets{
-        position:absolute;
-        top: -7rem;
-        right: 0rem;
+        position: absolute;
+        top: -5rem;
+        right: 2rem;
     }
     @include phones{
-        top: -7rem;
-        right: 0rem;
+        width: 15%;
+        height: 11%;
+        top: -12%;
+        right: 1%;
     }
 }
 .chocolate-bar{
@@ -90,6 +95,10 @@
     fill: #FFF;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    @include phones{
+        width: 60%;
+        height: 70%;
+    }
 }
 .product-name{
     font-size: 2.25rem;
@@ -125,11 +134,13 @@
 
 }
 .slider-info{
-    
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
+    max-width: 40%;
+    @include tablets{
+       max-width: none;
+    }
 }
 .slider-item-hidden{
     display: none;
@@ -170,28 +181,23 @@
     height: rem(30px);
     overflow: hidden;
     position: relative;
-    top: 5%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 3%;
     cursor: pointer;
     z-index: 20;
     @include tablets{
-        top: -9%;
-        right: 8%;
+
     }
 }
 .arrow-left{
-    left: 3%;
-    top: 3%;
+    margin-top: .3rem;
     transform: rotate(180deg);
     @include tablets{
-        left: 11%;
-        top: -10%;
+
     }
 }
+.arrow-right{
 
+
+}
 .slider-arrow:before{
     content: '';
     position: absolute;

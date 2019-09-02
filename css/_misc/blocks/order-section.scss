@@ -1,16 +1,18 @@
 .order-section{
-    height: rem(650px);
     position: relative;
  background: url(../img/order-berry.png) 3% 90% no-repeat,url(../img/order-leaf.png) right 80% no-repeat,url(../img/order-bg.jpg) no-repeat;
  background-size: auto,auto,cover;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
  @include tablets{
     background: url(../img/order-bg.jpg) no-repeat;
     background-size:cover;
-    height: 66rem;
+    
  }
  @include phones{
     width: 100%;
-    height: 55rem;
+    
  }
 }
 .order-section::after{
@@ -33,18 +35,19 @@
         background-size: 105%;
         background-repeat: no-repeat;
         position: absolute;
-        right: -11%;
-        top: 4%;
+        right: 0%;
+        top: -12%;
         width: 7.3125rem;
-        height: 16.25rem;
+        height: 10.25rem;
         z-index: 0;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
     }
 }
 .order-page{
     width: 100%;
-    max-width: rem(940px);
     margin: auto;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -57,6 +60,8 @@
     font-weight: 700;
     text-transform: uppercase;
     z-index: 1;
+    margin: 0;
+    @include phones{}
 }
 .order-form{
     display: flex;
@@ -67,7 +72,7 @@
         
        }
        @include phones{
-        padding: 0px 1rem;
+        
     }
 }
 .form-container{
@@ -81,9 +86,11 @@
         padding: 0 14%;
         margin: 0 auto;
         width: 90%;
+        z-index: 2;
     }
     @include phones{
         width: 93%;
+        padding: 0;
      }
 }
 .form-left{
@@ -107,6 +114,9 @@
     display: flex;
     flex: 1;
     margin-bottom: rem(20px);
+    @include phones{
+        margin-bottom: 0.25rem;
+    }
 }
 .form-block{
     margin-left: rem(20px);
@@ -146,6 +156,9 @@
     @include tablets{
         width: 100%;
     }
+    @include phones{
+        height: 7.65rem;
+    }
 }
 .form-radio-box{
     margin-bottom: rem(10px);
@@ -154,16 +167,23 @@
     @include tablets{
         box-sizing: border-box;
         justify-content: center;
-        padding: 0 2rem;
+        padding: 0;
+    }
+    @include phones{
+        flex-flow: row wrap;
     }
 }
 .form-control{
     display: flex;
+    align-items: center;
 }
 .form-radio-button{
     display: flex;
     flex: 1;
     margin-right: rem(20px);
+    @include phones{
+        margin-right: 0.25rem;
+    }
 }
 .form-hidden{
     display: flex;
@@ -175,6 +195,10 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    @include phones{
+        width: 1rem;
+        height: 1rem;
+    }
 }
 .form-text-input{
     padding: .14rem 0;
@@ -186,6 +210,7 @@
     height: 0;
     background-color: #0f5a47;
     border-radius: 50%;
+    
 
 }
 .form-radio{
@@ -195,6 +220,7 @@
     display: none;
 }
 .form-hidden-checkbox{
+    position: relative;
     display: flex;
     width: rem(25px);
     height: rem(25px);
@@ -204,6 +230,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    
 }
 .form-not-call{
     margin-bottom: rem(40px);
@@ -242,6 +269,7 @@ box-shadow: none;
 .form-radio:checked+.form-hidden:before{
 height: rem(10px);
 width: rem(10px);
+
 }
 .form-hidden-checkbox:before{
     content: '';
@@ -256,6 +284,10 @@ width: rem(10px);
 .form-checkbox:checked+.form-hidden-checkbox:before{
     width: rem(12px);
     height: rem(11px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
     @include tablets{
         width: 0.85rem;
         height: 0.7875rem;

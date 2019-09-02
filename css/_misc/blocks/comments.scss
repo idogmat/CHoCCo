@@ -85,6 +85,9 @@ background: #fff;
     @include tablets{
         padding-bottom: rem(70px);
     }
+    @include phones{
+        padding: 0;
+    }
 }
 
 .person-photo {
@@ -124,7 +127,7 @@ background: #fff;
 .person-info {
     margin: 0;
     padding: rem(25px) 0;
-    width: rem(445px);
+    padding-right: 1rem;
     font-size: rem(18px);
     font-weight: 500;
     color: #666666;
@@ -142,7 +145,8 @@ background: #fff;
 }
 
 .comment-person {
-    width: 100%;
+    margin: 0 auto;
+    width:80%;
     display: none;
     background: url(../img/comments-leaf.png) top right no-repeat,url(../img/circle-comm.png) 50% -45px no-repeat,#f8faf9;
     background-size: auto,auto;
@@ -213,6 +217,8 @@ background: #fff;
 }
 .comment-person__active{
     display: flex;
+    justify-content: flex-start;
+    
 }
 .person-img{
     width: rem(67px);

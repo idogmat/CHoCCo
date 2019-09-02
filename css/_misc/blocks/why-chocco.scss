@@ -4,6 +4,16 @@
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    @include phones{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
 
 }
 
@@ -28,7 +38,6 @@
     }
 
 }
-
 .why-chocco__title {
     padding-top: rem(100px);
     margin: 0 auto;
@@ -36,13 +45,10 @@
     text-align: center;
     padding-bottom: 4.125rem;
     @include tablets{
-        padding-top: rem(70px);
-        padding-bottom: 3rem;
+padding: 0;
     }
     @include phones{
-        font-size: 2.9rem;
-        padding-top: rem(50px);
-        padding-bottom: 3rem;
+padding: 0;
     }
 }
 
@@ -127,13 +133,14 @@ margin: 0 auto;
     position: relative;
     width: rem(285px);
     @include tablets{
-        margin: 0 auto;
-        justify-content: space-between;
+        width: 100%;
+        justify-content: center;
     }
     @include phones{
         display: inline-flex;
         margin: 0;
         width: 100%;
+        padding: 4% 0;
     }
 
 
@@ -163,30 +170,45 @@ margin: 0 auto;
     color: #666666;
     font-size: rem(18px);
     text-align: center;
+    @include tablets{
+        width: 72%;
+        margin: 0 auto;
+    }
     @include phones{
+        width: 100%;
         text-align: start;
     }
 }
 .features-icon-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     position: relative;
     background: #f2f5f4;
-    width: rem(125px);
-    height: rem(125px);
+    width: 7.8125rem;
+    height: 7.8125rem;
     border-radius: 50%;
 
     @include phones{
-            width: 13.8125rem;
+        width: 5.8125rem;
+        height: 5.8125rem;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 }
 .features-icon{
-    position: absolute;
+
     fill: #000;
     width: rem(69px);
     height: rem(69px);
-    left: rem(61px);
-    top: rem(61px);
-    transform: translate(-50%,-50%);
+
+    @include phones{
+        // position: unset;
+        // transform:none;
+    }
 }
 .features-icon{
     fill: #f2f5f4;

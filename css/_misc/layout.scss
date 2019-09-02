@@ -53,19 +53,7 @@ footer {
     box-sizing: border-box;
 }
 
-.page {
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    @include tablets{
-        max-width: rem(768px);
-    }
-    @include phones{
-        max-width: 34rem;
-    }
 
-
-}
 
 .btn {
     display: block;
