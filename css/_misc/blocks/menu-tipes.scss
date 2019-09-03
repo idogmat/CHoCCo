@@ -43,7 +43,7 @@
     color: #fff;
     text-transform: uppercase;
     transform: translate(-50%,-50%);
-    @include tablets{
+    @include phones{
         display: none;
     }
 }
@@ -62,8 +62,9 @@
 }
 
 .menu-accordeon__title{
+    position: relative;
     display: flex;
-    width: rem(100px);
+    min-width: rem(100px);
     height: 100%;
     font-weight: 500;
     background: no-repeat;
@@ -77,8 +78,10 @@
     align-items: flex-end;
 }
 .menu-accordeon__title__rotate{
+    position: absolute;
     display: flex;
      width: 0;
+     height: 0;
     transform: rotate(-90deg);
     font-size: rem(48px);
     line-height: 1;
@@ -87,7 +90,7 @@
     font-style: normal;
     line-height: 1;
     color: #fff;
-    padding: rem(20px) rem(50px);
+    padding: 1.125rem 1.5rem;
 }
 .btn-cross{
     display:none;
@@ -113,15 +116,15 @@
     transform: rotate(-135deg);
 }
 .menu-accordeon__hidden-box{
-    padding: rem(50px) 10% rem(20px) rem(25px);
-    display: none;
-    background: #333235;
-    opacity: .8;
-    width: 100%;
+    visibility: hidden;
+    max-width: 0;
+    position: absolute;
+    left: -20%;
+    z-index: -1;
 }
 .menu-accordeon__item__active{
     @include phones{
-        position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -134,8 +137,16 @@
     color: #fff;
     opacity: 1;
 }
-.menu-accordeon__visable-box{
-    display: flex;
+.menu-accordeon__visible-box{
+    position: relative;
+    left: 0;
+    padding: rem(50px) 10% rem(20px) rem(25px);
+    visibility: visible;
+    background: #333235;
+    max-width: 100%;
+    opacity: .8;
+    transition: .5s;
+    z-index: 2;
 }
 .btn-cross{
     display: flex;
