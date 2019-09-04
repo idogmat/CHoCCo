@@ -1,20 +1,4 @@
-.wrapper-our-team {
-    position: relative;
-    background: #fff;
-    margin: 0 auto;
-    width: 100%;
-    min-height: rem(650px);
-    background-repeat: no-repeat;
-    background-size: 100%;
-    @include tablets{
-        
 
-    }
-    @include phones{
-        width: 100%;
-
-    }
-}
 .team-blueberry{
     background-image: url(../img/team-blueberry.png);
     background-repeat: no-repeat;
@@ -57,9 +41,10 @@
 .our-team {
     position: relative;
     background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     @include tablets{
-        
-        height: 66rem;
     }
     @include phones{
         width: 100%;
@@ -137,28 +122,6 @@
 
 }
 
-.arrow-hidden {
-    &:after {
-        content: '';
-        position: absolute;
-        top: 56%;
-        margin-left: .3125rem;
-        border: 0.3125rem solid transparent;
-        border-bottom-color: #0f5a47;
-        -webkit-transition: 1s;
-        -o-transition: 1s;
-        transition: 1s;
-
-    }
-}
-.arrow-active{
-    &:after{
-    content: '';
-    transform: rotate(180deg);
-    }
-}
-
-
 .hidden-profession {
     padding-top: rem(10px);
     margin: 0;
@@ -185,8 +148,29 @@
 
 .block-team-active {
     margin: 0;
-    height: rem(30px);
+    max-height: rem(30px);
     margin-bottom: rem(100px);
     overflow: visible;
     transition: .5s;
+}
+.arrow-hidden {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 56%;
+        margin-left: .3125rem;
+        border: 0.3125rem solid transparent;
+        border-bottom-color: #0f5a47;
+        -webkit-transition: 1s;
+        -o-transition: 1s;
+        transition: 1s;
+
+    }
+}
+.arrow-active{
+    &:after{
+    content: '';
+    transform: rotate(180deg);
+    transition:1s;
+    }
 }

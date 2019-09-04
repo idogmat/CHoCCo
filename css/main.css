@@ -1373,20 +1373,8 @@ footer {
   justify-content: flex-start; }
 
 .person-img {
-  width: 4.1875rem;
-  height: 4.25rem; }
-
-.wrapper-our-team {
-  position: relative;
-  background: #fff;
-  margin: 0 auto;
-  width: 100%;
-  min-height: 40.625rem;
-  background-repeat: no-repeat;
-  background-size: 100%; }
-  @media screen and (max-width: 480px) {
-    .wrapper-our-team {
-      width: 100%; } }
+  width: 5rem;
+  height: 5rem; }
 
 .team-blueberry {
   background-image: url(../img/team-blueberry.png);
@@ -1428,10 +1416,17 @@ footer {
 
 .our-team {
   position: relative;
-  background: #fff; }
-  @media screen and (max-width: 768px) {
-    .our-team {
-      height: 66rem; } }
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
   @media screen and (max-width: 480px) {
     .our-team {
       width: 100%;
@@ -1527,23 +1522,6 @@ footer {
   font-weight: 500;
   text-align: center; }
 
-.arrow-hidden:after {
-  content: '';
-  position: absolute;
-  top: 56%;
-  margin-left: .3125rem;
-  border: 0.3125rem solid transparent;
-  border-bottom-color: #0f5a47;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s; }
-
-.arrow-active:after {
-  content: '';
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
 .hidden-profession {
   padding-top: 0.625rem;
   margin: 0;
@@ -1574,12 +1552,32 @@ footer {
 
 .block-team-active {
   margin: 0;
-  height: 1.875rem;
+  max-height: 1.875rem;
   margin-bottom: 6.25rem;
   overflow: visible;
   -webkit-transition: .5s;
   -o-transition: .5s;
   transition: .5s; }
+
+.arrow-hidden:after {
+  content: '';
+  position: absolute;
+  top: 56%;
+  margin-left: .3125rem;
+  border: 0.3125rem solid transparent;
+  border-bottom-color: #0f5a47;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
+
+.arrow-active:after {
+  content: '';
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s; }
 
 .fixed-menu {
   position: fixed;
@@ -1725,7 +1723,7 @@ footer {
   color: #fff;
   padding: 1.125rem 1.5rem; }
 
-.btn-cross {
+.acc-btn-cross {
   display: none;
   position: absolute;
   top: 20px;
@@ -1790,7 +1788,7 @@ footer {
   transition: .5s;
   z-index: 2; }
 
-.btn-cross {
+.acc-btn-cross {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }

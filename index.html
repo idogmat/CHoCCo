@@ -310,14 +310,15 @@
             </div>
             <span class="slider-arrow arrow-right" id="arrow-right"></span>
         </section>
+        
         <section class="our-team">
             <span class="team-blueberry"></span>
             <h2 class="team-title">команда</h2>
             <ul class="team-staff">
                 <li class="staff-block">
                     <img class="photo-staff" src="img/photo-boris.jpg" alt="photo-boris">
-                    <h4 class="staff-name arrow-hidden arrow-active">Борис Федорович</h4>
-                    <div class="hidden-block-team block-team-active">
+                    <h4 class="staff-name arrow-hidden">Борис Федорович</h4>
+                    <div class="hidden-block-team">
                         <p class="hidden-profession">Главный технолог</p>
                         <p class="hidden-info">Отвечает за вкусовые качества и калорийность</p>
                     </div>
@@ -372,7 +373,7 @@
                                     поздравить
                                     с днём Победы.
                                 </p>
-                                <a href="#" class="btn-cross">
+                                <a href="#" class="acc-btn-cross">
                                     <span class="cross-left"></span>
                                     <span class="cross-right"></span>
                                 </a>
@@ -393,7 +394,7 @@
                                     поздравить
                                     с днём Победы.
                                 </p>
-                                <a href="#" class="btn-cross">
+                                <a href="#" class="acc-btn-cross">
                                     <span class="cross-left"></span>
                                     <span class="cross-right"></span>
                                 </a>
@@ -414,7 +415,7 @@
                                     поздравить
                                     с днём Победы.
                                 </p>
-                                <a href="#" class="btn-cross">
+                                <a href="#" class="acc-btn-cross">
                                     <span class="cross-left"></span>
                                     <span class="cross-right"></span>
                                 </a>
@@ -426,9 +427,9 @@
         </section>
 
         <section class="wrapper-comment">
-            <div class="comment">
-                <h2 class="comment-title">Отзывы</h2>
-                <div class="comment-person">
+            <h2 class="comment-title">Отзывы</h2>
+            <ul class="comment">
+                <li class="comment-person">
                     <div class="comment-person-info">
                         <img class="person-photo" src="img/photo-alena.jpg" alt="">
                     </div>
@@ -439,8 +440,8 @@
                             могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно.</p>
                         <p class="person-name">Алёна Хмельницкая</p>
                     </div>
-                </div>
-                <div class="comment-person comment-person__active">
+                </li>
+                <li class="comment-person comment-person__active">
                     <div class="comment-person-info">
                         <img class="person-photo" src="img/photo-marry.jpg" alt="photo-vadim">
                     </div>
@@ -454,8 +455,8 @@
                             один. Но это скорее плюс, чем минус.</p>
                         <p class="person-name">Мария Орлова</p>
                     </div>
-                </div>
-                <div class="comment-person">
+                </li>
+                <li class="comment-person">
                     <div class="comment-person-info">
                         <img class="person-photo" src="img/photo-vadim.jpg" alt="photo-marry">
                     </div>
@@ -468,36 +469,36 @@
                             Спасибо производителю за этот качественный и экологичный продукт. </p>
                         <p class="person-name">Вадим Грачев</p>
                     </div>
-                </div>
-                <div class="check-menu">
+                </li>
+                <li class="check-menu">
                     <ul class="check-persons">
                         <li class="person-check"><a class="person-link" href=""><img class="person-img"
                                     src="img/photo-person1.png" alt="photo-person"></a>
                         </li>
-                        <li class="person-check"><a class="person-link check-active" href=""><img class="person-img"
+                        <li class="person-check check-active"><a class="person-link" href=""><img class="person-img"
                                     src="img/photo-person2.png" alt="photo-person"></a>
                         </li>
                         <li class="person-check"><a class="person-link" href=""><img class="person-img"
                                     src="img/photo-person3.png" alt="photo-person"></a>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </li>
+            </ul>
         </section>
         <section class="order-section">
             <div class="order-page">
                 <h2 class="order-h2">закажите доставку</h2>
-                <form class="order-form" id="form">
+                <form class="order-form" id="myForm">
                     <div class="form-container">
                         <div class="form-left">
                             <div class="form-contacts">
                                 <label class="form-block">
                                     <span class="form-text-input">Имя</span>
-                                    <input type="name" name="name" class="form-input" required>
+                                    <input type="name"  name="name" class="form-input" required>
                                 </label>
                                 <label class="form-block">
                                     <span class="form-text-input">Телефон</span>
-                                    <input type="tel" name="phone" class="form-input" required>
+                                    <input type="tel" name="phone" class="form-input" placeholder="8(123)1234567" required>
                                 </label>
                             </div>
                             <div class="form-contacts">
@@ -554,7 +555,7 @@
                                 </label>
                             </div>
                             <div class="form-buttons">
-                                <button type="submit" class="btn btn-order" id="send">Заказать</button>
+                                <button type="submit" class="btn btn-order" id="sendButton">Заказать</button>
                                 <button type="reset" class=" btn btn-reset">Очистить</button>
                             </div>
                         </div>

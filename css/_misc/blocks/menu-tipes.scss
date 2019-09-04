@@ -92,7 +92,7 @@
     color: #fff;
     padding: 1.125rem 1.5rem;
 }
-.btn-cross{
+.acc-btn-cross{
     display:none;
     position: absolute;
     top: 20px;
@@ -148,6 +148,6 @@
     transition: .5s;
     z-index: 2;
 }
-.btn-cross{
+.acc-btn-cross{
     display: flex;
 }
