@@ -153,18 +153,21 @@ window.addEventListener('DOMContentLoaded', function () {
             const data = {
                 name:myForm.elements.name.value,
                 phone:myForm.elements.phone.value,
-                comment:myForm.elements.comment.value
+                comment:myForm.elements.comment.value,
+                to:"borisdryabin@gmail"
             };
-            console.log(data);
+            
+            
 
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
             xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load',() => {
+                console.log(data);
                 console.log(xhr.response);
             });
-            // console.log('все ок!');
+            console.log('все ок!');
         }
 
     });
