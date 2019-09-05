@@ -60,31 +60,7 @@
         height: 80%;
     }
 }
-.item-structure{
-    position: relative;
-    margin-bottom: 1.875rem;
-    width: 5.625rem;
-    height: 5.625rem;
-    text-align: center;
-    background: #61c4d9;
-    border-radius: rem(10px);
-    font-size: 0.875rem;
-    font-style: italic;
-    font-weight: 800;
-    color: #FFF;
-    cursor: pointer;
-    @include tablets{
-        position: absolute;
-        top: -5rem;
-        right: 2rem;
-    }
-    @include phones{
-        width: 15%;
-        height: 11%;
-        top: -12%;
-        right: 1%;
-    }
-}
+
 .chocolate-bar{
     padding-top: 0.875rem;
     width: 3.75rem;
@@ -134,12 +110,15 @@
 
 }
 .slider-info{
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     max-width: 40%;
     @include tablets{
-       max-width: none;
+        position: static;
+    justify-content: center;
+    max-width: none;
     }
 }
 .slider-item-hidden{
@@ -218,29 +197,89 @@
     top: 50%;
     left: 50%;
 }
+.item-structure{
+    margin-bottom: 1.875rem;
+    width: 5.625rem;
+    height: 5.625rem;
+    text-align: center;
+    background: #61c4d9;
+    border-radius: rem(10px);
+    font-size: 0.875rem;
+    font-style: italic;
+    font-weight: 800;
+    color: #FFF;
+    cursor: pointer;
+    @include tablets{
+        width: 80%;
+    }
+}
+.slider-icon{
+    position: relative;
+    @include tablets{
+    position: absolute;
+    top: 6rem;
+    right: 0rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
+    @include phones{
+        width: 15%;
+        height: 10%;
+        top: 8%;
+        right: -6%;
+    }
+}
 .item-structure-block{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     position: absolute;
     width: 16.875rem;
     max-height: 23.75rem;
     background: #fff;
     opacity: .9;
-    top: 11.4rem;
-    left: 14.1rem;
+    top: 130%;
+    left: 14rem;
+    z-index: 30;
+    visibility: hidden;
     transform: translate(-50%, -50%);
     border-radius: 1rem;
     box-sizing: border-box;
     @include tablets{
-        left: 16.5rem;
-        top: -23.1rem;
+        top: 9.68rem;
+        left: -8.5rem;
+    
+    }
+    @include phones{
+        width: 55%;
+        top: 11.5rem;
+        left: -8.5rem;
     }
 }
-.structure-block-2{
-    top: 9.9rem;
+.structure-block-first{
+    top: 155%;
+    left: 14rem;
     @include tablets{
-        left: 16.5rem;
-        top: -23.1rem;
+        top: 11.5rem;
+        left: -8.5rem;
+    }
+    @include phones{
+        width: 55%;
+        top: 11.5rem;
+        left: -8.5rem;
     }
 }
+.structure-block-hidden{
+    visibility: hidden;
+    position: absolute;
+    left: 1%;
+    width: 0;
+    height: 0;
+
+}
+
 .structure-ingredient{
     padding:0 1rem;
     padding-top: .3rem;
@@ -255,9 +294,10 @@
     height: 3rem;
 }
 //show-hidden
-.structure-block-hidden{
-    display: none;
-}
+
 .structure-block-visible{
     display: flex;
+}
+.slider-item .item-structure:hover + .item-structure-block{
+    visibility: visible;
 }
