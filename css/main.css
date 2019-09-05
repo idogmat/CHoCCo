@@ -1398,8 +1398,8 @@ footer {
   height: 280px; }
   @media screen and (max-width: 480px) {
     .photo-staff {
-      width: 146px;
-      height: 218px; } }
+      width: 65%;
+      height: 65%; } }
 
 .team-raspberry {
   background-image: url(../img/team-raspberry.png);
@@ -2269,6 +2269,42 @@ footer {
     .form-checkbox:checked + .form-hidden-checkbox:before {
       width: 0.85rem;
       height: 0.7875rem; } }
+
+.good-order__active {
+  background: url(../img/order-bg.jpg);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  position: absolute;
+  width: 35%;
+  height: 30%;
+  left: 35%;
+  top: 35%;
+  border: 2px solid #317139; }
+
+.good-order {
+  display: none; }
+
+.good-order__message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700; }
 
 .slider-section {
   background: #f8faf9;

@@ -145,32 +145,46 @@ window.addEventListener('DOMContentLoaded', function () {
 
     //form-secton
     const myForm = document.querySelector('#myForm'),
-        sendButton = document.querySelector('#sendButton');
+        sendButton = document.querySelector('#sendButton'),
+        modulWindow = document.querySelector('.good-order'),
+        orderBtn = document.querySelector('.good-order-btn');
 
     sendButton.addEventListener('click', function (e) {
         e.preventDefault();
         if (validateForm(myForm)) {
-            const data = {
-                name:myForm.elements.name.value,
-                phone:myForm.elements.phone.value,
-                comment:myForm.elements.comment.value,
-                to:"borisdryabin@gmail"
-            };
-            
-            
+
+            let formData = new FormData(myForm);
+            formData.append("to", "test@test.test");
 
             const xhr = new XMLHttpRequest();
             xhr.responseType = 'json';
             xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-            xhr.send(JSON.stringify(data));
+            xhr.send(formData);
             xhr.addEventListener('load',() => {
-                console.log(data);
+                
                 console.log(xhr.response);
             });
-            console.log('все ок!');
-        }
+            
+            xhr.addEventListener('load', function () {
+                
+                modulWindow.style.display = 'flex';
+            if (xhr.status === 200) {
+                
+                document.querySelector('.good-order__active span').innerHTML = xhr.response.message;
+                
+            } else {
+                document.querySelector('.good-order__active span').innerHTML = ('Erorr - ' + xhr.status);
+              }
+              
+              orderBtn.addEventListener('click',function(e){
+                e.preventDefault();
+                modulWindow.style.display = 'none';
+              })
+            })
+ }
+})
 
-    });
+    
 
     function validateForm(form) {
         let valid = true
@@ -189,8 +203,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function validateField(field) {
         if (!field.checkValidity()) {
-            console.log(field);
-            // field.validati.validationMessage;
+            // console.log(field);
+            field.setAttribute('placeholder', field.validationMessage);
             field.style.border = "1px solid #0f5a47";
             
             return false;

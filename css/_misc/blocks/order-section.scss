@@ -293,3 +293,27 @@ width: rem(10px);
         height: 0.7875rem;
     }
 }
+.good-order__active{
+    background:url(../img/order-bg.jpg);
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    width: 35%;
+    height: 30%;
+    left: 35%;
+    top: 35%;
+    border: 2px solid #317139;
+}
+.good-order{
+    display: none;
+}
+.good-order__message{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
