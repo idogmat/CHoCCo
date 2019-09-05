@@ -301,10 +301,12 @@ width: rem(10px);
     flex-direction: column;
     justify-content: space-around;
     position: absolute;
-    width: 35%;
+    width: 50%;
     height: 30%;
-    left: 35%;
-    top: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
     border: 2px solid #317139;
 }
 .good-order{

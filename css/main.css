@@ -1489,7 +1489,8 @@ footer {
       justify-content: space-around; } }
   @media screen and (max-width: 480px) {
     .team-staff {
-      padding: 0; } }
+      padding: 0;
+      height: 100%; } }
 
 .staff-block {
   display: -webkit-box;
@@ -1759,16 +1760,8 @@ footer {
   visibility: hidden;
   max-width: 0;
   position: absolute;
-  left: -20%;
+  left: 10%;
   z-index: -1; }
-
-@media screen and (max-width: 480px) {
-  .menu-accordeon__item__active {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 1; } }
 
 .menu-accordeon__hidden__text {
   font-size: 1rem;
@@ -2286,10 +2279,14 @@ footer {
   -ms-flex-pack: distribute;
   justify-content: space-around;
   position: absolute;
-  width: 35%;
+  width: 50%;
   height: 30%;
-  left: 35%;
-  top: 35%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 10;
   border: 2px solid #317139; }
 
 .good-order {

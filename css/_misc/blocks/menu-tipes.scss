@@ -119,23 +119,16 @@
     visibility: hidden;
     max-width: 0;
     position: absolute;
-    left: -20%;
+    left: 10%;
     z-index: -1;
 }
-.menu-accordeon__item__active{
-    @include phones{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    z-index: 1;
-    }
-}
+
 
 .menu-accordeon__hidden__text{
     font-size: rem(16px);
     color: #fff;
     opacity: 1;
+    
 }
 .menu-accordeon__visible-box{
     position: relative;
