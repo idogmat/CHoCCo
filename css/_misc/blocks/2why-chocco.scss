@@ -1,6 +1,6 @@
 .why-chocco{
     position: relative;
-    background: url(../img/why-leaf.png),#f8faf9;
+    background: url(../img/2why-chocco/why-leaf.png),#f8faf9;
     background-size: cover;
     background-repeat: no-repeat;
     box-sizing: border-box;
@@ -23,7 +23,7 @@
 .why-raspberry{
     
     position: absolute;
-    background-image: url(../img/why-raspberry.png);
+    background-image: url(../img/2why-chocco/why-raspberry.png);
     background-repeat: no-repeat;
     width: 100%;
     height: rem(315px);
@@ -99,7 +99,7 @@ margin: 0 auto;
 
 }
 .features-block:after{
-    content: url(../img/circle3.png);
+    content: url(../img/2why-chocco/circle3.png);
     position: absolute;
     width: rem(69px);
     height: rem(66px);
@@ -116,7 +116,7 @@ margin: 0 auto;
     }
 }
 .features-block::before{
-    content: url(../img/circle3.png);
+    content: url(../img/2why-chocco/circle3.png);
     position: absolute;
     width: rem(69px);
     height: rem(66px);
@@ -209,8 +209,7 @@ margin: 0 auto;
     height: rem(69px);
 
     @include phones{
-        // position: unset;
-        // transform:none;
+
     }
 }
 .features-icon{
@@ -218,110 +217,3 @@ margin: 0 auto;
     stroke: #000;
     stroke-width: .9px;
 }
-
-// .features-class {
-//     @include tablets{
-//         margin: 0 auto;
-//         width: rem(445px);
-// padding-bottom: rem(160px);
-//     }
-//     &:nth-child(1)::before {
-//         content: url(../img/icon1.svg);
-//         position: absolute;
-//         width: rem(69px);
-//         height: rem(66px);
-//         top: rem(-102px);
-//         left: rem(142px);
-//         -webkit-transform: translate(-50%, -50%);
-//         -ms-transform: translate(-50%, -50%);
-//         transform: translate(-50%, -50%);
-//         z-index: 2;
-//         @include tablets{
-//             top: -32%;
-//             left: 51%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-//     &:nth-child(1)::after{
-//         content: url(../img/circle1.png);
-//         position: absolute;
-//         width: rem(69px);
-//         height: rem(66px);
-//         top: rem(-125px);
-//         left: rem(116px);
-//         -webkit-transform: translate(-50%, -50%);
-//         -ms-transform: translate(-50%, -50%);
-//         transform: translate(-50%, -50%);
-//                 @include tablets{
-//     top: -42%;
-//     left: 44%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-//     &:nth-child(2)::before {
-//         content: url(../img/icon2.svg);
-//         position: absolute;
-//         width: rem(70px);
-//         height: rem(69px);
-//         top: rem(-99px);
-//         left: rem(141px);
-//         -webkit-transform: translate(-50%, -50%);
-//         -ms-transform: translate(-50%, -50%);
-//         transform: translate(-50%, -50%);
-//         z-index: 2;
-//         @include tablets{
-//             top: -32%;
-//             left: 51%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-//     &:nth-child(2)::after{
-//         content: url(../img/circle1.png);
-//         position: absolute;
-//         width: rem(69px);
-//         height: rem(66px);
-//         top: rem(-125px);
-//         left: rem(116px);
-//         -webkit-transform: translate(-50%, -50%);
-//         -ms-transform: translate(-50%, -50%);
-//         transform: translate(-50%, -50%);
-//                 @include tablets{
-//     top: -42%;
-//     left: 44%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-//     &:nth-child(3)::before {
-//         content: url(../img/icon3.svg);
-//         position: absolute;
-//         width: rem(74px);
-//         height: rem(64px);
-//         top: rem(-95px);
-//         left: rem(142px);
-//         -webkit-transform: translate(-50%, -50%);
-//         -ms-transform: translate(-50%, -50%);
-//         transform: translate(-50%, -50%);
-//         z-index: 2;
-//         @include tablets{
-//             top: -32%;
-//             left: 51%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-//     &:nth-child(3)::after{
-//         content: url(../img/circle1.png);
-//         position: absolute;
-//         width: rem(69px);
-//         height: rem(66px);
-//         top: rem(-125px);
-//         left: rem(116px);
-//         -webkit-transform: translate(-50%, -50%);
-//         -ms-transform: translate(-50%, -50%);
-//         transform: translate(-50%, -50%);
-//                 @include tablets{
-//     top: -42%;
-//     left: 44%;
-//             transform: translate(-50%, -50%);
-//         }
-//     }
-// }

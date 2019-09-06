@@ -489,7 +489,7 @@ footer {
   -ms-flex-pack: justify;
   justify-content: space-between;
   width: 100%;
-  background: url(../img/bg-leaf.png) 100%, #61c4d9;
+  background: url(../img/1section-top/bg-leaf.png) 100%, #61c4d9;
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-box-sizing: border-box;
@@ -499,13 +499,13 @@ footer {
     .section-top {
       margin: 0;
       padding: 0;
-      background: url(../img/bg-leaf.png) 100%, #61c4d9;
+      background: url(../img/1section-top/bg-leaf.png) 100%, #61c4d9;
       background-repeat: no-repeat;
       background-position: 100% 0%;
       background-size: 100% 61%; } }
   @media screen and (max-width: 480px) {
     .section-top {
-      background: url(../img/bg-leaf.png) 100%, #61c4d9;
+      background: url(../img/1section-top/bg-leaf.png) 100%, #61c4d9;
       background-repeat: no-repeat;
       background-position: 100% 0%;
       background-size: 100% 61%; } }
@@ -704,7 +704,7 @@ footer {
   text-align: center; }
   .phone-number::before {
     padding: 0.5rem;
-    content: url(../img/phone.png); }
+    content: url(../img/1section-top/phone.png); }
   @media screen and (max-width: 940px) {
     .phone-number {
       display: none; } }
@@ -853,6 +853,9 @@ footer {
   color: #fff;
   font-weight: 400;
   width: 21.875rem; }
+  @media screen and (max-width: 480px) {
+    .content-description {
+      width: 100%; } }
 
 .block-marketing-pluses {
   width: 29.375rem;
@@ -894,7 +897,7 @@ footer {
     height: 7rem;
     left: -2rem;
     bottom: -3rem;
-    background: url(../img/mini-leaf.png) 100% 39%;
+    background: url(../img/1section-top/mini-leaf.png) 100% 39%;
     background-repeat: no-repeat; }
     @media screen and (max-width: 768px) {
       .marketing-pluses::before {
@@ -924,7 +927,7 @@ footer {
 
 .why-chocco {
   position: relative;
-  background: url(../img/why-leaf.png), #f8faf9;
+  background: url(../img/2why-chocco/why-leaf.png), #f8faf9;
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-box-sizing: border-box;
@@ -964,7 +967,7 @@ footer {
 
 .why-raspberry {
   position: absolute;
-  background-image: url(../img/why-raspberry.png);
+  background-image: url(../img/2why-chocco/why-raspberry.png);
   background-repeat: no-repeat;
   width: 100%;
   height: 19.6875rem;
@@ -1043,7 +1046,7 @@ footer {
       align-items: flex-start; } }
 
 .features-block:after {
-  content: url(../img/circle3.png);
+  content: url(../img/2why-chocco/circle3.png);
   position: absolute;
   width: 4.3125rem;
   height: 4.125rem;
@@ -1060,7 +1063,7 @@ footer {
       height: 0; } }
 
 .features-block::before {
-  content: url(../img/circle3.png);
+  content: url(../img/2why-chocco/circle3.png);
   position: absolute;
   width: 4.3125rem;
   height: 4.125rem;
@@ -1507,7 +1510,7 @@ footer {
   visibility: visible; }
 
 .team-blueberry {
-  background-image: url(../img/team-blueberry.png);
+  background-image: url(../img/4our-team/team-blueberry.png);
   background-repeat: no-repeat;
   width: 12rem;
   height: 37.5rem;
@@ -1539,7 +1542,7 @@ footer {
       height: 65%; } }
 
 .team-raspberry {
-  background-image: url(../img/team-raspberry.png);
+  background-image: url(../img/4our-team/team-raspberry.png);
   background-repeat: no-repeat;
   width: 7.5rem;
   height: 8.125rem;
@@ -1719,7 +1722,7 @@ footer {
 
 .wrapper-menu-tipes {
   position: relative;
-  background: url(../img/cooky-berry.jpg);
+  background: url(../img/5menu-tipes/cooky-berry.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -1911,7 +1914,7 @@ footer {
 
 .wrapper-comment::after {
   content: '';
-  background-image: url(../img/comment-strawberry.png);
+  background-image: url(../img/6comments/comment-strawberry.png);
   background-repeat: no-repeat;
   width: 9.375rem;
   height: 5.375rem;
@@ -1938,7 +1941,7 @@ footer {
 
 .wrapper-comment::before {
   content: '';
-  background-image: url(../img/comments-berry.png);
+  background-image: url(../img/6comments/comments-berry.png);
   background-repeat: no-repeat;
   width: 8.75rem;
   height: 20.1875rem;
@@ -2038,7 +2041,7 @@ footer {
   margin: 0 auto;
   width: 80%;
   display: none;
-  background: url(../img/comments-leaf.png) top right no-repeat, url(../img/circle-comm.png) 50% -45px no-repeat, #f8faf9;
+  background: url(../img/6comments/comments-leaf.png) top right no-repeat, url(../img/6comments/circle-comm.png) 50% -45px no-repeat, #f8faf9;
   background-size: auto,auto;
   position: relative; }
   @media screen and (max-width: 768px) {
@@ -2142,7 +2145,7 @@ footer {
 
 .order-section {
   position: relative;
-  background: url(../img/order-berry.png) 3% 90% no-repeat, url(../img/order-leaf.png) right 80% no-repeat, url(../img/order-bg.jpg) no-repeat;
+  background: url(../img/8order-section/order-berry.png) 3% 90% no-repeat, url(../img/8order-section/order-leaf.png) right 80% no-repeat, url(../img/8order-section/order-bg.jpg) no-repeat;
   background-size: auto,auto,cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2156,7 +2159,7 @@ footer {
   justify-content: center; }
   @media screen and (max-width: 768px) {
     .order-section {
-      background: url(../img/order-bg.jpg) no-repeat;
+      background: url(../img/8order-section/order-bg.jpg) no-repeat;
       background-size: cover; } }
   @media screen and (max-width: 480px) {
     .order-section {
@@ -2164,7 +2167,7 @@ footer {
 
 .order-section::after {
   content: "";
-  background: url(../img/order-blackberry.png);
+  background: url(../img/8order-section/order-blackberry.png);
   position: absolute;
   right: -6rem;
   top: -1rem;
@@ -2177,7 +2180,7 @@ footer {
   @media screen and (max-width: 480px) {
     .order-section::after {
       content: "";
-      background: url(../img/order-blackberry.png);
+      background: url(../img/8order-section/order-blackberry.png);
       background-size: 105%;
       background-repeat: no-repeat;
       position: absolute;
@@ -2499,7 +2502,7 @@ footer {
 
 .form-hidden-checkbox:before {
   content: '';
-  background-image: url(../img/check.png);
+  background-image: url(../img/8order-section/check.png);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2523,7 +2526,7 @@ footer {
       height: 0.7875rem; } }
 
 .good-order__active {
-  background: url(../img/order-bg.jpg);
+  background: url(../img/8order-section/order-bg.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

@@ -15,7 +15,7 @@ background: #fff;
 }
 .wrapper-comment::after{
     content: '';
-    background-image: url(../img/comment-strawberry.png);
+    background-image: url(../img/6comments/comment-strawberry.png);
     background-repeat: no-repeat;
     width: rem(150px);
     height: rem(86px);
@@ -42,7 +42,7 @@ background: #fff;
 }
 .wrapper-comment::before{
     content: '';
-    background-image: url(../img/comments-berry.png);
+    background-image: url(../img/6comments/comments-berry.png);
     background-repeat: no-repeat;
     width: rem(140px);
     height: rem(323px);
@@ -148,7 +148,7 @@ background: #fff;
     margin: 0 auto;
     width:80%;
     display: none;
-    background: url(../img/comments-leaf.png) top right no-repeat,url(../img/circle-comm.png) 50% -45px no-repeat,#f8faf9;
+    background: url(../img/6comments/comments-leaf.png) top right no-repeat,url(../img/6comments/circle-comm.png) 50% -45px no-repeat,#f8faf9;
     background-size: auto,auto;
     position: relative;
     @include tablets{
