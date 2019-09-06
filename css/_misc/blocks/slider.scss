@@ -211,22 +211,25 @@
     cursor: pointer;
     @include tablets{
         width: 80%;
+        
+    height: 100%;
     }
 }
 .slider-icon{
     position: relative;
+    
     @include tablets{
     position: absolute;
-    top: 6rem;
-    right: 0rem;
+    top: 2rem;
+    right: -4rem;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     }
     @include phones{
         width: 15%;
-        height: 10%;
-        top: 8%;
+        height: 9%;
+        top: -4%;
         right: -6%;
     }
 }
@@ -236,26 +239,31 @@
     justify-content: center;
     flex-direction: column;
     position: absolute;
-    width: 16.875rem;
+    width: 13rem;
     max-height: 23.75rem;
     background: #fff;
     opacity: .9;
     top: 130%;
-    left: 14rem;
+    left: 12.2rem;
     z-index: 30;
     visibility: hidden;
     transform: translate(-50%, -50%);
     border-radius: 1rem;
     box-sizing: border-box;
+    @media screen and(max-width:805px){
+        width: 65%;
+        left: 11rem;
+        top: 11rem;
+    }
     @include tablets{
         top: 9.68rem;
-        left: -8.5rem;
+        left: -6.5rem;
+        width: 13rem;
     
     }
     @include phones{
-        width: 55%;
-        top: 11.5rem;
-        left: -8.5rem;
+        top: 9.8rem;
+        left: -6.5rem;
     }
 }
 .structure-block-first{
@@ -263,7 +271,7 @@
     left: 14rem;
     @include tablets{
         top: 11.5rem;
-        left: -8.5rem;
+        left: -6.5rem;
     }
     @include phones{
         width: 55%;

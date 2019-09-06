@@ -44,7 +44,6 @@
 }
 
 .header-menu {
-    padding: rem(20px) 0 rem(40px) 0;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -108,7 +107,9 @@
 //mini-menu
 
 .menu-tablet{
+    
     display: none;
+
     @include tablets{
         flex-direction: column;
         justify-content: center;
@@ -134,10 +135,10 @@
     padding: 1rem;
 }
 .menu-tablet-link{
-    
     font-size: 2.125rem;
     text-decoration: none;
     color: #fff;
+
 }
 .mini-menu-x{
     z-index: 1001;
@@ -205,7 +206,9 @@
         padding: rem(8px);
         content: url(../img/phone.png);
     }
-
+    @media screen and (max-width:940px){
+        display:none;
+    }
     @include tablets {
         display: none;
     }

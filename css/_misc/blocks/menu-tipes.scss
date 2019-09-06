@@ -76,6 +76,9 @@
     -webkit-box-align: end;
     -ms-flex-align: end;
     align-items: flex-end;
+    @include phones{
+        min-width: 5.79rem;
+    }
 }
 .menu-accordeon__title__rotate{
     position: absolute;
@@ -91,6 +94,9 @@
     line-height: 1;
     color: #fff;
     padding: 1.125rem 1.5rem;
+    @include phones{
+        font-size: 2.714rem;
+    }
 }
 .acc-btn-cross{
     display:none;
