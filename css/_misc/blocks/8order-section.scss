@@ -62,7 +62,9 @@
     text-transform: uppercase;
     z-index: 1;
     margin: 0;
-    @include phones{}
+    @include phones{
+        font-size: 2rem;
+    }
 }
 .order-form{
     display: flex;
@@ -170,7 +172,7 @@
 .form-comment{
     margin-bottom: rem(15px);
     height: rem(180px);
-    width: rem(460px);
+    width: 100%;
     resize: none;
     border: none;
     @include tablets{
