@@ -52,6 +52,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 .order-h2{
     font-size: rem(48px);
@@ -65,10 +66,10 @@
 }
 .order-form{
     display: flex;
-    margin: 0 auto;
+    
     @include tablets{
         flex-direction: column;
-        margin: 0 auto;
+        
         
        }
        @include phones{
@@ -87,6 +88,11 @@
         margin: 0 auto;
         width: 90%;
         z-index: 2;
+        @include hmin{
+            padding: 0;
+            flex-direction: row;
+            -webkit-box-pack: start;
+        }
     }
     @include phones{
         width: 93%;
@@ -98,6 +104,12 @@
     flex-direction: column;
     flex: 1;
     align-self: self-start;
+    @include tablets{
+        @include hmin{
+            width: 45%;
+        }
+
+    }
 }
 .form-right{
     margin: 0 2%;
@@ -108,6 +120,10 @@
     @include tablets{
         width: 100%;
         margin: 0;
+        @include hmin{
+            width: 45%;
+            padding-left: 1%;
+        }
     }
 }
 .form-contacts{
@@ -145,6 +161,10 @@
     font-size: rem(18px);
     color: #000;
     border: rem(1px) solid transparent;
+    @include tablets{
+        height: 2.5rem;
+        padding: 0 0.625rem;
+    }
     
 }
 .form-comment{
@@ -155,9 +175,12 @@
     border: none;
     @include tablets{
         width: 100%;
+        @include hmin{
+            height: 6rem;
+        }
     }
     @include phones{
-        height: 7.65rem;
+        height: 5rem;
     }
 }
 .form-radio-box{
@@ -171,6 +194,7 @@
     }
     @include phones{
         flex-flow: row wrap;
+        margin-bottom: 0.2rem;
     }
 }
 .form-control{
@@ -238,6 +262,9 @@
         display: flex;
         justify-content: center;
     }
+    @include phones{
+        margin-bottom: 0.5rem;
+    }
 }
 .form-buttons{
     display: flex;
@@ -247,12 +274,22 @@
 }
 .btn-order{
     box-shadow: none;
+    @include phones{
+        padding: 0.1875rem;
+        width: 8rem;
+        height: 1.75rem;
+    }
 }
 .btn-reset{
 background: 0;
 text-transform: capitalize;
 font-weight: 500;
 box-shadow: none;
+@include phones{
+    padding: 0.1875rem;
+    width: 8rem;
+    height: 1.75rem;
+}
 }
 .form-input:focus,.form-comment:focus{
     border: rem(2px) solid #dde3bd;

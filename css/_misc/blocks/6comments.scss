@@ -2,14 +2,14 @@
     position: relative;
 background: #fff;
     width: 100%;
-    height: rem(650px);
+    
     @include tablets{
-        height: 66rem;
+        
         
     }
     @include phones{
-        height: 57rem;
-        width: 100%;
+        
+        
     }
     
 }
@@ -62,8 +62,7 @@ background: #fff;
 }
 .comment {
     margin: 0 auto;
-    width: 100%;
-    height: 100%;
+
 }
 
 
@@ -84,6 +83,10 @@ background: #fff;
     z-index: 1;
     @include tablets{
         padding-bottom: rem(70px);
+        @include hmin{
+            padding: 0;
+            font-size: 2rem;
+        }
     }
     @include phones{
         padding: 0;
@@ -96,6 +99,11 @@ background: #fff;
     padding: rem(50px) rem(20px) rem(50px) rem(50px);
     @include tablets{
         padding: 5.125rem 1.25rem 0 1.125rem;
+        @include hmin{
+           padding: 0;
+           width: 6rem;
+           height: 6rem;
+        }
     }
     @include phones{
         padding: 0;
@@ -108,6 +116,11 @@ background: #fff;
     @include tablets{
         text-align: center;
         padding-bottom: 2rem;
+        @include hmin{
+            text-align: start;
+padding: 0;
+
+        }
     }
     @include phones{
         width: 100%;
@@ -121,9 +134,21 @@ background: #fff;
     color: #323232;
     @include tablets{
         padding-top: 2rem;
+        @include hmin{
+            padding-top: 1rem;
+        }
     }
 }
-
+.comment-person-info{
+    @include tablets{
+        margin: auto;
+        padding: 0 3rem 0 0;
+        @media screen and (max-width:600px){
+            padding: 0 1rem;
+            
+        }
+    }
+}
 .person-info {
     margin: 0;
     padding: rem(25px) 0;
@@ -131,9 +156,16 @@ background: #fff;
     font-size: rem(18px);
     font-weight: 500;
     color: #666666;
+    @include tablets{
+        @include hmin{
+            font-size: 1rem;
+padding: 1rem 0;
+        }
+    }
     @include phones{
         width: 100%;
         padding: 4% 2%;
+        
     }
 }
 
@@ -156,6 +188,12 @@ background: #fff;
         justify-content: center;
         align-items: center;
         margin: auto;
+        @include hmin{
+            align-items: start;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            background: url(../img/6comments/comments-leaf.png) top right no-repeat,#f8faf9;
+        }
     }
 }
 
@@ -203,6 +241,11 @@ background: #fff;
     -ms-flex-align: center;
     align-items: center;
     margin-top: rem(26px);
+    @include tablets{
+        @include hmin{
+            margin-top: 0.5rem;
+        }
+    }
 }
 
 .check-active {
@@ -213,6 +256,13 @@ background: #fff;
     width: rem(80px);
     height: rem(80px);
     overflow: hidden;
+    @include tablets{
+        @include hmin{
+            width: 3rem;
+            height: 3rem; 
+            border: 0.3rem solid #0f5a47;
+        }
+    }
 
 }
 .comment-person__active{
@@ -223,5 +273,11 @@ background: #fff;
 .person-img{
     width: 5rem;
     height: 5rem;
+    @include tablets{
+        @include hmin{
+            width: 3rem;
+    height: 3rem;
+        }
+    }
 
 }

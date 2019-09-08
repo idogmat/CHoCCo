@@ -20,8 +20,8 @@
 
 }
 
-.why-raspberry{
-    
+.why-chocco:after{
+    content:'';
     position: absolute;
     background-image: url(../img/2why-chocco/why-raspberry.png);
     background-repeat: no-repeat;
@@ -35,6 +35,9 @@
     z-index: 1;
     @include tablets{
         height: 20.6875rem;
+        @include hmin{
+            display:none;
+        }
     }
     @include phones{
         display: none;
@@ -61,13 +64,18 @@ padding: 0;
     text-transform: uppercase;
     font-size: rem(48px);
     font-weight: 700;
+    @include tablets{
+        @include hmin{
+            padding: 0;
+        }
+    }
 }
 
 .why-chocco__title__text {
     font-size: rem(18px);
     color: #666666;
     margin: 0;
-    margin: 0 30%;
+    margin: 0 auto;
     @include tablets{
         margin: 0 auto;
     }
@@ -90,7 +98,13 @@ padding: 0;
         display: flex;
 flex-direction: column;
 margin: 0 auto;
+align-items: center;
     justify-content: space-between;
+    @include hmin{
+        padding: 0;
+        
+        
+    }
     }
     @include phones{
         padding: 0;
@@ -136,14 +150,17 @@ margin: 0 auto;
     position: relative;
     width: rem(285px);
     @include tablets{
-        width: 100%;
+        width: 85%;
         justify-content: center;
+        @include hmin{
+            display:inline-flex;
+        }
     }
     @include phones{
         display: inline-flex;
         margin: 0;
         width: 100%;
-        padding: 4% 0;
+        padding: 1% 0;
     }
 
 
@@ -164,6 +181,11 @@ margin: 0 auto;
     font-size: rem(27px);
     text-align: center;
     font-weight: 700;
+    @include tablets{
+        @include hmin{
+            text-align: start;
+        }
+    }
     @include phones{
         text-align: start;
     }
@@ -176,6 +198,10 @@ margin: 0 auto;
     @include tablets{
         width: 72%;
         margin: 0 auto;
+        @include hmin{
+            width: 100%;
+            text-align: start;
+        }
     }
     @include phones{
         width: 100%;
@@ -192,6 +218,15 @@ margin: 0 auto;
     width: 7.8125rem;
     height: 7.8125rem;
     border-radius: 50%;
+    @include tablets{
+        width: 6.8125rem;
+        height: 6.8125rem;
+        @include hmin{
+            width: 4.8125rem;
+    height: 4.8125rem;
+        }
+
+    }
 
     @include phones{
         width: 5.8125rem;
@@ -208,7 +243,11 @@ margin: 0 auto;
     width: rem(69px);
     height: rem(69px);
 
-    @include phones{
+    @include tablets{
+        @include hmin{
+            width: 3.3125rem;
+            height: 3.3125rem;
+        }
 
     }
 }

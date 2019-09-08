@@ -13,10 +13,17 @@
     }
     
 }
+.slider-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+}
 .slider-wrap{
     position: relative;
     width: 100%;
-    height: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,6 +44,7 @@
     justify-content: center;
     @include tablets{
         flex-direction: column;
+        align-items: center;
     }
 }
 .slider-img{
@@ -49,15 +57,17 @@
 }
 
 .chocco-slider-img{
-    width: 29.625rem;
-    height: 26.375rem;
+    width: 80%;
+    height: 80%;
 @include tablets{
     width: 80%;
     height: 80%;
+    @include hmin{
+        width: 35%;
+        }
 }
     @include phones{
-        width: 80%;
-        height: 80%;
+        width: 35%;
     }
 }
 
@@ -71,9 +81,16 @@
     fill: #FFF;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    @include tablets{
+        @include hmin{
+            width: 3rem;
+            height: 3rem;
+            }
+    }
     @include phones{
         width: 60%;
         height: 70%;
+
     }
 }
 .product-name{
@@ -85,9 +102,14 @@
         text-align: center;
         margin: 0 3rem;
         padding-bottom: 2rem;
+            @include hmin{
+            padding: 0;
+            }
+    
     }
     @include phones{
         margin: 0;
+        padding: 0;
     }
 
 }
@@ -100,12 +122,15 @@
         width: 75%;
         text-align: center;
         padding-bottom: 2rem;
+        @include hmin{
+            padding: 0;
+            }
     }
     @include phones{
         margin: 0 auto;
         width: 100%;
         text-align: center;
-        padding-bottom: 2rem;
+        padding: 0;
     }
 
 }
@@ -137,6 +162,12 @@
     flex-wrap: wrap;
     @include tablets{
         margin: 0 auto;
+        @include hmin{
+            padding: 0;
+            }
+    }
+    @include phones{
+        padding: 0;
     }
 }
 .calories-chocco,.weight-chocco{
@@ -154,6 +185,13 @@
     background: #0b4d3c;
     color: #fff;
     box-shadow: none;
+    @include tablets{
+        @include hmin{
+            width: 9rem;
+    height: 2.75rem;
+    padding: .8rem;
+        }
+    }
 }
 .slider-arrow{
     min-width: rem(15px);
@@ -170,6 +208,7 @@
     margin-top: .3rem;
     transform: rotate(180deg);
     @include tablets{
+        margin-top: .4rem;
 
     }
 }
@@ -221,16 +260,21 @@
     @include tablets{
     position: absolute;
     top: 2rem;
-    right: -4rem;
+    right: -3rem;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     }
+    @include tablets{
+    @include hmin{
+        top: 4rem;
+    }
+}
     @include phones{
         width: 15%;
-        height: 9%;
-        top: -4%;
-        right: -6%;
+        height: 12%;
+        top: 7%;
+        right: -3%;
     }
 }
 .item-structure-block{

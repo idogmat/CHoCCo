@@ -50,6 +50,7 @@
 .footer-phone{
     color: #0f5a47;
     padding: 0;
+    text-decoration: none;
     @include tablets{
         display: flex;
     }

@@ -4,15 +4,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 40.625rem;
     background-repeat: no-repeat;
-    @include tablets{
-
-    }
-    @include phones{
-        width: 100%;
-        height: 44.858rem;
-    }
     
 }
 .menu-tipes{
@@ -72,6 +64,7 @@
     font-size: rem(48px);
     line-height: 1;
     color: #fff;
+    background-size: cover;
     text-decoration: none;
     -webkit-box-align: end;
     -ms-flex-align: end;
@@ -94,6 +87,11 @@
     line-height: 1;
     color: #fff;
     padding: 1.125rem 1.5rem;
+    @include tablets{
+        @include hmin{
+            font-size: 2.3rem;
+        }
+    }
     @include phones{
         font-size: 2.714rem;
     }
@@ -127,7 +125,7 @@
     padding: 0;
     margin: 0;
     position: absolute;
-    left: 10%;
+    left: 1%;
     z-index: -1;
 }
 

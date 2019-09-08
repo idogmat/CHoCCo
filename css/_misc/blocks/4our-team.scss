@@ -1,5 +1,6 @@
 
-.team-blueberry{
+.our-team:after{
+    content:'';
     background-image: url(../img/4our-team/team-blueberry.png);
     background-repeat: no-repeat;
     width: 12rem;
@@ -14,25 +15,31 @@
     @include tablets{
         bottom: 26rem;
         right: -6rem;
+        @include hmin{
+            display:none;
+        }
     }
     @include phones{
-        top: -6rem;
-    right: -4rem;
-    background-size: 100% 150%;
-    width: 8rem;
-    height: 10.5rem;
+display:none;
     }
     
 }
 .photo-staff{
-    width: 200px;
-    height: 280px;
+    width: 70%;
+    height: 60%;
+    @include tablets{
+        @include hmin{
+            width: 60%;
+            height: 50%;
+        }
+    }
     @include phones{
-        width: 65%;
-        height: 65%;
+width: 50%;
+    height: 55%;
     }
 }
-.team-raspberry{
+.our-team:before{
+    content:'';
     background-image: url(../img/4our-team/team-raspberry.png);
     background-repeat: no-repeat;
     width: 7.5rem;
@@ -44,14 +51,25 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 2;
+    @include tablets{
+        @include hmin{
+            display:none;
+        }
+    }
+    @include phones{
+        display:none;
+    }
 }
 .our-team {
     position: relative;
     background: #fff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     @include tablets{
+        @include hmin{
+            
+        }
     }
     @include phones{
         width: 100%;
@@ -77,6 +95,9 @@
     @include tablets{
         padding-top: 40px;
         padding-bottom: 50px;
+        @include hmin{
+            padding: 0;
+        }
         
     }
     @include phones{
@@ -87,16 +108,17 @@
 }
 
 .team-staff {
-    height: 75%;
-    padding: 0 1rem;
     display: flex;
     justify-content: center;
-    flex-flow: row wrap;
-    
+    height: 60%;
     @include tablets{
-        
         flex-flow: row wrap;
     justify-content: space-around;
+    @include hmin{
+        justify-content: flex-start;
+        flex-flow: row nowrap;
+        height: 60%;
+    }
     }
     @include phones{
         padding: 0;
@@ -107,16 +129,19 @@
     display: flex;
         align-items: center;
     flex-direction: column;
-    max-width: rem(220px);
-    max-height: rem(405px);
+    width: 65%;
+    height: 85%;
     list-style: none;
     z-index: 1;
     @include tablets{
-        max-height: rem(440px);
+        height: rem(440px);
+        @include hmin{
+            height: 100%;
+        }
     }
     @include phones{
         width: 50%;
-        max-height: 18rem;
+        height: 50%;
     }
 }
 
@@ -127,7 +152,14 @@
     font-size: rem(21px);
     font-weight: 500;
     text-align: center;
-
+    @include tablets{
+        @include hmin{
+            font-size: .9rem;
+        }
+    }
+    @include phones{
+        font-size: .9rem;
+    }
 }
 
 .hidden-profession {
@@ -136,6 +168,11 @@
     font-size: rem(18px);
     font-weight: 400;
     text-align: center;
+    @include phones{
+        padding: 0;
+        font-size: .9rem;
+
+    }
 }
 
 .hidden-info {
@@ -144,6 +181,10 @@
     font-size: rem(18px);
     font-weight: 300;
     text-align: center;
+    @include phones{
+        padding: 0;
+        font-size: .9rem;
+    }
 }
 
 .hidden-block-team {
@@ -152,6 +193,7 @@
     height: 0;
     overflow: hidden;
     align-items: center;
+    margin-top: -2rem;
 }
 
 .block-team-active {

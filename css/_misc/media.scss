@@ -11,3 +11,8 @@
         @content;
     }
 }
+@mixin hmin() {
+    @media screen and (max-height: 700px) and (min-width:481px){
+        @content;
+    }
+}
