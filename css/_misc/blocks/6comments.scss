@@ -174,6 +174,9 @@ padding: 1rem 0;
     font-size: rem(18px);
     font-weight: 500;
     color: #666666;
+    @include phones{
+        text-align: end;
+    }
 }
 
 .comment-person {
@@ -194,6 +197,9 @@ padding: 1rem 0;
             justify-content: flex-start;
             background: url(../img/6comments/comments-leaf.png) top right no-repeat,#f8faf9;
         }
+    }
+    @include phones{
+        width: 95%;
     }
 }
 
@@ -246,6 +252,10 @@ padding: 1rem 0;
             margin-top: 0.5rem;
         }
     }
+    @include phones{
+        padding: 0;
+        margin-top: 0.1rem;
+    }
 }
 
 .check-active {
@@ -268,7 +278,10 @@ padding: 1rem 0;
 .comment-person__active{
     display: flex;
     justify-content: flex-start;
-    
+    @include phones{
+        justify-content: center;
+        width: 95%;
+    }
 }
 .person-img{
     width: 5rem;
