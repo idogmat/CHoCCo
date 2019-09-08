@@ -2175,7 +2175,8 @@ footer {
       padding-top: 1rem; } }
   @media screen and (max-width: 480px) {
     .comment-person-title {
-      padding: 0; } }
+      padding: 0;
+      font-size: 1.34rem; } }
 
 @media screen and (max-width: 768px) {
   .comment-person-info {
