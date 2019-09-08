@@ -2143,9 +2143,9 @@ footer {
   @media screen and (max-width: 480px) {
     .person-photo {
       padding: 0;
-      margin-top: 4.8125rem;
-      width: 7.8125rem;
-      height: 7.8125rem; } }
+      margin-top: 0;
+      width: 38%;
+      height: 35%; } }
 
 @media screen and (max-width: 768px) {
   .comment-info {
@@ -2158,7 +2158,8 @@ footer {
 
 @media screen and (max-width: 480px) {
   .comment-info {
-    width: 100%; } }
+    width: 100%;
+    padding: 0; } }
 
 .comment-person-title {
   margin: 0;
@@ -2172,6 +2173,9 @@ footer {
   @media screen and (max-width: 768px) and (max-height: 700px) and (min-width: 481px) {
     .comment-person-title {
       padding-top: 1rem; } }
+  @media screen and (max-width: 480px) {
+    .comment-person-title {
+      padding: 0; } }
 
 @media screen and (max-width: 768px) {
   .comment-person-info {
@@ -2180,6 +2184,16 @@ footer {
   @media screen and (max-width: 768px) and (max-width: 600px) {
     .comment-person-info {
       padding: 0 1rem; } }
+
+@media screen and (max-width: 480px) {
+  .comment-person-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 0; } }
 
 .person-info {
   margin: 0;
@@ -2196,7 +2210,7 @@ footer {
   @media screen and (max-width: 480px) {
     .person-info {
       width: 100%;
-      padding: 4% 2%; } }
+      padding: 0; } }
 
 .person-name {
   margin: 0.3125rem 0;
@@ -2293,7 +2307,7 @@ footer {
   @media screen and (max-width: 480px) {
     .check-persons {
       padding: 0;
-      margin-top: 0.1rem; } }
+      margin-top: 0; } }
 
 .check-active {
   border: 0.375rem solid #0f5a47;
@@ -2306,9 +2320,13 @@ footer {
 
 @media screen and (max-width: 768px) and (max-height: 700px) and (min-width: 481px) {
   .check-active {
-    width: 3rem;
-    height: 3rem;
+    width: 4rem;
+    height: 4rem;
     border: 0.3rem solid #0f5a47; } }
+  @media screen and (max-width: 480px) {
+    .check-active {
+      width: 3rem;
+      height: 3rem; } }
 
 .comment-person__active {
   display: -webkit-box;
@@ -2330,8 +2348,12 @@ footer {
 
 @media screen and (max-width: 768px) and (max-height: 700px) and (min-width: 481px) {
   .person-img {
-    width: 3rem;
-    height: 3rem; } }
+    width: 4rem;
+    height: 4rem; } }
+  @media screen and (max-width: 480px) {
+    .person-img {
+      width: 3rem;
+      height: 3rem; } }
 
 .video-container {
   width: 95%;

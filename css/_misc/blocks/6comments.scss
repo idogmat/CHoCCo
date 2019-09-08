@@ -107,9 +107,9 @@ background: #fff;
     }
     @include phones{
         padding: 0;
-        margin-top: 4.8125rem;
-        width: 7.8125rem;
-        height: 7.8125rem;
+        margin-top: 0;
+        width: 38%;
+        height: 35%;
     }
 }
 .comment-info{
@@ -124,6 +124,7 @@ padding: 0;
     }
     @include phones{
         width: 100%;
+        padding: 0;
     }
 }
 .comment-person-title {
@@ -138,6 +139,9 @@ padding: 0;
             padding-top: 1rem;
         }
     }
+    @include phones{
+        padding: 0;
+    }
 }
 .comment-person-info{
     @include tablets{
@@ -147,6 +151,11 @@ padding: 0;
             padding: 0 1rem;
             
         }
+    }
+    @include phones{
+        display: flex;
+    justify-content: center;
+        padding: 0;
     }
 }
 .person-info {
@@ -164,7 +173,7 @@ padding: 1rem 0;
     }
     @include phones{
         width: 100%;
-        padding: 4% 2%;
+        padding: 0;
         
     }
 }
@@ -254,7 +263,7 @@ padding: 1rem 0;
     }
     @include phones{
         padding: 0;
-        margin-top: 0.1rem;
+        margin-top: 0;
     }
 }
 
@@ -268,12 +277,15 @@ padding: 1rem 0;
     overflow: hidden;
     @include tablets{
         @include hmin{
-            width: 3rem;
-            height: 3rem; 
+            width: 4rem;
+            height: 4rem; 
             border: 0.3rem solid #0f5a47;
         }
     }
-
+    @include phones{
+        width: 3rem;
+        height: 3rem;
+    }
 }
 .comment-person__active{
     display: flex;
@@ -288,9 +300,12 @@ padding: 1rem 0;
     height: 5rem;
     @include tablets{
         @include hmin{
-            width: 3rem;
-    height: 3rem;
+            width: 4rem;
+    height: 4rem;
         }
     }
-
+@include phones{
+    width: 3rem;
+    height: 3rem;
+}
 }
