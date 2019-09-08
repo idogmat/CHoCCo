@@ -2,6 +2,9 @@
     position: relative;
 background: #fff;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     
     @include tablets{
         
@@ -47,7 +50,7 @@ background: #fff;
     width: rem(140px);
     height: rem(323px);
     position: absolute;
-    bottom: -50%;
+    bottom: -20rem;
     left: 3.5%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -56,8 +59,12 @@ background: #fff;
     @include tablets{
         width: 9.75rem;
         height: 18.1875rem;
-        bottom: -20%;
+        bottom: -17rem;
+
         left: 3.5%;
+    }
+    @include phones{
+        bottom: -17rem;
     }
 }
 .comment {
@@ -69,8 +76,8 @@ background: #fff;
 .comment-title {
     position: relative;
     text-transform: uppercase;
-    padding-top: rem(60px);
-    padding-bottom: rem(35px);
+    padding-top: 0.75rem;
+    padding-bottom: 1.1875rem;
     margin: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -101,15 +108,15 @@ background: #fff;
         padding: 5.125rem 1.25rem 0 1.125rem;
         @include hmin{
            padding: 0;
-           width: 6rem;
-           height: 6rem;
+           width: 9rem;
+           height: 11rem;
         }
     }
     @include phones{
         padding: 0;
-        margin-top: 4.8125rem;
-        width: 7.8125rem;
-        height: 7.8125rem;
+        margin: 0;
+        width: 35%;
+        height: 35%;
     }
 }
 .comment-info{
@@ -123,6 +130,7 @@ padding: 0;
         }
     }
     @include phones{
+        padding: 0;
         width: 100%;
     }
 }
@@ -138,6 +146,9 @@ padding: 0;
             padding-top: 1rem;
         }
     }
+    @include phones{
+        padding: 0;
+    }
 }
 .comment-person-info{
     @include tablets{
@@ -148,6 +159,11 @@ padding: 0;
             
         }
     }
+@include phones{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
 }
 .person-info {
     margin: 0;
@@ -163,9 +179,7 @@ padding: 1rem 0;
         }
     }
     @include phones{
-        width: 100%;
-        padding: 4% 2%;
-        
+        padding: 0;
     }
 }
 
@@ -258,12 +272,16 @@ padding: 1rem 0;
     overflow: hidden;
     @include tablets{
         @include hmin{
-            width: 3rem;
-            height: 3rem; 
+            width: 4rem;
+            height: 4rem; 
             border: 0.3rem solid #0f5a47;
         }
     }
-
+    @include phones{
+        width: 4rem;
+        height: 4rem; 
+        border: 0.3rem solid #0f5a47;
+    }
 }
 .comment-person__active{
     display: flex;
@@ -275,9 +293,12 @@ padding: 1rem 0;
     height: 5rem;
     @include tablets{
         @include hmin{
-            width: 3rem;
-    height: 3rem;
+            width: 4rem;
+    height: 4rem;
         }
     }
-
+@include phones{
+    width: 4rem;
+    height: 4rem;
+}
 }
