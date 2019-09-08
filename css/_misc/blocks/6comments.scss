@@ -114,8 +114,8 @@ background: #fff;
     }
     @include phones{
         padding: 0;
-        margin: 0;
-        width: 35%;
+        margin-top: 0;
+        width: 38%;
         height: 35%;
     }
 }
@@ -132,6 +132,7 @@ padding: 0;
     @include phones{
         padding: 0;
         width: 100%;
+        padding: 0;
     }
 }
 .comment-person-title {
@@ -159,11 +160,13 @@ padding: 0;
             
         }
     }
-@include phones{
-    align-items: center;
-    display: flex;
+
+    @include phones{
+        display: flex;
     justify-content: center;
-}
+        padding: 0;
+    }
+
 }
 .person-info {
     margin: 0;
@@ -179,7 +182,9 @@ padding: 1rem 0;
         }
     }
     @include phones{
+        width: 100%;
         padding: 0;
+
     }
 }
 
@@ -188,6 +193,9 @@ padding: 1rem 0;
     font-size: rem(18px);
     font-weight: 500;
     color: #666666;
+    @include phones{
+        text-align: end;
+    }
 }
 
 .comment-person {
@@ -208,6 +216,9 @@ padding: 1rem 0;
             justify-content: flex-start;
             background: url(../img/6comments/comments-leaf.png) top right no-repeat,#f8faf9;
         }
+    }
+    @include phones{
+        width: 95%;
     }
 }
 
@@ -260,6 +271,10 @@ padding: 1rem 0;
             margin-top: 0.5rem;
         }
     }
+    @include phones{
+        padding: 0;
+        margin-top: 0;
+    }
 }
 
 .check-active {
@@ -278,15 +293,17 @@ padding: 1rem 0;
         }
     }
     @include phones{
-        width: 4rem;
-        height: 4rem; 
-        border: 0.3rem solid #0f5a47;
+        width: 3rem;
+        height: 3rem;
     }
 }
 .comment-person__active{
     display: flex;
     justify-content: flex-start;
-    
+    @include phones{
+        justify-content: center;
+        width: 95%;
+    }
 }
 .person-img{
     width: 5rem;
