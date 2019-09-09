@@ -1,26 +1,24 @@
-.slider-section{
+.slider-section {
     background: #f8faf9;
     width: 100%;
     display: flex;
     align-items: center;
-    
-    @include tablets{
-        
 
-    }
-    @include phones{
-        
-    }
-    
+    @include tablets {}
+
+    @include phones {}
+
 }
-.slider-container{
-    display:flex;
+
+.slider-container {
+    display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     width: 90%;
 }
-.slider-wrap{
+
+.slider-wrap {
     position: relative;
     width: 100%;
 
@@ -30,48 +28,60 @@
     justify-content: center;
     z-index: 1;
 }
-.slider-obj{
+
+.slider-obj {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.slider-item{
+
+.slider-item {
     width: 100%;
     display: flex;
     position: relative;
     justify-content: center;
-    @include tablets{
+
+    @include tablets {
         flex-direction: column;
         align-items: center;
     }
 }
-.slider-img{
 
-    @include tablets{
+.slider-img {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablets {
         padding: 0;
         display: flex;
-    justify-content: center;
+        justify-content: center;
+        align-items: center;
     }
 }
 
-.chocco-slider-img{
-    width: 80%;
-    height: 80%;
-@include tablets{
-    width: 80%;
-    height: 80%;
-    @include hmin{
-        width: 35%;
+.chocco-slider-img {
+    width: 70%;
+    height: 70%;
+
+    @include tablets {
+        width: 80%;
+        height: 80%;
+
+        @include hmin {
+            width: 35%;
         }
-}
-    @include phones{
+    }
+
+    @include phones {
         width: 35%;
     }
 }
 
-.chocolate-bar{
+.chocolate-bar {
     padding-top: 0.875rem;
     width: 3.75rem;
     height: 4.375rem;
@@ -81,52 +91,73 @@
     fill: #FFF;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        width: 3.75rem;
+        height: 2.375rem;
+
+        @include hmin {
             width: 3rem;
             height: 3rem;
-            }
+        }
     }
-    @include phones{
+
+    @include phones {
         width: 60%;
         height: 70%;
 
     }
 }
-.product-name{
+
+.product-name {
     font-size: 2.25rem;
     font-weight: 700;
     text-transform: uppercase;
     margin: 0;
-    @include tablets{
+    @include phones{
+        font-size: 2rem;
+    }
+
+    @include tablets {
         text-align: center;
         margin: 0 3rem;
         padding-bottom: 2rem;
-            @include hmin{
+
+        @include hmin {
             padding: 0;
-            }
-    
+        }
+
     }
-    @include phones{
+
+    @include phones {
         margin: 0;
         padding: 0;
     }
 
 }
-.what-pluses{
+
+.what-pluses {
     color: #666666;
     font-size: 1.125rem;
     width: 85%;
-    @include tablets{
+
+    @include hmin {
+        margin: 0;
+        padding: 0;
+    }
+
+    @include tablets {
         margin: 0 auto;
         width: 75%;
         text-align: center;
         padding-bottom: 2rem;
-        @include hmin{
+
+        @include hmin {
             padding: 0;
-            }
+        }
     }
-    @include phones{
+
+    @include phones {
         margin: 0 auto;
         width: 100%;
         text-align: center;
@@ -134,89 +165,118 @@
     }
 
 }
-.slider-info{
+
+.slider-info {
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     max-width: 40%;
-    @include tablets{
+
+    @include tablets {
         position: static;
-    justify-content: center;
-    max-width: none;
+        justify-content: center;
+        max-width: none;
     }
 }
-.slider-item-hidden{
+
+.slider-item-hidden {
     display: none;
 }
-.include-chocco{
+
+.include-chocco {
     display: inline-flex;
-    @include tablets{
+
+    @include tablets {
         margin: 0 auto;
     }
 }
-.slider-order{
+
+.slider-order {
     padding-top: 1.875rem;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    @include tablets{
-        margin: 0 auto;
-        @include hmin{
-            padding: 0;
-            }
+
+    @include hmin {
+        margin: 0;
+        padding: 0;
     }
-    @include phones{
+
+    @include tablets {
+        margin: 0 auto;
+
+        @include hmin {
+            padding: 0;
+        }
+    }
+
+    @include phones {
         padding: 0;
     }
 }
-.calories-chocco,.weight-chocco{
+
+.calories-chocco,
+.weight-chocco {
     font-size: 1.125rem;
     padding-right: 3.125rem;
     text-align: start;
-    
+
 }
-.chocco-price{
-    font-size: 3.75rem;;
+
+.chocco-price {
+    font-size: 3.75rem;
     font-weight: 300;
     padding-right: 1rem;
+    @include phones{
+        font-size: 2.75rem;
+
+    }
 }
-.btn-slider{
+
+.btn-slider {
     background: #0b4d3c;
     color: #fff;
     box-shadow: none;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             width: 9rem;
-    height: 2.75rem;
-    padding: .8rem;
+            height: 2.75rem;
+            padding: .8rem;
         }
     }
+    @include phones{
+        width: 9rem;
+        padding: .7rem;
+        height: 2.75rem;
+    }
 }
-.slider-arrow{
+
+.slider-arrow {
     min-width: rem(15px);
     height: rem(30px);
     overflow: hidden;
     position: relative;
     cursor: pointer;
     z-index: 20;
-    @include tablets{
 
-    }
+    @include tablets {}
 }
-.arrow-left{
+
+.arrow-left {
     margin-top: .3rem;
     transform: rotate(180deg);
-    @include tablets{
+
+    @include tablets {
         margin-top: .4rem;
 
     }
 }
-.arrow-right{
 
+.arrow-right {}
 
-}
-.slider-arrow:before{
+.slider-arrow:before {
     content: '';
     position: absolute;
     width: rem(50px);
@@ -226,9 +286,10 @@
     top: rem(-11px);
     left: rem(-50px);
     border-radius: rem(6px);
-    
+
 }
-.slider-arrow:after{
+
+.slider-arrow:after {
     content: '';
     width: rem(30px);
     height: rem(30px);
@@ -236,7 +297,8 @@
     top: 50%;
     left: 50%;
 }
-.item-structure{
+
+.item-structure {
     margin-bottom: 1.875rem;
     width: 5.625rem;
     height: 5.625rem;
@@ -248,36 +310,41 @@
     font-weight: 800;
     color: #FFF;
     cursor: pointer;
-    @include tablets{
-        width: 80%;
-        
-    height: 100%;
+
+    @include tablets {
+        width: 4rem;
+
+        height: 4rem;
     }
 }
-.slider-icon{
+
+.slider-icon {
     position: relative;
-    
-    @include tablets{
-    position: absolute;
-    top: 2rem;
-    right: -3rem;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+
+    @include tablets {
+        position: absolute;
+        top: 2rem;
+        right: -3rem;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
-    @include tablets{
-    @include hmin{
-        top: 4rem;
+
+    @include tablets {
+        @include hmin {
+            top: 4rem;
+        }
     }
-}
-    @include phones{
+
+    @include phones {
         width: 15%;
         height: 12%;
         top: 7%;
         right: -3%;
     }
 }
-.item-structure-block{
+
+.item-structure-block {
     position: absolute;
     display: flex;
     justify-content: center;
@@ -294,36 +361,43 @@
     transform: translate(-50%, -50%);
     border-radius: 1rem;
     box-sizing: border-box;
-    @media screen and(max-width:805px){
+
+    @media screen and(max-width:805px) {
         width: 65%;
         left: 11rem;
         top: 11rem;
     }
-    @include tablets{
+
+    @include tablets {
         top: 9.68rem;
         left: -6.5rem;
         width: 13rem;
-    
+
     }
-    @include phones{
+
+    @include phones {
         top: 9.8rem;
         left: -6.5rem;
     }
 }
-.structure-block-first{
+
+.structure-block-first {
     top: 155%;
     left: 14rem;
-    @include tablets{
+
+    @include tablets {
         top: 11.5rem;
         left: -6.5rem;
     }
-    @include phones{
-        width: 55%;
+
+    @include phones {
+        width: 14rem;
         top: 11.5rem;
-        left: -8.5rem;
+        left: -7.1rem;
     }
 }
-.structure-block-hidden{
+
+.structure-block-hidden {
     visibility: hidden;
     position: absolute;
     left: 1%;
@@ -332,24 +406,26 @@
 
 }
 
-.structure-ingredient{
-    padding:0 1rem;
+.structure-ingredient {
+    padding: 0 1rem;
     padding-top: .3rem;
     display: flex;
     justify-content: space-between;
-    
-    
+
+
 }
 
-.ingredient-svg{
+.ingredient-svg {
     width: 3rem;
     height: 3rem;
 }
+
 //show-hidden
 
-.structure-block-visible{
+.structure-block-visible {
     display: flex;
 }
-.slider-item .item-structure:hover + .item-structure-block{
+
+.slider-item .item-structure:hover+.item-structure-block {
     visibility: visible;
 }

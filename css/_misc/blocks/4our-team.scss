@@ -1,6 +1,5 @@
-
-.our-team:after{
-    content:'';
+.our-team:after {
+    content: '';
     background-image: url(../img/4our-team/team-blueberry.png);
     background-repeat: no-repeat;
     width: 12rem;
@@ -12,71 +11,90 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 0;
-    @include tablets{
+
+    @include hmin {
+        background-size: 100% 100%;
+        width: 12rem;
+        height: 25.5rem;
+        position: absolute;
+        bottom: -2rem;
+        right: -6rem;
+    }
+
+    @include tablets {
         bottom: 26rem;
         right: -6rem;
-        @include hmin{
-            display:none;
+
+        @include hmin {
+            display: none;
         }
     }
-    @include phones{
-display:none;
+
+    @include phones {
+        display: none;
     }
-    
+
 }
-.photo-staff{
+
+.photo-staff {
     width: 70%;
     height: 60%;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             width: 60%;
             height: 50%;
         }
     }
-    @include phones{
-width: 50%;
-    height: 55%;
+
+    @include phones {
+        width: 50%;
+        height: 55%;
     }
 }
-.our-team:before{
-    content:'';
+
+.our-team:before {
+    content: '';
     background-image: url(../img/4our-team/team-raspberry.png);
     background-repeat: no-repeat;
     width: 7.5rem;
     height: 8.125rem;
     position: absolute;
-    bottom: -12%;
+    bottom: -7rem;
     left: 7%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 2;
-    @include tablets{
-        @include hmin{
-            display:none;
+
+    @include tablets {
+        @include hmin {
+            display: none;
         }
     }
-    @include phones{
-        display:none;
+
+    @include phones {
+        display: none;
     }
 }
+
 .our-team {
     position: relative;
     background: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    @include tablets{
-        @include hmin{
-            
-        }
+
+    @include tablets {
+        @include hmin {}
     }
-    @include phones{
+
+    @include phones {
         width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        
+
     }
 }
 
@@ -92,15 +110,18 @@ width: 50%;
     font-size: rem(48px);
     font-weight: 700;
     color: #000;
-    @include tablets{
+
+    @include tablets {
         padding-top: 40px;
         padding-bottom: 50px;
-        @include hmin{
+
+        @include hmin {
             padding: 0;
         }
-        
+
     }
-    @include phones{
+
+    @include phones {
         padding: 0px;
         padding: 0px;
         z-index: 1;
@@ -114,34 +135,45 @@ width: 50%;
     @include tablets{
         flex-flow: row nowrap;
     justify-content: space-around;
-
+    }
     @include hmin{
         justify-content: flex-start;
         flex-flow: row nowrap;
-        height: 60%;
+        justify-content: space-around;
+
+        @include hmin {
+            justify-content: flex-start;
+            flex-flow: row nowrap;
+            height: 60%;
+        }
     }
-    }
-    @include phones{
+
+    @include phones {
+        flex-flow: row wrap;
         padding: 0;
         flex-flow: row wrap;
         
     }
 }
+
 .staff-block {
     display: flex;
-        align-items: center;
+    align-items: center;
     flex-direction: column;
     width: 65%;
     height: 85%;
     list-style: none;
     z-index: 1;
-    @include tablets{
+
+    @include tablets {
         height: rem(440px);
-        @include hmin{
+
+        @include hmin {
             height: 100%;
         }
     }
-    @include phones{
+
+    @include phones {
         width: 50%;
         height: 60%;
     }
@@ -154,12 +186,14 @@ width: 50%;
     font-size: rem(21px);
     font-weight: 500;
     text-align: center;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             font-size: .9rem;
         }
     }
-    @include phones{
+
+    @include phones {
         font-size: .9rem;
     }
 }
@@ -170,7 +204,8 @@ width: 50%;
     font-size: rem(18px);
     font-weight: 400;
     text-align: center;
-    @include phones{
+
+    @include phones {
         padding: 0;
         font-size: .9rem;
 
@@ -183,7 +218,8 @@ width: 50%;
     font-size: rem(18px);
     font-weight: 300;
     text-align: center;
-    @include phones{
+
+    @include phones {
         padding: 0;
         font-size: .9rem;
     }
@@ -196,6 +232,7 @@ width: 50%;
     overflow: hidden;
     align-items: center;
     margin-top: -2rem;
+
 }
 
 .block-team-active {
@@ -205,6 +242,7 @@ width: 50%;
     overflow: visible;
     transition: .5s;
 }
+
 .arrow-hidden {
     &:after {
         content: '';
@@ -217,10 +255,11 @@ width: 50%;
 
     }
 }
-.arrow-active{
-    &:after{
-    content: '';
-    transform: rotate(180deg);
-    transition:.5s;
+
+.arrow-active {
+    &:after {
+        content: '';
+        transform: rotate(180deg);
+        transition: .5s;
     }
 }

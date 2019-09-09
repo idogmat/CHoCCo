@@ -1,22 +1,13 @@
 .wrapper-comment {
     position: relative;
-background: #fff;
+    background: #fff;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
-    @include tablets{
-        
-        
-    }
-    @include phones{
-        
-        
-    }
-    
 }
-.wrapper-comment::after{
+
+.wrapper-comment::after {
     content: '';
     background-image: url(../img/6comments/comment-strawberry.png);
     background-repeat: no-repeat;
@@ -29,21 +20,24 @@ background: #fff;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 0;
-    @include tablets{
+
+    @include tablets {
         top: 6%;
         right: -10%;
         width: 10.375rem;
         height: 6.375rem;
     }
-    @include phones{
+
+    @include phones {
         width: 8.375rem;
-    height: 5.375rem;
+        height: 5.375rem;
         background-size: 40% 40%;
         background-size: 100% 100%;
         right: -12%;
     }
 }
-.wrapper-comment::before{
+
+.wrapper-comment::before {
     content: '';
     background-image: url(../img/6comments/comments-berry.png);
     background-repeat: no-repeat;
@@ -56,22 +50,21 @@ background: #fff;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     z-index: 2;
-    @include tablets{
+
+    @include tablets {
         width: 9.75rem;
         height: 18.1875rem;
         bottom: -17rem;
-
         left: 3.5%;
     }
-    @include phones{
+    @include phones {
         bottom: -17rem;
     }
 }
+
 .comment {
     margin: 0 auto;
-
 }
-
 
 .comment-title {
     position: relative;
@@ -88,86 +81,102 @@ background: #fff;
     font-size: rem(48px);
     font-weight: 700;
     z-index: 1;
-    @include tablets{
+
+    @include tablets {
         padding-bottom: rem(70px);
-        @include hmin{
+
+        @include hmin {
             padding: 0;
             font-size: 2rem;
         }
     }
-    @include phones{
+
+    @include phones {
         padding: 0;
+        font-size: 2rem;
     }
 }
 
 .person-photo {
-    width: rem(288px);
-    height: rem(335px);
-    padding: rem(50px) rem(20px) rem(50px) rem(50px);
-    @include tablets{
+    width: 16rem;
+    height: 17.9375rem;
+    padding: 4.125rem 1.25rem 0 1.125rem;
+
+    @include tablets {
         padding: 5.125rem 1.25rem 0 1.125rem;
-        @include hmin{
-           padding: 0;
-           width: 9rem;
-           height: 11rem;
+        @include hmin {
+            padding: 0;
+            width: 6rem;
+            height: 6rem;
+
         }
     }
-    @include phones{
+
+    @include phones {
         padding: 0;
         margin-top: 0;
         width: 38%;
         height: 35%;
     }
 }
-.comment-info{
-    @include tablets{
+
+.comment-info {
+    @include tablets {
         text-align: center;
         padding-bottom: 2rem;
-        @include hmin{
+
+        @include hmin {
             text-align: start;
-padding: 0;
+            padding: 0;
 
         }
     }
-    @include phones{
-        padding: 0;
+    @include phones {
         width: 100%;
         padding: 0;
     }
 }
+
 .comment-person-title {
     margin: 0;
     padding: rem(65px) 0 0 0;
     font-size: rem(30px);
     font-weight: 500;
     color: #323232;
-    @include tablets{
+
+    @include tablets {
         padding-top: 2rem;
-        @include hmin{
+
+        @include hmin {
             padding-top: 1rem;
         }
     }
-    @include phones{
+
+    @include phones {
         padding: 0;
+        font-size: 1.34rem;
     }
 }
-.comment-person-info{
-    @include tablets{
+
+.comment-person-info {
+    @include tablets {
         margin: auto;
         padding: 0 3rem 0 0;
-        @media screen and (max-width:600px){
+
+        @media screen and (max-width:600px) {
             padding: 0 1rem;
-            
+
         }
     }
+    @include phones {
 
-    @include phones{
         display: flex;
-    justify-content: center;
+        justify-content: center;
         padding: 0;
     }
 
 }
+
 .person-info {
     margin: 0;
     padding: rem(25px) 0;
@@ -175,13 +184,15 @@ padding: 0;
     font-size: rem(18px);
     font-weight: 500;
     color: #666666;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             font-size: 1rem;
-padding: 1rem 0;
+            padding: 1rem 0;
         }
     }
-    @include phones{
+
+    @include phones {
         width: 100%;
         padding: 0;
 
@@ -193,31 +204,35 @@ padding: 1rem 0;
     font-size: rem(18px);
     font-weight: 500;
     color: #666666;
-    @include phones{
+
+    @include phones {
         text-align: end;
     }
 }
 
 .comment-person {
     margin: 0 auto;
-    width:80%;
+    width: 80%;
     display: none;
-    background: url(../img/6comments/comments-leaf.png) top right no-repeat,url(../img/6comments/circle-comm.png) 50% -45px no-repeat,#f8faf9;
-    background-size: auto,auto;
+    background: url(../img/6comments/comments-leaf.png) top right no-repeat, url(../img/6comments/circle-comm.png) 50% -45px no-repeat, #f8faf9;
+    background-size: auto, auto;
     position: relative;
-    @include tablets{
+
+    @include tablets {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         margin: auto;
-        @include hmin{
+
+        @include hmin {
             align-items: start;
             flex-flow: row nowrap;
             justify-content: flex-start;
-            background: url(../img/6comments/comments-leaf.png) top right no-repeat,#f8faf9;
+            background: url(../img/6comments/comments-leaf.png) top right no-repeat, #f8faf9;
         }
     }
-    @include phones{
+
+    @include phones {
         width: 95%;
     }
 }
@@ -266,12 +281,14 @@ padding: 1rem 0;
     -ms-flex-align: center;
     align-items: center;
     margin-top: rem(26px);
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             margin-top: 0.5rem;
         }
     }
-    @include phones{
+
+    @include phones {
         padding: 0;
         margin-top: 0;
     }
@@ -285,37 +302,44 @@ padding: 1rem 0;
     width: rem(80px);
     height: rem(80px);
     overflow: hidden;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             width: 4rem;
-            height: 4rem; 
+            height: 4rem;
             border: 0.3rem solid #0f5a47;
         }
     }
-    @include phones{
+
+    @include phones {
         width: 3rem;
         height: 3rem;
     }
 }
-.comment-person__active{
+
+.comment-person__active {
     display: flex;
     justify-content: flex-start;
-    @include phones{
+
+    @include phones {
         justify-content: center;
         width: 95%;
     }
 }
-.person-img{
+
+.person-img {
     width: 5rem;
     height: 5rem;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             width: 4rem;
-    height: 4rem;
+            height: 4rem;
         }
     }
-@include phones{
-    width: 4rem;
-    height: 4rem;
-}
+    @include phones {
+        width: 3rem;
+        height: 3rem;
+    }
+
 }
