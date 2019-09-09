@@ -518,6 +518,13 @@ footer {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -730,8 +737,12 @@ footer {
   font-size: 3.75rem;
   line-height: 3.75rem;
   font-weight: 700;
-  width: 45rem;
   text-transform: uppercase; }
+  @media screen and (max-height: 550px) {
+    .title {
+      margin: 0;
+      font-size: 3rem;
+      line-height: 1; } }
   @media screen and (max-width: 768px) {
     .title {
       width: 100%;
@@ -797,6 +808,9 @@ footer {
 
 .head-img {
   width: 50%; }
+  @media screen and (max-height: 550px) {
+    .head-img {
+      width: 35%; } }
   @media screen and (max-width: 768px) {
     .head-img {
       width: 100%; } }
@@ -841,7 +855,10 @@ footer {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-  flex-direction: column; }
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .content-promo {
       display: -webkit-box;
@@ -868,7 +885,10 @@ footer {
   font-size: 1.3125rem;
   color: #fff;
   font-weight: 400;
-  width: 21.875rem; }
+  width: 80%; }
+  @media screen and (max-height: 550px) {
+    .content-description {
+      margin: 0; } }
 
 @media screen and (max-width: 768px) and (max-height: 750px) {
   .content-description {
@@ -1302,19 +1322,33 @@ footer {
       -ms-flex-align: center;
       align-items: center; } }
 
-@media screen and (max-width: 768px) {
-  .slider-img {
-    padding: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center; } }
+.slider-img {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media screen and (max-width: 768px) {
+    .slider-img {
+      padding: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; } }
 
 .chocco-slider-img {
-  width: 80%;
-  height: 80%; }
+  width: 70%;
+  height: 70%; }
   @media screen and (max-width: 768px) {
     .chocco-slider-img {
       width: 80%;
@@ -1510,8 +1544,8 @@ footer {
   cursor: pointer; }
   @media screen and (max-width: 768px) {
     .item-structure {
-      width: 80%;
-      height: 100%; } }
+      width: 4rem;
+      height: 4rem; } }
 
 .slider-icon {
   position: relative; }
@@ -1662,7 +1696,7 @@ footer {
   width: 7.5rem;
   height: 8.125rem;
   position: absolute;
-  bottom: -12%;
+  bottom: -7rem;
   left: 7%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1742,8 +1776,8 @@ footer {
     .team-staff {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-      flex-flow: row wrap;
+      -ms-flex-flow: row nowrap;
+      flex-flow: row nowrap;
       -ms-flex-pack: distribute;
       justify-content: space-around; } }
   @media screen and (max-width: 768px) and (max-height: 700px) and (min-width: 481px) {
@@ -1758,6 +1792,10 @@ footer {
       height: 60%; } }
   @media screen and (max-width: 480px) {
     .team-staff {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+      flex-flow: row wrap;
       padding: 0;
       height: 100%; } }
 
@@ -2050,7 +2088,17 @@ footer {
 .wrapper-comment {
   position: relative;
   background: #fff;
-  width: 100%; }
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
 
 .wrapper-comment::after {
   content: '';
@@ -2096,8 +2144,11 @@ footer {
     .wrapper-comment::before {
       width: 9.75rem;
       height: 18.1875rem;
-      bottom: -20%;
+      bottom: -17rem;
       left: 3.5%; } }
+  @media screen and (max-width: 480px) {
+    .wrapper-comment::before {
+      bottom: -17rem; } }
 
 .comment {
   margin: 0 auto; }
@@ -2126,12 +2177,13 @@ footer {
       font-size: 2rem; } }
   @media screen and (max-width: 480px) {
     .comment-title {
-      padding: 0; } }
+      padding: 0;
+      font-size: 2rem; } }
 
 .person-photo {
-  width: 18rem;
-  height: 20.9375rem;
-  padding: 3.125rem 1.25rem 3.125rem 3.125rem; }
+  width: 16rem;
+  height: 17.9375rem;
+  padding: 4.125rem 1.25rem 0 1.125rem; }
   @media screen and (max-width: 768px) {
     .person-photo {
       padding: 5.125rem 1.25rem 0 1.125rem; } }
@@ -2453,6 +2505,9 @@ footer {
   text-transform: uppercase;
   z-index: 1;
   margin: 0; }
+  @media screen and (max-width: 480px) {
+    .order-h2 {
+      font-size: 2rem; } }
 
 .order-form {
   display: -webkit-box;
@@ -2572,6 +2627,9 @@ footer {
   font-style: normal;
   font-size: 1.125rem;
   color: #0f5a47; }
+  @media screen and (max-width: 480px) {
+    .form-text-input {
+      font-size: .875rem; } }
 
 .form-input {
   width: 100%;
@@ -2837,8 +2895,7 @@ footer {
 
 .page-map {
   position: relative;
-  width: 100%;
-  height: 46.875rem; }
+  width: 100%; }
 
 .map-container {
   width: 100%;
@@ -2861,9 +2918,7 @@ footer {
 
 .conteiner-footer {
   width: 95%;
-  max-width: 58.75rem;
   margin: auto;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2876,7 +2931,7 @@ footer {
   flex-direction: row; }
   @media screen and (max-width: 768px) {
     .conteiner-footer {
-      padding: 2rem 3rem 0; } }
+      padding: 1rem 3rem 0; } }
   @media screen and (max-width: 480px) {
     .conteiner-footer {
       width: 100%;

@@ -45,7 +45,7 @@ width: 50%;
     width: 7.5rem;
     height: 8.125rem;
     position: absolute;
-    bottom: -12%;
+    bottom: -7rem;
     left: 7%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -112,7 +112,7 @@ width: 50%;
     justify-content: center;
     height: 60%;
     @include tablets{
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
     justify-content: space-around;
     @include hmin{
         justify-content: flex-start;
@@ -121,6 +121,7 @@ width: 50%;
     }
     }
     @include phones{
+        flex-flow: row wrap;
         padding: 0;
         height: 100%;
     }
@@ -194,6 +195,7 @@ width: 50%;
     overflow: hidden;
     align-items: center;
     margin-top: -2rem;
+    
 }
 
 .block-team-active {

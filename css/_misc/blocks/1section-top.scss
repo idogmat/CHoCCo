@@ -33,8 +33,9 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     justify-content: space-between;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    
     position: relative;
 
     @include tablets {
@@ -235,8 +236,13 @@
     font-size: rem(60px);
     line-height: rem(60px);
     font-weight: 700;
-    width: 45rem;
     text-transform: uppercase;
+    @media screen and( max-height:550px){
+        margin: 0;
+        font-size: 3rem;
+        line-height: 1;
+    }
+    
 
 
     @include tablets {
@@ -290,7 +296,10 @@
 }
 .head-img{
     width: 50%;
-
+    @media screen and( max-height:550px){
+        width: 35%;
+        
+    }
     @include tablets{
         width: 100%;
         @media screen and(max-height:700px) {
@@ -328,6 +337,7 @@ height: 100%;
 .content-promo {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     @include tablets {
         display: flex;
         flex-direction: column;
@@ -343,7 +353,10 @@ height: 100%;
     font-size: rem(21px);
     color: #fff;
     font-weight: 400;
-    width: rem(350px);
+    width:80%;
+    @media screen and( max-height:550px){
+        margin: 0;
+    }
     @include tablets{
         @media screen and (max-height:750px){
             margin-top: 0;

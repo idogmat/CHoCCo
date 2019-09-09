@@ -1,7 +1,6 @@
 .page-map{
     position: relative;
     width: 100%;
-    height: rem(750px);
 
 }
 .map-container{
@@ -23,14 +22,12 @@
 }
 .conteiner-footer{
     width: 95%;
-    max-width: rem(940px);
     margin: auto;
-    height: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     @include tablets{
-        padding: 2rem 3rem 0;
+        padding: 1rem 3rem 0;
     }
     @include phones{
         width: 100%;

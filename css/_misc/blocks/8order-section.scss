@@ -62,19 +62,17 @@
     text-transform: uppercase;
     z-index: 1;
     margin: 0;
-    @include phones{}
+    @include phones{
+        font-size: 2rem;
+    }
 }
 .order-form{
     display: flex;
     
     @include tablets{
-        flex-direction: column;
-        
-        
+        flex-direction: column; 
        }
-       @include phones{
-        
-    }
+
 }
 .form-container{
     display: flex;
@@ -151,6 +149,9 @@
     font-style: normal;
     font-size: rem(18px);
     color: #0f5a47;
+    @include phones{
+        font-size: .875rem;
+    }
 }
 .form-input{
     width: 100%;

@@ -96,7 +96,7 @@ window.addEventListener('DOMContentLoaded', function () {
         accordeonContentPanes = document.querySelectorAll('.menu-accordeon__hidden-box');
     accordeonItem.forEach(function (accordeon) {
         const accordeonTitleRow = accordeon.querySelector('.menu-accordeon__title');
-        // console.log(accordeonTitleRow);
+        
 
         accordeonTitleRow.addEventListener('click', toggleAcordeon);
 
@@ -105,7 +105,7 @@ window.addEventListener('DOMContentLoaded', function () {
     function toggleAcordeon(e) {
         e.preventDefault();
         accordeonContentPanes.forEach(function (content) {
-            // console.log(content.previousElementSibling);
+            
             if (content.previousElementSibling === e.target || content.previousElementSibling.firstChild === e.target) {
                 content.classList.remove('menu-accordeon__hidden-box');
                 content.classList.add('menu-accordeon__visible-box');
@@ -118,7 +118,7 @@ window.addEventListener('DOMContentLoaded', function () {
                 e.preventDefault();
                 content.classList.remove('menu-accordeon__visible-box');
                 content.classList.add('menu-accordeon__hidden-box');
-                // console.log(content);
+                
             }
         });
 

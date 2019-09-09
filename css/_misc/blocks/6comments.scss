@@ -2,16 +2,10 @@
     position: relative;
 background: #fff;
     width: 100%;
-    
-    @include tablets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
         
-        
-    }
-    @include phones{
-        
-        
-    }
-    
 }
 .wrapper-comment::after{
     content: '';
@@ -56,8 +50,11 @@ background: #fff;
     @include tablets{
         width: 9.75rem;
         height: 18.1875rem;
-        bottom: -20%;
+        bottom: -17rem;
         left: 3.5%;
+    }
+    @include phones{
+        bottom: -17rem;
     }
 }
 .comment {
@@ -90,13 +87,14 @@ background: #fff;
     }
     @include phones{
         padding: 0;
+        font-size: 2rem;
     }
 }
 
 .person-photo {
-    width: rem(288px);
-    height: rem(335px);
-    padding: rem(50px) rem(20px) rem(50px) rem(50px);
+    width: 16rem;
+    height: 17.9375rem;
+    padding: 4.125rem 1.25rem 0 1.125rem;
     @include tablets{
         padding: 5.125rem 1.25rem 0 1.125rem;
         @include hmin{
