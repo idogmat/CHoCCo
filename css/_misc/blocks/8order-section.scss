@@ -1,21 +1,23 @@
-.order-section{
+.order-section {
     position: relative;
- background: url(../img/8order-section/order-berry.png) 3% 90% no-repeat,url(../img/8order-section/order-leaf.png) right 80% no-repeat,url(../img/8order-section/order-bg.jpg) no-repeat;
- background-size: auto,auto,cover;
- display: flex;
- flex-direction: column;
- justify-content: center;
- @include tablets{
-    background: url(../img/8order-section/order-bg.jpg) no-repeat;
-    background-size:cover;
-    
- }
- @include phones{
-    width: 100%;
-    
- }
+    background: url(../img/8order-section/order-berry.png) 3% 90% no-repeat, url(../img/8order-section/order-leaf.png) right 80% no-repeat, url(../img/8order-section/order-bg.jpg) no-repeat;
+    background-size: auto, auto, cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablets {
+        background: url(../img/8order-section/order-bg.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    @include phones {
+        width: 100%;
+
+    }
 }
-.order-section::after{
+
+.order-section::after {
     content: "";
     background: url(../img/8order-section/order-blackberry.png);
     position: absolute;
@@ -27,9 +29,10 @@
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    @include tablets{
-    }
-    @include phones{
+
+    @include tablets {}
+
+    @include phones {
         content: "";
         background: url(../img/8order-section/order-blackberry.png);
         background-size: 105%;
@@ -45,7 +48,8 @@
         transform: none;
     }
 }
-.order-page{
+
+.order-page {
     width: 100%;
     margin: auto;
     display: flex;
@@ -54,29 +58,42 @@
     justify-content: center;
     z-index: 1;
 }
-.order-h2{
+
+.order-h2 {
     font-size: rem(48px);
-    color:#0f5a47;
+    color: #0f5a47;
     text-align: center;
     font-weight: 700;
     text-transform: uppercase;
     z-index: 1;
     margin: 0;
-    @include phones{
+
+    @include tablets {
+        font-size: 2rem;
+
+        @include hmin {
+            font-size: 2rem;
+        }
+    }
+
+    @include phones {
         font-size: 2rem;
     }
 }
-.order-form{
+
+.order-form {
     display: flex;
-    
-    @include tablets{
-        flex-direction: column; 
-       }
+
+    @include tablets {
+        flex-direction: column;
+    }
 
 }
-.form-container{
+
+.form-container {
     display: flex;
-    @include tablets{
+
+    @include tablets {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -86,74 +103,94 @@
         margin: 0 auto;
         width: 90%;
         z-index: 2;
-        @include hmin{
+
+        @include hmin {
             padding: 0;
             flex-direction: row;
             -webkit-box-pack: start;
         }
     }
-    @include phones{
+
+    @include phones {
         width: 93%;
         padding: 0;
-     }
+    }
 }
-.form-left{
+
+.form-left {
     display: flex;
     flex-direction: column;
     flex: 1;
     align-self: self-start;
-    @include tablets{
-        @include hmin{
+
+    @include tablets {
+        @include hmin {
             width: 45%;
         }
 
     }
 }
-.form-right{
+
+.form-right {
     margin: 0 2%;
     display: flex;
     flex-direction: column;
     flex: 1;
     align-self: self-start;
-    @include tablets{
+
+    @include tablets {
         width: 100%;
         margin: 0;
-        @include hmin{
+
+        @include hmin {
             width: 45%;
             padding-left: 1%;
         }
     }
 }
-.form-contacts{
+
+.form-contacts {
     display: flex;
     flex: 1;
     margin-bottom: rem(20px);
-    @include phones{
+
+    @include phones {
         margin-bottom: 0.25rem;
     }
 }
-.form-block{
+
+.form-block {
     margin-left: rem(20px);
     display: flex;
     flex: 1;
     flex-direction: column;
-    @include tablets{
-        &:nth-child(1){
+
+    @include tablets {
+        &:nth-child(1) {
             margin: 0;
         }
     }
 }
-.form-text-input{
+
+.form-text-input {
     display: flex;
     font-weight: 400;
     font-style: normal;
     font-size: rem(18px);
     color: #0f5a47;
-    @include phones{
+
+    @include tablets {
+        @include hmin {
+            font-size: .9rem;
+        }
+    }
+
+    @include phones {
         font-size: .875rem;
     }
 }
-.form-input{
+
+.form-input {
     width: 100%;
     height: rem(60px);
     padding: rem(10px);
@@ -162,55 +199,71 @@
     font-size: rem(18px);
     color: #000;
     border: rem(1px) solid transparent;
-    @include tablets{
+
+    @include tablets {
         height: 2.5rem;
         padding: 0 0.625rem;
+
+        @include hmin {
+            height: 2rem;
+        }
     }
-    
+
 }
-.form-comment{
+
+.form-comment {
     margin-bottom: rem(15px);
     height: rem(180px);
     width: rem(460px);
     resize: none;
     border: none;
-    @include tablets{
+
+    @include tablets {
         width: 100%;
-        @include hmin{
+
+        @include hmin {
             height: 6rem;
         }
     }
-    @include phones{
+
+    @include phones {
         height: 5rem;
     }
 }
-.form-radio-box{
+
+.form-radio-box {
     margin-bottom: rem(10px);
     display: flex;
     flex: 1;
-    @include tablets{
+
+    @include tablets {
         box-sizing: border-box;
         justify-content: center;
         padding: 0;
     }
-    @include phones{
+
+    @include phones {
         flex-flow: row wrap;
         margin-bottom: 0.2rem;
     }
 }
-.form-control{
+
+.form-control {
     display: flex;
     align-items: center;
 }
-.form-radio-button{
+
+.form-radio-button {
     display: flex;
     flex: 1;
     margin-right: rem(20px);
-    @include phones{
+
+    @include phones {
         margin-right: 0.25rem;
     }
 }
-.form-hidden{
+
+.form-hidden {
     display: flex;
     width: rem(25px);
     height: rem(25px);
@@ -220,31 +273,37 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    @include phones{
+
+    @include phones {
         width: 1rem;
         height: 1rem;
     }
 }
-.form-text-input{
+
+.form-text-input {
     padding: .14rem 0;
 }
-.form-hidden:before{
+
+.form-hidden:before {
     content: '';
     display: flex;
     width: 0;
     height: 0;
     background-color: #0f5a47;
     border-radius: 50%;
-    
+
 
 }
-.form-radio{
+
+.form-radio {
     display: none;
 }
-.form-checkbox{
+
+.form-checkbox {
     display: none;
 }
-.form-hidden-checkbox{
+
+.form-hidden-checkbox {
     position: relative;
     display: flex;
     width: rem(25px);
@@ -255,48 +314,80 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    
+
 }
-.form-not-call{
+
+.form-not-call {
     margin-bottom: rem(40px);
-    @include tablets{
+
+    @include tablets {
         display: flex;
         justify-content: center;
+
+        @include hmin {
+            margin-bottom: 0.5rem;
+        }
     }
-    @include phones{
+
+    @include phones {
         margin-bottom: 0.5rem;
     }
 }
-.form-buttons{
+
+.form-buttons {
     display: flex;
-    @include tablets{
+
+    @include tablets {
         justify-content: center;
     }
 }
-.btn-order{
+
+.btn-order {
     box-shadow: none;
-    @include phones{
+
+    @include tablets {
+        @include hmin {
+            padding: .7rem;
+            width: 9rem;
+            height: 2.75rem;
+        }
+    }
+
+    @include phones {
         padding: 0.1875rem;
         width: 8rem;
         height: 1.75rem;
     }
 }
-.btn-reset{
-background: 0;
-text-transform: capitalize;
-font-weight: 500;
-box-shadow: none;
-@include phones{
-    padding: 0.1875rem;
-    width: 8rem;
-    height: 1.75rem;
+
+.btn-reset {
+    background: 0;
+    text-transform: capitalize;
+    font-weight: 500;
+    box-shadow: none;
+
+    @include tablets {
+        @include hmin {
+            padding: .7rem;
+            width: 9rem;
+            height: 2.75rem;
+        }
+    }
+
+    @include phones {
+        padding: 0.1875rem;
+        width: 8rem;
+        height: 1.75rem;
+    }
 }
-}
-.form-input:focus,.form-comment:focus{
+
+.form-input:focus,
+.form-comment:focus {
     border: rem(2px) solid #dde3bd;
     outline: 0;
 }
-.form-hidden:before{
+
+.form-hidden:before {
     content: '';
     display: flex;
     width: 0;
@@ -304,12 +395,14 @@ box-shadow: none;
     background-color: #0f5a47;
     border-radius: 50%;
 }
-.form-radio:checked+.form-hidden:before{
-height: rem(10px);
-width: rem(10px);
+
+.form-radio:checked+.form-hidden:before {
+    height: rem(10px);
+    width: rem(10px);
 
 }
-.form-hidden-checkbox:before{
+
+.form-hidden-checkbox:before {
     content: '';
     background-image: url(../img/8order-section/check.png);
     display: flex;
@@ -317,22 +410,25 @@ width: rem(10px);
     height: 0;
     background-color: transparent;
     background-size: cover;
-    
+
 }
-.form-checkbox:checked+.form-hidden-checkbox:before{
+
+.form-checkbox:checked+.form-hidden-checkbox:before {
     width: rem(12px);
     height: rem(11px);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -40%);
-    @include tablets{
+
+    @include tablets {
         width: 0.85rem;
         height: 0.7875rem;
     }
 }
-.good-order__active{
-    background:url(../img/8order-section/order-bg.jpg);
+
+.good-order__active {
+    background: url(../img/8order-section/order-bg.jpg);
     display: flex;
     margin: 0 auto;
     align-items: center;
@@ -347,10 +443,12 @@ width: rem(10px);
     z-index: 10;
     border: 2px solid #317139;
 }
-.good-order{
+
+.good-order {
     display: none;
 }
-.good-order__message{
+
+.good-order__message {
     display: flex;
     justify-content: center;
     text-align: center;
