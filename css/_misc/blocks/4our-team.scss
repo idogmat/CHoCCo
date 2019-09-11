@@ -5,7 +5,7 @@
     width: 12rem;
     height: 37.5rem;
     position: absolute;
-    bottom: 17rem;
+    bottom: 6rem;
     right: -6rem;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -37,19 +37,23 @@
 }
 
 .photo-staff {
-    width: 70%;
-    height: 60%;
-
+    width: 12rem;
+    height: 16rem;
+    object-fit: contain;
+@media screen and(max-width:850px){
+    width: 10rem;
+    height: 13rem;
+}
     @include tablets {
         @include hmin {
-            width: 60%;
-            height: 50%;
+            width: 10rem;
+            height: 13rem;
         }
     }
 
     @include phones {
-        width: 50%;
-        height: 55%;
+        width: 8.9375rem;
+        height: 11.5625rem;
     }
 }
 
@@ -101,7 +105,6 @@
 
 .team-title {
     position: relative;
-    padding-top: 4rem;
     padding-bottom: rem(50px);
     display: flex;
     justify-content: center;
@@ -112,8 +115,7 @@
     color: #000;
 
     @include tablets {
-        padding-top: 40px;
-        padding-bottom: 50px;
+padding:0;
 
         @include hmin {
             padding: 0;
@@ -122,8 +124,7 @@
     }
 
     @include phones {
-        padding: 0px;
-        padding: 0px;
+        padding: 2rem 0;
         z-index: 1;
     }
 }
@@ -131,15 +132,16 @@
 .team-staff {
     display: flex;
     justify-content: center;
-    height: 60%;
+    height: 80%;
+    justify-content: space-between;
 
     @include tablets {
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-around;
 
         @include hmin {
             justify-content: flex-start;
-            flex-flow: row nowrap;
+            flex-flow: row wrap;
             height: 60%;
         }
     }
@@ -155,22 +157,24 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 65%;
-    height: 85%;
+    width: 12rem;
+    padding:0;
+    height: 24rem;
     list-style: none;
     z-index: 1;
 
     @include tablets {
-        height: rem(440px);
+        height: 19rem;
+        width: 13rem;
 
         @include hmin {
-            height: 100%;
+            height: 19rem;
         }
     }
 
     @include phones {
         width: 50%;
-        height: 50%;
+        height: 17rem;
     }
 }
 
@@ -190,6 +194,7 @@
 
     @include phones {
         font-size: .9rem;
+        padding-top: 0.5rem;
     }
 }
 

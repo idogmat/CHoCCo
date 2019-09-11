@@ -1,7 +1,5 @@
-window.addEventListener('DOMContentLoaded', function () {
-
     'use strict';
-
+window.onload = function(){
     //main-menu
 
     var clickMenu = document.querySelectorAll('.mini-menu')[1],
@@ -215,4 +213,4 @@ window.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-});
+};

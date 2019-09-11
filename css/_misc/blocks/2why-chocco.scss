@@ -15,6 +15,7 @@
     }
 
     @include phones {
+        background:  #f8faf9;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -85,6 +86,7 @@
         }
     }
     @include phones{
+        padding-bottom: 1rem;
         margin: 0;
         font-size: 2rem;
     }
@@ -99,11 +101,14 @@
     @include tablets {
         margin: 0 auto;
     }
+    @include phones{
+        padding-bottom: 1rem;
+    }
 }
 
 .features-block {
     position: relative;
-    padding: 0 rem(35px);
+    padding: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -112,7 +117,7 @@
     -ms-flex-flow: row nowrap;
     flex-flow: row nowrap;
     -ms-flex-pack: distribute;
-    justify-content: space-around;
+    justify-content: space-between;
     z-index: 2;
 
     @include tablets {
@@ -142,7 +147,7 @@
     width: rem(69px);
     height: rem(66px);
     top: 5.4375rem;
-    right: 28%;
+    right: 24%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
@@ -161,7 +166,7 @@
     width: rem(69px);
     height: rem(66px);
     top: 5.4375rem;
-    left: 35%;
+    left: 31%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);

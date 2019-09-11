@@ -87,7 +87,7 @@
     z-index: 1;
 
     @include tablets {
-        padding-bottom: rem(70px);
+        padding: 1rem 0;
 
         @include hmin {
             padding: 0;
@@ -96,7 +96,7 @@
     }
 
     @include phones {
-        padding: 0;
+        padding: 2rem 0;
         font-size: 2rem;
     }
 }
@@ -121,13 +121,14 @@
         margin-top: 0;
         width: 38%;
         height: 35%;
+        padding-top: 4rem;
     }
 }
 
 .comment-info {
     @include tablets {
         text-align: center;
-        padding-bottom: 2rem;
+        padding-bottom: 1rem;
 
         @include hmin {
             text-align: start;
@@ -139,6 +140,7 @@
     @include phones {
         width: 100%;
         padding: 0;
+        padding-top: 1rem;
     }
 }
 
@@ -150,7 +152,7 @@
     color: #323232;
 
     @include tablets {
-        padding-top: 2rem;
+        padding-top: 1rem;
 
         @include hmin {
             padding-top: 1rem;
@@ -159,6 +161,7 @@
 
     @include phones {
         padding: 0;
+        padding: 1rem 0;
         font-size: 1.34rem;
     }
 }
@@ -177,7 +180,7 @@
     @include phones {
         display: flex;
         justify-content: center;
-        padding: 0;
+        padding-top:2rem;
     }
 }
 
@@ -216,7 +219,7 @@
 
 .comment-person {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     display: none;
     background: url(../img/6comments/comments-leaf.png) top right no-repeat, url(../img/6comments/circle-comm.png) 50% -45px no-repeat, #f8faf9;
     background-size: auto, auto;
@@ -238,6 +241,7 @@
 
     @include phones {
         width: 95%;
+        background-size: 25% 25%;
     }
 }
 

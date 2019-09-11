@@ -60,6 +60,7 @@
 }
 
 .order-h2 {
+    padding: 4% 0;
     font-size: rem(48px);
     color: #0f5a47;
     text-align: center;
@@ -69,6 +70,7 @@
     margin: 0;
 
     @include tablets {
+        padding: 0;
         font-size: 2rem;
 
         @include hmin {
@@ -77,6 +79,7 @@
     }
 
     @include phones {
+        padding-bottom: 1rem;
         font-size: 2rem;
     }
 }
@@ -92,6 +95,9 @@
 
 .form-container {
     display: flex;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 
     @include tablets {
         -webkit-box-orient: vertical;
@@ -125,14 +131,15 @@
 
     @include tablets {
         @include hmin {
-            width: 45%;
+            
         }
 
     }
 }
 
 .form-right {
-    margin: 0 2%;
+    margin: 0;
+    margin-left: 1rem;
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -143,8 +150,7 @@
         margin: 0;
 
         @include hmin {
-            width: 45%;
-            padding-left: 1%;
+
         }
     }
 }
@@ -214,7 +220,7 @@
 .form-comment {
     margin-bottom: rem(15px);
     height: rem(180px);
-    width: rem(460px);
+    width: 100%;
     resize: none;
     border: none;
 
@@ -244,7 +250,7 @@
 
     @include phones {
         flex-flow: row wrap;
-        margin-bottom: 0.2rem;
+        margin-bottom: 1.2rem;
     }
 }
 
@@ -340,10 +346,15 @@
     @include tablets {
         justify-content: center;
     }
+    @include phones{
+        padding-top: 1rem;
+    }
 }
 
 .btn-order {
     box-shadow: none;
+    background: #2f7060;
+    color: #fff;
 
     @include tablets {
         @include hmin {
@@ -353,11 +364,11 @@
         }
     }
 
-    @include phones {
-        padding: 0.1875rem;
-        width: 8rem;
-        height: 1.75rem;
-    }
+    // @include phones {
+    //     padding: 0.1875rem;
+    //     width: 8rem;
+    //     height: 1.75rem;
+    // }
 }
 
 .btn-reset {
@@ -374,11 +385,11 @@
         }
     }
 
-    @include phones {
-        padding: 0.1875rem;
-        width: 8rem;
-        height: 1.75rem;
-    }
+    // @include phones {
+    //     padding: 0.1875rem;
+    //     width: 8rem;
+    //     height: 1.75rem;
+    // }
 }
 
 .form-input:focus,

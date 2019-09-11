@@ -86,3 +86,16 @@ footer {
         }
     }
 }
+.container {
+    width: 95%;
+    max-width: 1100px;
+    margin:0 auto;
+    display: flex;
+    flex-direction: column;
+
+
+    @include tablets {
+        padding: 0;
+        background: transparent;
+    }
+}
