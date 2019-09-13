@@ -1,0 +1,301 @@
+.why-chocco {
+    position: relative;
+    background: url(/dist/img/2why-chocco/why-leaf.png), #f8faf9;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    @include phones {
+        background:  #f8faf9;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+}
+
+.why-chocco:after {
+    content: '';
+    position: absolute;
+    background-image: url(/dist/img/2why-chocco/why-raspberry.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 11rem;
+    height: 14rem;
+    top: 95%;
+    left: 5rem;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    @include tablets {
+        height: 20.6875rem;
+
+        @include hmin {
+            display: none;
+        }
+    }
+
+    @include phones {
+        display: none;
+    }
+
+}
+
+.why-chocco__title {
+    padding-top: rem(100px);
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding-bottom: 4.125rem;
+    z-index: 2;
+
+    @include hmin {
+        padding: 0;
+    }
+
+    @include tablets {
+        padding: 0;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.why-chocco__title__h2 {
+    margin: rem(10px) 0;
+    color: #000;
+    text-transform: uppercase;
+    font-size: rem(48px);
+    font-weight: 700;
+
+    @include tablets {
+        @include hmin {
+            padding: 0;
+        }
+    }
+    @include phones{
+        padding-bottom: 1rem;
+        margin: 0;
+        font-size: 2rem;
+    }
+}
+
+.why-chocco__title__text {
+    font-size: rem(18px);
+    color: #666666;
+    margin: 0;
+    margin: 0 auto;
+
+    @include tablets {
+        margin: 0 auto;
+    }
+    @include phones{
+        padding-bottom: 1rem;
+    }
+}
+
+.features-block {
+    position: relative;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-between;
+    z-index: 2;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+
+        @include hmin {
+            padding: 0;
+
+
+        }
+    }
+
+    @include phones {
+        padding: 0;
+        align-items: flex-start;
+    }
+
+}
+
+.features-block:after {
+    content: url(/dist/img/2why-chocco/circle3.png);
+    position: absolute;
+    width: rem(69px);
+    height: rem(66px);
+    top: 5.4375rem;
+    right: 24%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include tablets {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
+
+.features-block::before {
+    content: url(/dist/img/2why-chocco/circle3.png);
+    position: absolute;
+    width: rem(69px);
+    height: rem(66px);
+    top: 5.4375rem;
+    left: 31%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include tablets {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
+
+.features-class {
+    position: relative;
+    width: rem(285px);
+
+    @include tablets {
+        width: 85%;
+        justify-content: center;
+
+        @include hmin {
+            display: inline-flex;
+        }
+    }
+
+    @include phones {
+        display: inline-flex;
+        margin: 0;
+        width: 100%;
+        padding: 1% 0;
+    }
+
+
+}
+
+.features-info {
+    font-weight: 300;
+}
+
+.features-text {
+    @include phones {
+        padding-left: 1rem;
+    }
+}
+
+
+.features-text-h3 {
+    margin: 0;
+    color: #000;
+    font-size: rem(27px);
+    text-align: center;
+    font-weight: 700;
+
+    @include tablets {
+        @include hmin {
+            text-align: start;
+        }
+    }
+
+    @include phones {
+        text-align: start;
+    }
+}
+
+.features-info {
+    color: #666666;
+    font-size: rem(18px);
+    text-align: center;
+
+    @include tablets {
+        width: 72%;
+        margin: 0 auto;
+
+        @include hmin {
+            width: 100%;
+            text-align: start;
+        }
+    }
+
+    @include phones {
+        width: 100%;
+        text-align: start;
+    }
+}
+
+.features-icon-bg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative;
+    background: #f2f5f4;
+    width: 7.8125rem;
+    height: 7.8125rem;
+    border-radius: 50%;
+
+    @include tablets {
+        width: 6.8125rem;
+        height: 6.8125rem;
+
+        @include hmin {
+            width: 4.8125rem;
+            height: 4.8125rem;
+        }
+
+    }
+
+    @include phones {
+        width: 5.8125rem;
+        height: 5.8125rem;
+        border-radius: 50%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.features-icon {
+
+    fill: #f2f5f4;
+    stroke: #000;
+    width: 4.3125rem;
+    height: 4.3125rem;
+
+    @include tablets {
+        @include hmin {
+            width: 3.3125rem;
+            height: 3.3125rem;
+        }
+
+    }
+}

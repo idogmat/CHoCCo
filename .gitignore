@@ -2,3 +2,4 @@
 .vscode/settings.json
 
 /prepros-6.config
+node_modules

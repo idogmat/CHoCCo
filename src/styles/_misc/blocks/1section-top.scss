@@ -1,0 +1,456 @@
+.section-top {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: url(/dist/img/1section-top/bg-leaf.png) 100%, #61c4d9;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;
+
+    @include tablets {
+        margin: 0;
+        padding: 0;
+        background: url(/dist/img/1section-top/bg-leaf.png) 100%, #61c4d9;
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+        background-size: 100% 61%;
+    }
+
+    @include phones {
+        background: url(/dist/img/1section-top/bg-leaf.png) 100%, #61c4d9;
+        background-repeat: no-repeat;
+        background-position: 100% 0%;
+        background-size: 100% 61%;
+    }
+}
+
+.header-menu {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    @include tablets {
+        padding: 0;
+
+    }
+}
+
+.menu {
+    padding-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablets {}
+}
+
+.menu-list {
+    padding: 0;
+    display: inline-flex;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.mini-menu {
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: .625rem;
+        z-index: 1000;
+        position: absolute;
+        top: 20px;
+        right: 0;
+    }
+}
+
+.mini-menu-row {
+    @include tablets {
+        display: flex;
+        height: .25rem;
+        background-color: #fff;
+        border-radius: .125rem;
+        transition: .5s;
+        top: 0;
+    }
+}
+
+//mini-menu
+
+.menu-tablet {
+
+    display: none;
+
+    @include tablets {
+        position: fixed;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 1001;
+        width: 100%;
+        height: 100%;
+        background: #2f3234;
+        justify-content: center;
+        transition: .5s;
+    }
+}
+
+.menu-tablet-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu-tablet-item {
+    padding: 1rem;
+}
+
+.menu-tablet-link {
+    font-size: 2.125rem;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.mini-menu-x {
+    z-index: 1001;
+}
+
+.mini-menu-cross {
+    @include tablets {
+        display: flex;
+        height: .25rem;
+        background-color: #fff;
+        border-radius: .125rem;
+        transition: .5s;
+        top: 0;
+
+        &:nth-child(1) {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            transform: rotate(-135deg);
+            width: 100%;
+        }
+
+        &:nth-child(2) {
+            position: absolute;
+            top: -20px;
+            opacity: 0;
+            width: 100%;
+        }
+
+        &:nth-child(3) {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            transform: rotate(135deg);
+            width: 100%;
+        }
+    }
+}
+
+//
+.menu-item {
+    list-style: none;
+
+}
+
+.logo-cho {
+    padding: rem(7px) 0;
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Museosans', Arial, sans-serif;
+    font-size: 1.5rem;
+
+    @include tablets {
+        top: 1rem;
+        position: absolute;
+        padding-left: 2rem;
+    }
+}
+
+.phone-number {
+    padding: rem(12px) 0 0 rem(10px);
+    text-decoration: none;
+    color: #fff;
+    font-size: rem(24px);
+    line-height: rem(30px);
+    text-align: center;
+
+    &::before {
+        padding: rem(8px);
+        content: url(/dist/img/1section-top/phone.png);
+    }
+
+    @media screen and (max-width:940px) {
+        display: none;
+    }
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu-link {
+    padding: 0;
+    padding-left: 1rem;
+    text-decoration: none;
+    font-size: 1.125rem;
+    line-height: 1.875rem;
+    text-align: center;
+    color: #fff;
+
+}
+
+.menu-item:nth-child(1) .menu-link {
+    padding: 0;
+}
+
+.title {
+    position: relative;
+    color: #fff;
+    font-size: rem(60px);
+    line-height: rem(60px);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media screen and(max-height:550px) {
+        margin: 0;
+        font-size: 3rem;
+        line-height: 1;
+    }
+
+
+
+    @include tablets {
+        width: 100%;
+        display: flex;
+        text-align: center;
+        margin: 0;
+        justify-content: center;
+
+        @media screen and(max-height: 750px) {
+            font-size: 2.5rem;
+            line-height: 1;
+            margin: 0;
+            width: 100%;
+        }
+
+    }
+
+    @include phones {
+        margin: 0;
+        font-size: 3.3rem;
+
+        @media screen and(max-height: 570px) {
+            font-size: 1.9rem;
+        }
+    }
+}
+
+.head-info-img {
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+
+    @include tablets {
+        flex-direction: column-reverse;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+}
+
+.content {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    
+
+    @include tablets {
+        width: 100%;
+        height: 65%;
+    }
+}
+
+.head-img {
+    width: 50%;
+
+    @media screen and(max-height:550px) {
+        width: 35%;
+
+    }
+
+    @include tablets {
+        width: 100%;
+
+        @media screen and(max-height:700px) {
+            height: 40%;
+        }
+    }
+
+    @include phones {
+        width: 100%;
+        height: 40%;
+    }
+}
+
+.head-img-cho {
+    width: 100%;
+    height: 100%;
+
+    @include tablets {
+        width: 50%;
+        height: 85%;
+        align-items: center;
+        margin: auto;
+        display: flex;
+
+        @media screen and(max-height:700px) {
+            width: 35%;
+            height: 95%;
+        }
+
+    }
+
+    @include phones {
+        width: 50%;
+        height: 85%;
+        display: flex;
+
+    }
+}
+
+.content-promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+.content-description {
+    display: flex;
+    flex-direction: column;
+    font-size: rem(21px);
+    color: #fff;
+    font-weight: 400;
+    width: 80%;
+
+    @media screen and(max-height:550px) {
+        margin: 0;
+    }
+
+    @include tablets {
+        @media screen and (max-height:750px) {
+            margin-top: 0;
+            width: 100%;
+        }
+    }
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.block-marketing-pluses {
+    width: rem(470px);
+    padding-bottom: 2rem;
+
+    @include tablets {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0;
+        width: 70%;
+    }
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+.marketing-pluses {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    list-style: none;
+    width: 90%;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 5rem;
+        height: 7rem;
+        left: -2rem;
+        bottom: -3rem;
+        background: url(/dist/img/1section-top/mini-leaf.png) 100% 39%;
+        background-repeat: no-repeat;
+
+        @include tablets {
+            visibility: hidden;
+        }
+
+    }
+
+    @include phones {
+        width: 100%;
+    }
+}
+
+
+.marketing-plus {
+    padding-left: 12%;
+    position: relative;
+    color: #fff;
+    @include tablets{
+        padding-left: 15%;
+    }
+}
+
+.leaf,
+.transport,
+.weight {
+    position: absolute;
+    top: rem(23px);
+    left: rem(25px);
+    width: rem(43px);
+    height: rem(43px);
+    fill: transparent;
+    stroke: #b0f7ff;
+    transform: translate(-50%, -50%);
+}

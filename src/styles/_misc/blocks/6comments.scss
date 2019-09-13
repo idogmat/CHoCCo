@@ -1,0 +1,353 @@
+.wrapper-comment {
+    position: relative;
+    background: #fff;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.wrapper-comment::after {
+    content: '';
+    background-image: url(/dist/img/6comments/comment-strawberry.png);
+    background-repeat: no-repeat;
+    width: rem(150px);
+    height: rem(86px);
+    position: absolute;
+    top: 11%;
+    right: 0%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 0;
+
+    @include tablets {
+        top: 6%;
+        right: -10%;
+        width: 10.375rem;
+        height: 6.375rem;
+    }
+
+    @include phones {
+        width: 8.375rem;
+        height: 5.375rem;
+        background-size: 40% 40%;
+        background-size: 100% 100%;
+        right: -12%;
+    }
+}
+
+.wrapper-comment::before {
+    content: '';
+    background-image: url(/dist/img/6comments/comments-berry.png);
+    background-repeat: no-repeat;
+    width: rem(140px);
+    height: rem(323px);
+    position: absolute;
+    bottom: -50%;
+    left: 3.5%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    @include tablets {
+        width: 9.75rem;
+        height: 18.1875rem;
+        bottom: -17rem;
+        left: 3.5%;
+    }
+
+    @include phones {
+        bottom: -17rem;
+    }
+}
+
+.comment {
+    margin: 0 auto;
+
+}
+
+
+.comment-title {
+    position: relative;
+    text-transform: uppercase;
+    padding-top: rem(60px);
+    padding-bottom: rem(35px);
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: rem(48px);
+    font-weight: 700;
+    z-index: 1;
+
+    @include tablets {
+        padding: 1rem 0;
+
+        @include hmin {
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+
+    @include phones {
+        padding: 2rem 0;
+        font-size: 2rem;
+    }
+}
+
+.person-photo {
+    width: 16rem;
+    height: 17.9375rem;
+    padding: 4.125rem 1.25rem 0 1.125rem;
+
+    @include tablets {
+        padding: 5.125rem 1.25rem 0 1.125rem;
+
+        @include hmin {
+            padding: 0;
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    @include phones {
+        padding: 0;
+        margin-top: 0;
+        width: 38%;
+        height: 35%;
+        padding-top: 4rem;
+    }
+}
+
+.comment-info {
+    @include tablets {
+        text-align: center;
+        padding-bottom: 1rem;
+
+        @include hmin {
+            text-align: start;
+            padding: 0;
+
+        }
+    }
+
+    @include phones {
+        width: 100%;
+        padding: 0;
+        padding-top: 1rem;
+    }
+}
+
+.comment-person-title {
+    margin: 0;
+    padding: rem(65px) 0 0 0;
+    font-size: rem(30px);
+    font-weight: 500;
+    color: #323232;
+
+    @include tablets {
+        padding-top: 1rem;
+
+        @include hmin {
+            padding-top: 1rem;
+        }
+    }
+
+    @include phones {
+        padding: 0;
+        padding: 1rem 0;
+        font-size: 1.34rem;
+    }
+}
+
+.comment-person-info {
+    @include tablets {
+        margin: auto;
+        padding: 0 3rem 0 0;
+
+        @media screen and (max-width:600px) {
+            padding: 0 1rem;
+
+        }
+    }
+
+    @include phones {
+        display: flex;
+        justify-content: center;
+        padding-top:2rem;
+    }
+}
+
+.person-info {
+    margin: 0;
+    padding: rem(25px) 0;
+    padding-right: 1rem;
+    font-size: rem(18px);
+    font-weight: 500;
+    color: #666666;
+
+    @include tablets {
+        @include hmin {
+            font-size: 1rem;
+            padding: 1rem 0;
+        }
+    }
+
+    @include phones {
+        width: 100%;
+        padding: 0;
+
+    }
+}
+
+.person-name {
+    margin: rem(5px) 0;
+    font-size: rem(18px);
+    font-weight: 500;
+    color: #666666;
+
+    @include phones {
+        text-align: end;
+    }
+}
+
+.comment-person {
+    margin: 0 auto;
+    width: 100%;
+    display: none;
+    background: url(/dist/img/6comments/comments-leaf.png) top right no-repeat, url(/dist/img/6comments/circle-comm.png) 50% -45px no-repeat, #f8faf9;
+    background-size: auto, auto;
+    position: relative;
+
+    @include tablets {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+
+        @include hmin {
+            align-items: start;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            background: url(/dist/img/6comments/comments-leaf.png) top right no-repeat, #f8faf9;
+        }
+    }
+
+    @include phones {
+        width: 95%;
+        background-size: 25% 25%;
+    }
+}
+
+.person-check {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: rem(1px);
+    z-index: 2;
+    width: rem(80px);
+    height: rem(80px);
+}
+
+.check-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.check-persons {
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: rem(26px);
+
+    @include tablets {
+        @include hmin {
+            margin-top: 0.5rem;
+        }
+    }
+
+    @include phones {
+        padding: 0;
+        margin-top: 0;
+    }
+}
+
+.check-active {
+    border: rem(6px) solid #0f5a47;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 50%;
+    width: rem(80px);
+    height: rem(80px);
+    overflow: hidden;
+
+    @include tablets {
+        @include hmin {
+            width: 4rem;
+            height: 4rem;
+            border: 0.3rem solid #0f5a47;
+        }
+    }
+
+    @include phones {
+        width: 3rem;
+        height: 3rem;
+    }
+}
+
+.comment-person__active {
+    display: flex;
+    justify-content: flex-start;
+
+    @include phones {
+        justify-content: center;
+        width: 95%;
+    }
+}
+
+.person-img {
+    width: 5rem;
+    height: 5rem;
+
+    @include tablets {
+        @include hmin {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+    @include phones {
+        width: 3rem;
+        height: 3rem;
+    }
+}
