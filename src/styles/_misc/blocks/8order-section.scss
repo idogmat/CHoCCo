@@ -7,7 +7,7 @@
     justify-content: center;
 
     @include tablets {
-        background-image: url(/dist/img/8order-section/order-bg.jpg) no-repeat;
+        background: url(/dist/img/8order-section/order-bg.jpg) no-repeat;
         background-size: cover;
     }
 
@@ -30,7 +30,9 @@
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 
-    @include tablets {}
+    @include tablets {
+        
+    }
 
     @include phones {
         content: "";
@@ -96,7 +98,7 @@
 .form-container {
     display: flex;
     width: 90%;
-    max-width: 1100px;
+    max-width: 68.75rem;
     margin: 0 auto;
 
     @include tablets {

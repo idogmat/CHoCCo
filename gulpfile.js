@@ -28,12 +28,12 @@ sass.compiler = require("node-sass");
 
 
 task("clean", () => {
-    console.log(env);
-    return src("${DIST_PATH}/**/*", {read: false}).pipe(rm());
-});
+    // console.log(env);
+    return src(`${DIST_PATH}/**/*`, {read: false}).pipe(rm());
+})
 
 task("copy:html", () => {
-    return src("${SRC_PATH}/*.html")
+    return src(`${SRC_PATH}/*.html`)
         .pipe(dest(DIST_PATH))
         .pipe(reload({
             stream: true
@@ -41,13 +41,16 @@ task("copy:html", () => {
 });
 
 task("copy:img", () => {
-    return src("${SRC_PATH}/img/**/*")
+    return src(`${SRC_PATH}/img/**/*`)
     .pipe(dest("dist/img/"))
 });
-
+task("copy:video", () => {
+    return src(`${SRC_PATH}/video/*.mp4`)
+    .pipe(dest("dist/video/"))
+});
 task("icons", () =>{
-    return src("${SRC_PATH}/*.svg")
-.pipe(dest("dist/"));
+    return src(`${SRC_PATH}/sprite.svg`)
+.pipe(dest("dist"));
 
 });
 task("styles", () => {
@@ -98,7 +101,7 @@ watch("./src/*.svg", series("icons"));
 task("default",
  series(
    "clean",
-   parallel("copy:html","copy:img", "styles", "scripts", "icons"),
+   parallel("icons","copy:html","copy:img","copy:video", "styles", "scripts"),
    parallel("watch", "server")
  )
 );
@@ -106,5 +109,5 @@ task("default",
 task("build",
  series(
    "clean",
-   parallel("copy:html", "styles", "scripts", "icons","copy:img"))
+   parallel("icons","copy:html", "styles", "copy:video", "scripts","copy:img"))
 );
