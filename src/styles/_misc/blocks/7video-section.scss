@@ -8,7 +8,7 @@
     z-index: 5;
     &:before{
         content: '';
-        background: url(/dist/img/7video-section/videoleaf-r.png) no-repeat;
+        background: url(./img/7video-section/videoleaf-r.png) no-repeat;
         position: absolute;
         right: 3%;
         top: 3%;
@@ -20,7 +20,7 @@
     }
     &:after{
         content: '';
-        background: url(/dist/img/7video-section/videoleaf-l.png) no-repeat;
+        background: url(./img/7video-section/videoleaf-l.png) no-repeat;
         position: absolute;
         left: 2%;
         bottom: 2%;

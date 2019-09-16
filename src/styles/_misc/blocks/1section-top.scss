@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: url(/dist/img/1section-top/bg-leaf.png) 100%, #61c4d9;
+    background: url(./img/1section-top/bg-leaf.png) 100%, #61c4d9;
     background-size: contain;
     background-repeat: no-repeat;
     -webkit-box-sizing: border-box;
@@ -13,14 +13,14 @@
     @include tablets {
         margin: 0;
         padding: 0;
-        background: url(/dist/img/1section-top/bg-leaf.png) 100%, #61c4d9;
+        background: url(./img/1section-top/bg-leaf.png) 100%, #61c4d9;
         background-repeat: no-repeat;
         background-position: 100% 0%;
         background-size: 100% 61%;
     }
 
     @include phones {
-        background: url(/dist/img/1section-top/bg-leaf.png) 100%, #61c4d9;
+        background: url(./img/1section-top/bg-leaf.png) 100%, #61c4d9;
         background-repeat: no-repeat;
         background-position: 100% 0%;
         background-size: 100% 61%;
@@ -195,7 +195,7 @@
 
     &::before {
         padding: rem(8px);
-        content: url(/dist/img/1section-top/phone.png);
+        content: url(./img/1section-top/phone.png);
     }
 
     @media screen and (max-width:940px) {
@@ -418,7 +418,7 @@
         height: 7rem;
         left: -2rem;
         bottom: -3rem;
-        background: url(/dist/img/1section-top/mini-leaf.png) 100% 39%;
+        background: url(./img/1section-top/mini-leaf.png) 100% 39%;
         background-repeat: no-repeat;
 
         @include tablets {

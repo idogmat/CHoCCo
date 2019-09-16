@@ -1,13 +1,13 @@
 .order-section {
     position: relative;
-    background: url(/dist/img/8order-section/order-berry.png) 3% 90% no-repeat, url(/dist/img/8order-section/order-leaf.png) right 80% no-repeat, url(/dist/img/8order-section/order-bg.jpg) no-repeat;
+    background: url(./img/8order-section/order-berry.png) 3% 90% no-repeat, url(./img/8order-section/order-leaf.png) right 80% no-repeat, url(./img/8order-section/order-bg.jpg) no-repeat;
     background-size: auto, auto, cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
 
     @include tablets {
-        background: url(/dist/img/8order-section/order-bg.jpg) no-repeat;
+        background: url(./img/8order-section/order-bg.jpg) no-repeat;
         background-size: cover;
     }
 
@@ -19,7 +19,7 @@
 
 .order-section::after {
     content: "";
-    background-image: url(/dist/img/8order-section/order-blackberry.png);
+    background-image: url(./img/8order-section/order-blackberry.png);
     position: absolute;
     right: -6rem;
     top: -1rem;
@@ -36,7 +36,7 @@
 
     @include phones {
         content: "";
-        background-image: url(/dist/img/8order-section/order-blackberry.png);
+        background-image: url(./img/8order-section/order-blackberry.png);
         background-size: 105%;
         background-repeat: no-repeat;
         position: absolute;
@@ -417,7 +417,7 @@
 
 .form-hidden-checkbox:before {
     content: '';
-    background-image: url(/dist/img/8order-section/check.png);
+    background-image: url(./img/8order-section/check.png);
     display: flex;
     width: 0;
     height: 0;
@@ -441,7 +441,7 @@
 }
 
 .good-order__active {
-    background: url(/dist/img/8order-section/order-bg.jpg);
+    background: url(./img/8order-section/order-bg.jpg);
     display: flex;
     margin: 0 auto;
     align-items: center;
