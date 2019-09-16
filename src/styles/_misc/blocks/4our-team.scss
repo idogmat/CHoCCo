@@ -134,6 +134,7 @@ padding:0;
     justify-content: center;
     height: 80%;
     justify-content: space-between;
+    align-items: center;
 
     @include tablets {
         flex-flow: row wrap;

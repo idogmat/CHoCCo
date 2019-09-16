@@ -101,13 +101,13 @@ watch("./src/*.svg", series("icons"));
 task("default",
  series(
    "clean",
-   parallel("icons","copy:html","copy:img", "styles", "scripts"),
-   parallel("watch", "server")
+   parallel("icons","copy:img","copy:html","styles","scripts"),
+   parallel("watch","server")
  )
 );
  
 task("build",
  series(
    "clean",
-   parallel("icons","copy:html", "styles", "scripts","copy:img"))
+   parallel("icons","copy:img","copy:html","styles","scripts"))
 );
