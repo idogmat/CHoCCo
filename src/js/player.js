@@ -62,6 +62,37 @@ const eventsInit = () => {
     player.playVideo();
   });
 };
+// volume
+$(".video__volume-progress").on("click", e => {
+  const vol = $(e.currentTarget);
+  const volPosition = e.pageX - vol.offset().left;
+  const volPercent = Math.ceil((volPosition / vol.width()) * 100);
+  console.log(volPercent);
+  $(".video__volume-current").css({
+    left: `${volPercent}%`
+
+  
+  });
+  player.setVolume(volPercent);
+});
+
+$(".volume-icon-btn").on("click", e => {
+
+  const volIcon = $(".volume-icon");
+
+  if (volIcon.hasClass("stop")) {
+    player.setVolume(0);
+    volIcon.removeClass("stop");
+
+  } else {
+    player.setVolume(100);
+    volIcon.addClass("stop");
+  
+    }
+});
+  
+
+
 
 const onPlayerStateChange = event => {
   const playerButton = $(".player__start");
@@ -74,31 +105,21 @@ const onPlayerStateChange = event => {
   5 (видео подают реплики).
    */
   switch (event.data) {
-    case 1: 
+    case 1:
       $('.player__wrapper').addClass('active');
       playerButton.addClass("paused");
       break;
-    case 2: 
+    case 2:
       playerButton.removeClass("paused");
       break;
   }
 };
 
-function currentMove () {
-  // console.log(video.volume * 100 + '%');
-   videoCurrent.style.width = video.currentTime*100/video.duration + '%';
-   $('.video__volume-current').width(video.volume * 100 + '%');
-}
-$('.video__total').on('click', function(e) {
-  var x = (e.pageX - this.offsetLeft)/$(this).width();
-  video.currentTime = x * video.duration;
-})
-
 function onYouTubeIframeAPIReady() {
   player = new YT.Player("yt-player", {
     height: "405",
     width: "660",
-    videoId: "xdusvmwJwWo",
+    videoId: "ME7xegzmZ0M",
     events: {
       onReady: onPlayerReady,
       onStateChange: onPlayerStateChange

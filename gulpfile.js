@@ -44,10 +44,10 @@ task("copy:img", () => {
     return src(`${SRC_PATH}/img/**/*`)
     .pipe(dest("dist/img/"))
 });
-task("copy:video", () => {
-    return src(`${SRC_PATH}/video/*.mp4`)
-    .pipe(dest("dist/video/"))
-});
+// task("copy:video", () => {
+//     return src(`${SRC_PATH}/video/*.mp4`)
+//     .pipe(dest("dist/video/"))
+// });
 task("icons", () =>{
     return src(`${SRC_PATH}/sprite.svg`)
 .pipe(dest("dist"));
@@ -101,7 +101,7 @@ watch("./src/*.svg", series("icons"));
 task("default",
  series(
    "clean",
-   parallel("icons","copy:html","copy:img","copy:video", "styles", "scripts"),
+   parallel("icons","copy:html","copy:img", "styles", "scripts"),
    parallel("watch", "server")
  )
 );
@@ -109,5 +109,5 @@ task("default",
 task("build",
  series(
    "clean",
-   parallel("icons","copy:html", "styles", "copy:video", "scripts","copy:img"))
+   parallel("icons","copy:html", "styles", "scripts","copy:img"))
 );
