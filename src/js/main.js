@@ -7,8 +7,8 @@ let inscroll = false;
 const md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
-const countPositon = sectionEq =>{
-return `${sectionEq * -100}%`;
+const countPositon = sectionEq => {
+    return `${sectionEq * -100}%`;
 }
 
 const switchActiveClass = (elems, elemEq) => {
@@ -20,27 +20,31 @@ const unBlockScroll = () => {
     const touchScrollInertionTime = 300;
     setTimeout(() => {
         inscroll = false
-    },transitionDuration + touchScrollInertionTime);
+    }, transitionDuration + touchScrollInertionTime);
 }
 
 const performTransition = sectionEq => {
     if (inscroll) return;
 
-        inscroll = true;
-        const position = countPositon(sectionEq);
-        const swichFixedMenuActiveClass = () => 
+    inscroll = true;
+    const position = countPositon(sectionEq);
+    const swichFixedMenuActiveClass = () =>
         switchActiveClass($('.fixed-menu__item'), sectionEq);
 
-        swichFixedMenuActiveClass();
-        
+    swichFixedMenuActiveClass();
+
+    if (isMobile) {
         switchActiveClass(sections, sectionEq);
+    }
+    switchActiveClass(sections, sectionEq);
 
-        display.css({
-            transform: `translateY(${position})`
-        });
+    display.css({
+        transform: `translateY(${position})`
+    });
 
-        unBlockScroll();
-    };
+    unBlockScroll();
+
+};
 
 const scrollViewport = direction => {
     const activeSection = sections.filter('.scroll-active');
@@ -59,22 +63,22 @@ $(document).on("wheel", e => {
     const deltaY = e.originalEvent.deltaY;
     const direction = deltaY < 0 ? "prev" : "next";
 
-        scrollViewport(direction);
+    scrollViewport(direction);
 });
 
-$(document).on('keydown', e =>{
+$(document).on('keydown', e => {
     const tagName = e.target.tagName.toLowerCase();
-    const userTypingInInputs = tagName === 'input' || tagName ==='textarea';
+    const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
 
     if (userTypingInInputs) return;
-        switch(e.keyCode) {
-            case 38: //prev
+    switch (e.keyCode) {
+        case 38: //prev
             scrollViewport('prev');
             break;
-            case 40: //next
+        case 40: //next
             scrollViewport('next');
             break;
-        }
+    }
 });
 
 
@@ -85,22 +89,22 @@ $('[data-scroll-to]').on('click', e => {
 });
 
 if (isMobile) {
-window.addEventListener("touchmove", e => {
-    e.preventDefault();
-},{passive:false});
+    window.addEventListener("touchmove", e => {
+        e.preventDefault();
+    }, {passive: false});
 
     $("body").swipe({
-        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-          let scrollDirection;
+        swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            let scrollDirection;
 
-          if (direction === "up") scrollDirection = "next";
-          if (direction === "down") scrollDirection = "prev";
+            if (direction === "up") scrollDirection = "next";
+            if (direction === "down") scrollDirection = "prev";
 
-          scrollViewport(scrollDirection);
+            scrollViewport(scrollDirection);
         }
-      });
-    }
-    
+    });
+}
+
 // main-menu
 
 var clickMenu = document.querySelectorAll('.mini-menu')[1],
@@ -222,6 +226,7 @@ function toggleAcordeon(e) {
     });
 
 }
+
 //our-team
 const reviewsLi = document.querySelector('.comment').children,
     controllerLi = document.querySelector('.check-persons').children,
@@ -282,7 +287,6 @@ sendButton.addEventListener('click', function (e) {
         })
     }
 })
-
 
 
 function validateForm(form) {
